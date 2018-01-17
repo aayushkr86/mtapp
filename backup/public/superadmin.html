@@ -1,0 +1,2151 @@
+
+     <style>
+        .in{padding-right: 0px !important;}
+
+        .label-success {
+    background-color: #5cb85c;
+    cursor:pointer;
+}
+ .error {
+   color: red;
+ }
+    </style>
+
+    <!--== MAIN CONTRAINER ==-->
+    <div>
+    <div class="container-fluid sb1 inner_page" >
+        <div class="row" style="height: 60px;">
+            <!--== LOGO ==-->
+            <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+                <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <a href="#" class="atab-menu"><i class="fa fa-bars tab-menu" aria-hidden="true"></i></a>
+                <!-- <a href="index-2.html" class="logo"><img src="/assets/images/logo1.png" alt="" />
+                </a>-->
+
+            </div>
+            <!--== SEARCH ==-->
+
+            <!--== MY ACCCOUNT ==-->
+            <div class="col-md-8 col-sm-3 col-xs-6" style="float: right;">
+                <!-- Dropdown Trigger -->
+                <a class='waves-effect dropdown-button top-user-pro' href="javascript:void(0);" data-activates='top-menu'><!--img src="/assets/images/user/6.png" alt="" /-->{{ 'SIDE_ACCOUNT' | translate }}  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </a>
+
+                <!-- Dropdown Structure -->
+                <ul id='top-menu' class='dropdown-content top-menu-sty'>
+                    <!-- <li><a href="javascript:void(0);" class="waves-effect"><i class="fa fa-cogs" aria-hidden="true"></i>Admin Setting</a>
+                    </li>
+
+                    <li class="divider"></li> -->
+                    <li><a href="javascript:void(0);" class="ho-dr-con-last waves-effect" ng-click="adminlogout();"><i class="fa fa-sign-in" aria-hidden="true"></i> {{'MENU_Logout' | translate}}</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!--== BODY CONTNAINER ==-->
+    <div class="container-fluid sb2" style="height:100%">
+        <div class="row">
+            <div class="sb2-1" style="position: fixed; overflow: scroll; ">
+                <!--== USER INFO ==-->
+                <div class="sb2-12" align="center">
+                    <ul>
+
+                        <li>
+                            <h5>Admin </h5>
+                        </li>
+
+                        <br>
+
+
+                        <span style="font-size: 16px;">{{decoded.email}}</span>
+
+                    </ul>
+                </div>
+                <!--== LEFT MENU ==-->
+                <div class="sb2-13" style="height:100%">
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li><a href="javascript:void(0);"><i class="fa fa-bar-chart" aria-hidden="true"></i><b> 
+                        {{'MENU_DASHBOARD' | translate }}</b></a>
+                        </li>
+                        <li><a ng-href="http://localhost:3000/#/adminDashboard#tabsNavigationSimple2" data-toggle="tab" class=""><i class="fa fa-building-o" aria-hidden="true"></i> <b>{{ 'MENU_BRANCH' | translate }}</b></a>
+
+                        </li>
+                        <li><a ng-href="http://localhost:3000/#/adminDashboard#tabsNavigationSimple1" data-toggle="tab" class=""> <i class="fa fa-superpowers" aria-hidden="true"></i><b>{{ 'MENU_SUPERVISOR' | translate }} </b></a>
+
+                        </li>
+                        <li><a ng-href="http://localhost:3000/#/adminDashboard#tabsNavigationSimple3" data-toggle="tab" class=""><i class="fa fa-snowflake-o" aria-hidden="true"></i> <b>{{ 'MENU_TELLER' | translate }}</b></a>
+
+                        </li>
+                        <li><a ng-href="http://localhost:3000/#/adminDashboard#tabsNavigationSimple4" data-toggle="tab" class=""><i class="fa fa-hdd-o" aria-hidden="true"></i> <b>{{'MENU_CONTROLLER' | translate}}</b></a>
+
+                        </li>
+                        <li><a ng-href="http://localhost:3000/#/adminDashboard#tabsNavigationSimple5" data-toggle="tab" class=""><i class="fa fa-globe" aria-hidden="true"></i> <b>{{ 'MENU_COUNTRY_LIMIT' | translate }}</b></a>
+
+                        </li>
+                        <li><a ng-href="http://localhost:3000/#/adminDashboard#tabsNavigationSimple6" data-toggle="tab" class=""><i class="fa fa-address-card" aria-hidden="true"></i><b>{{ 'MENU_KYC' | translate }}</b></a>
+
+                        </li>
+                          <li><a ng-href="http://localhost:3000/#/adminDashboard#tabsNavigationSimple7" data-toggle="tab" class=""><i class="fa fa-user-circle-o" aria-hidden="true"></i> <b>{{ 'MENU_REMITTER' | translate }}</b></a>
+
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/adminDashboard#tabsNavigationSimple20"><i class="fa fa-user-circle-o" aria-hidden="true"></i><span><b>{{ 'MENU_BENEFICIARY' | translate }}</b></span></a>
+                       </li>
+                        <li><a ng-href="http://localhost:3000/#/adminDashboard#tabsNavigationSimple8" data-toggle="tab" class=""><i class="fa fa-file-image-o" aria-hidden="true"></i><b>{{ 'MENU_REPORT' | translate }}</b></a>
+
+                        </li>
+                            <li><a ng-href="http://localhost:3000/#/adminDashboard#tabsNavigationSimple9" data-toggle="tab" class=""><i class="fa fa-usd" aria-hidden="true"></i><b>{{ 'MENU_TARIFF' | translate }}</b></a>
+
+                        </li>
+                        <li class="active supplier123"><a ng-href="http://localhost:3000/#/adminDashboard#tabsNavigationSimple12345" data-toggle="tab" class=""><i class="fa fa-user-circle-o" aria-hidden="true"></i><b>{{'MENU_SUPPLIER'|translate}}</b></a>
+
+                        </li>
+                            <li><a ng-href="http://localhost:3000/#/adminDashboard#tabsNavigationSimple10" data-toggle="tab" class=""><i class="fa fa-share-alt-square" aria-hidden="true"></i> <b>{{ 'MENU_COMISSION_SHARING' | translate }}</b></a>
+
+                        </li>
+                        <li><a ng-href="http://localhost:3000/#/adminDashboard#tabsNavigationSimple77" data-toggle="tab" class=""><i class="fa fa-globe" aria-hidden="true"></i> <b>{{'MENU_COUNTRYADD'|translate}}</b></a>
+
+                        </li>
+
+                         <li class="closed"><a href="javascript:void(0)" class=""><i class="fa fa-language" aria-hidden="true"></i> <b>{{'MENU_LANGUAGE' |translate}}</b></a>
+                           <ul>
+                             <li ng-click="changeLanguage('de')"><a href="">{{ 'BUTTON_LANG_DE' | translate }}</a>
+                             </li>
+                             <li ng-click="changeLanguage('en')"><a href="">{{ 'BUTTON_LANG_EN' | translate }}</a>
+                             </li>
+                           </ul>
+                         </li>
+                         <li ><a href="index.html" class=""><i class="fa fa-sign-in" aria-hidden="true"></i><b> Logout</b></a>
+
+                            </li>
+
+                     <li><a href="javascript:void(0);" class="ho-dr-con-last waves-effect" ng-click="adminlogout();"><i class="fa fa-sign-in" aria-hidden="true"></i> <b>{{'MENU_Logout' | translate}}</b></a>
+                    </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="sb2-2">
+              
+                <div class="sb2-2-add-blog sb2-2-1">
+                    <h2></h2><br>
+
+                 
+
+                    <div class="tab-content">
+                        <div id="home">
+                            <div class="box-inn-sp">
+
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="tabsNavigationSimple1" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>{{'TITTLE_SUPER'|translate}}</p>
+                                </div>
+                                <div class="bor">
+                                    <form name="supervisorform">
+                                    <div class="row">
+                                              <div class="input-field col s3 hidebranch">
+                                                <select ng-model="supbranchID" id="iuy">
+                                                  <!-- <option value="" disabled >Branch ID</option> -->
+                                                 <option ng-repeat ="branch in branchdata2 track by $index" value="{{branch}}" ng-selected="{{supbranchID}}">{{branch}}</option>
+
+                                                </select>
+                                                <label for="list-title"><font color="black">{{'SIDE_BRANCH_ID'|translate}}</font></label>
+
+                                            </div>
+
+                                            <div class="input-field col s3 branchidhide" style="display:none;" >
+                                                <!-- <label for="list-title">Branch ID</label> -->
+                                                <input id="list-title" type="text" class="validate" disabled value="{{supbranchID}}"  >
+                                                <label class="list-title" class="active"><font color="black">{{'SIDE_BRANCH_ID'|translate}}</font></label>
+
+                                            </div>
+                                           
+                                            <div class="input-field col s3">
+                                                 <input id="list-title" type="email" class="validate" ng-model="superEmail"  name="superEmail" required="required" >
+                                                                <label for="list-title" class="active"><font  color="black">{{'SIDE_EMAIL'|translate}}</font> <span class="error" ng-show="supervisorform.superEmail.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="supervisorform.superEmail.$error.email">
+                                                                  {{'Notvalidemail'|translate}}</span>
+
+                                            </div>
+
+                                            <div class="input-field col s3">
+                                                 <input id="list-title" type="text" class="validate" ng-model="superName" required="required" ng-pattern="usernamepattern" name="superName">
+                                                                <label for="list-title" class="active"><font  color="black">{{'SIDE_FULL_NAME'|translate}}</font> <span class="error" ng-show="supervisorform.superName.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="supervisorform.superName.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+
+                                            </div>
+                                              <div class="input-field col s3">
+                                              <select multiple ng-model ="superdays" id="superworkday">
+                                               <!-- <option value="" disabled> Workdays</option> -->
+                                                  <option value="Monday">Monday</option>
+                                                    <option value="Tuesday">Tuesday</option>
+                                                    <option value="Wednesday">Wednesday</option>
+                                                    <option value="Thursday">Thursday</option>
+                                                      <option value="Friday">Friday</option>
+                                                      <option value="Saturday">Saturday</option>
+                                                      <option value="Sunday">Sunday</option>
+                                                </select>
+                                               <label for="list-title"><font color="black">{{'SIDE_WORKING_DAYS'|translate}}</font></label>
+
+
+
+                                            </div>
+                                          
+                                        </div>
+
+                                         <div class="row">
+                                            <div class="input-field col s3">
+                                                 <input id="list-title" type="text" class="validate" ng-model="superAddress" name="superAddress" required="required" maxlength="250" ng-pattern="address">
+                                                                <label for="list-title" class="active"><font  color="black"> {{'SIDE_ADDRESS1'|translate}}</font>  <span class="error" ng-show="supervisorform.superAddress.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="supervisorform.superAddress.$error.pattern">{{'Pleaseentervalidaddress'|translate}}</span>
+
+                                                                </div>
+                                          
+
+                                            <div class="input-field col s3">
+                                                 <input id="list-title" type="text" class="validate" ng-model="superHours" ng-pattern="workingpattern" name="superHours" required="required">
+                                                                <label for="list-title" class="active"><font  color="black">{{'SIDE_WORKING_HOURS'|translate}}</font> <span class="error" ng-show="supervisorform.superHours.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*
+                                                                </span></label>
+                                                                <span class="error" ng-show="supervisorform.superHours.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+
+                                            </div>
+
+                                            <div class="input-field col s3">
+
+                                                <input id="list-title" type="tel" class="validate" ng-model="superPhone" name="superPhone" ng-pattern="phoneNumberpattern" required="required" maxlength="15">
+                                                <label for="list-title" class="active"><font  color="black">{{'SIDE_CONTACT_WITH_COUNTRY_CODE'|translate}}</font>  <span class="error" ng-show="supervisorform.superPhone.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                
+                                                  <br><span class="error" ng-show="supervisorform.superPhone.$error.pattern">{{'PleasematchpatternCountryCode'|translate}}</span>
+
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                           
+
+                                           <div class="row" align="right" style="margin-right: 17px;margin-top:-50px">
+
+                                                 <button type="button"role="button" class="btn btn-success app-button" ng-click="createSupervisior();" id="addbtn1">
+                                              {{'SIDE_ADD'|translate}}
+                                              </button>
+                                             <button type="button"role="button" class="btn btn-success app-button" id="savebtn1" ng-click="updatesupervisor();">
+                                              {{'SIDE_SAVE'|translate}}
+                                              </button>
+
+                                            <button type="button"role="button" class="btn btn-success app-button1" ng-click="resetSupervisior();" id="resetbtn1" style="width: auto;">
+                                              {{'SIDE_RESET'|translate}}
+                                              </button>
+
+
+                                        </div>
+
+
+                                    <hr>
+
+
+                                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="box-inn-sp">
+
+                                <div class="tab-inn" style="border-style: solid;
+    border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+    <table id="dtable" class="display" cellspacing="0" width="100%" datatable="">
+            <thead style="background-color: #269abc;">
+                <tr>
+                    <th style="color: #ffffff;">S.N</th>
+                    <th style="color: #ffffff;">{{'SIDE_BRANCH_ID'|translate}}</th>
+                    <th style="color: #ffffff;">{{'SupervisorID' |translate}}</th>
+                    <th style="color: #ffffff;">{{'SIDE_FULL_NAME'|translate}}</th>
+                   <!--  <th style="color: #ffffff;">Country</th> -->
+                    <th style="color: #ffffff;">{{'SIDE_TELEPHONE'|translate}}</th>
+                    <th style="color: #ffffff;">{{'SIDE_EMAIL'|translate}}</th>
+                    <th style="color: #ffffff;">{{'SIDE_WORKING_HOURS'|translate}}</th>
+                    <th style="color: #ffffff;">{{'SIDE_WORKING_DAYS'|translate}}</th>
+                    <th style="color: #ffffff;">{{'IDE_MAC_ADDRESS'|translate}}</th>
+                    <th style="color: #ffffff;"> {{' SIDE_Enable_Disable'|translate}} </th>
+                    <th style="color: #ffffff;">{{'SIDE_EDIT'|translate}}</th>
+                    <th style="color: #ffffff;">{{'Delete'|translate}}</th>
+
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat ="superv in supervisiorDetails track by $index">
+                    <td>{{$index+1}}</td>
+                    <td>{{superv.branchID}}</td>
+                   <td>{{superv.supervisiorID}} </td>
+                   <td>{{superv.name}}</td>
+                   <!--  <td>{{superv.country}}</td> -->
+                     <td>{{superv.phone}}</td>
+                       <td>{{superv.email}}</td>
+                     <td>{{superv.hoursOfWorkDaily}}</td>
+                     <td>
+                       <span>{{superv.workdays[0]}}</span>
+                       <span>{{superv.workdays[1]}}</span>
+                       <span>{{superv.workdays[2]}}</span></br>
+                       <span>{{superv.workdays[3]}}</span>
+                       <span>{{superv.workdays[4]}}</span>
+                       <span>{{superv.workdays[5]}}</span>
+                     </td>
+                     <td>{{superv.supermac}}</td>
+                      <!-- <td>  <button type="button" role="button" class="btn btn-success app-button enable">Enable</button> </td> -->
+                      <td>  <button type="button" role="button" class="btn btn-success app-button enablesuper"  ng-model="superv.isActive" ng-click="superactiveCheck(superv)">{{superv.isActive === false ? 'Disable' : 'Enable'}}</button> </td>
+                      <td><a href="javascript:void(0);" ng-click="editsupervisor(superv);"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                      <td><a href="javascript:void(0);" ng-click="deletesupervisor(superv);"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+                                </div>
+
+                                  <br>
+
+                               <!-- <div class="row" style="margin-left: 2px;">
+
+                                                 <button type="button"role="button" class="btn btn-success app-button">
+                                              Save
+                                              </button>
+                                             <button type="button"role="button" class="btn btn-success app-button123">
+                                              Print
+                                              </button>
+
+                                            <button type="button"role="button" class="btn btn-success app-button1">
+                                              Reset
+                                              </button>
+                                    </div> -->
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                                        </div>
+
+                                        <br>
+
+
+
+
+<!----------------------------------------Paying money--------------------------------------------!-->
+    <!----------------------------------------Paying money--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+<div id="menu5" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>Paying Supplier</p>
+                                </div>
+                                <div class="bor">
+                                    <form>
+                                    <div class="row">
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s6">
+                                                <input id="last_name" type="text" value="#457845" class="validate">
+                                                <label for="last_name">Code</label>
+                                                 <input type="submit" class="waves-effect waves-light btn-large" value="Find Supplier">
+
+                                            </div>
+
+
+
+
+
+                                       </div>
+                                       <br>
+
+                                       <div class="row">
+                                        <div class="input-field col s3">
+                                                <input id="last_name" type="text" value="#41245DG" class="validate">
+                                                <label for="last_name">Invoice Number</label>
+
+
+                                            </div>
+                                            <div class="input-field col s3">
+                                                <input id="last_name" type="text" value="17-05-2017" class="validate">
+                                                <label for="last_name">Date</label>
+
+
+                                            </div>
+                                            <div class="input-field col s3">
+                                                <input id="last_name" type="text" value="10000" class="validate">
+                                                <label for="last_name">Amount</label>
+
+
+
+                                            </div>
+
+
+
+
+                                            </div>
+                                            <div class="row">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>Account Number Of The Supplier To pay (Remitter)</p>
+                                </div>
+                                </div>
+                                <br>
+
+                                <div class="row">
+                                        <div class="input-field col s3">
+                                                <input id="last_name" type="text" value="" class="validate">
+                                                <label for="last_name">Name Of The Remitter</label>
+
+
+
+                                            </div>
+
+                                            <div class="input-field col s3" align="left">
+                                                <input id="last_name" type="text" value="" class="validate">
+                                                <label for="last_name">Contact with CountryCode</label>
+
+
+
+                                            </div>
+
+                                                <input type="submit" class="waves-effect waves-light btn-large" style="    margin-top: 6px;
+    margin-left: 129px;" value="Search Invoice" align="right">
+                                                <input type="submit" class="waves-effect waves-light btn-large" value="Pay & Print Reciept" align="right" style="background-color: #089208;">
+
+
+                                           </div>
+
+                                        </form>
+
+                                        <br>
+
+
+
+
+<div class="row">
+ </div>
+                                     </form>
+
+<!----------------------------------------Print Report--------------------------------------------!-->
+    <!----------------------------------------Print Report--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+<div id="tabsNavigationSimple3" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>{{'TellerDetail'|translate}} </p>
+                                </div>
+                                <div class="bor">
+                                    <form name="tellerform">
+
+                                        <div class="row">
+                                          <div class="input-field col s3">
+                                            <select ng-model="tellerbranch" id="tid" 
+                                            ng-change="getSupervisor(tellerbranch);">
+                                              <!-- <option value="" disabled >Branch ID</option> -->
+                                            <option ng-repeat ="branch in supervisiorDetails track by $index" value="{{branch.branchID}}" ng-selected="tbranch =={{branch.branchID}}">{{branch.branchID}}</option>
+                                            </select>
+                                            <label for="list-title"><font color="black">{{'SIDE_BRANCH_ID'|translate}}</font></label>
+
+                                            </div>
+
+                                              <div class="input-field col s3" id="tellersuper">
+                                               <input id="list-title" type="text" class="validate" ng-model ="tellersupervisor" disabled value="{{tellersupervisor}}" >
+
+                                             
+                                                <label class="active"><font color="black">{{'SupervisorID'|translate}}</font></label>
+
+                                            </div>
+
+                                            <div class="input-field col s3">
+                                                <input id="list-title2" type="text" class="validate number" ng-model="tellerlimit" name="tellerlimit" required="required" ng-pattern="payementpattern">
+                                                <label for="last_name" class="active"><font color="black"> {{'SIDE_PAYMENT_LIMIT'|translate}}</font>  <span class="error" ng-show="tellerform.tellerlimit.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                              <span class="error" ng-show="tellerform.tellerlimit.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+                                            </div>
+
+</div>
+
+
+                                        <div class="row" align="right" style="margin-top:-50px">
+
+                                                <button type="button"role="button" class="btn btn-success app-button" ng-click="createTeller();" id="addbtn2">
+                                              {{'SIDE_ADD'|translate}}
+                                              </button>
+                                              <button type="button"role="button" class="btn btn-success app-button" ng-click="updateTeller();" id="savebtn2" ng-init="hidesavebtn()">
+                                            {{'SIDE_SAVE'|translate}}
+                                            </button>
+
+                                            <button type="button"role="button" class="btn btn-success app-button1" ng-click="resetTeller()" id="resetbtn2" style="width: auto;">
+                                              {{'SIDE_RESET'|translate}}
+                                              </button>
+
+
+
+                                    </div>
+<hr>
+
+
+                                     <div class="tab-inn">
+                                    <div class="table-responsive table-desi" style="overflow: hidden;">
+                                      <table id="dtable2" class="display" cellspacing="0" width="100%">
+                                        <thead style="background-color: #269abc;">
+
+                                            <tr>
+                                                <th style="color: #ffffff;">S.N.</th>
+                                                <th style="color: #ffffff;">{{'SIDE_BRANCH_ID'|translate}}</th>
+                                                <!-- <th style="color: #ffffff;">Supervisor ID</th> -->
+                                                <th style="color: #ffffff;">{{'TellerID'|translate}}</th>
+                                                <th style="color: #ffffff;">{{'SIDE_PAYMENT_LIMIT'|translate}}</th>
+                                                 <th style="color: #ffffff;">{{'SIDE_MAC_ADDRESS'|translate}}</th>
+                                               <!--  <th style="color: #ffffff;"> Enable/Disable</th> -->
+                                                <th style="color: #ffffff;"> {{'SIDE_EDIT'|translate}} </th>
+                                                 <th style="color: #ffffff;"> {{'Delete'|translate}} </th>
+
+                                            </tr>
+                                        </thead>
+
+
+                                        <tbody>
+                                            <tr ng-repeat ="tellerid in telleriddata track by $index">
+                                                <td>{{$index+1}}</td>
+                                                <td>{{tellerid.branchID}}</td>
+                                                <!-- <td>{{tellerid.supervisiorID.supervisiorID}}</td> -->
+                                                <td>{{tellerid.tellerID}}</td>
+                                                 <td>{{tellerid.paymentLimit}}</td>
+                                                <td>{{tellerid.telleridmac}}</td>
+                                           <!-- <td>  <button type="button" role="button" class="btn btn-success app-button enabletellerid"  ng-model="tellerid.isActive" ng-click="telleridactiveCheck(tellerid)">{{tellerid.isActive === false ? 'Disable' : 'Enable'}}</button> </td> -->
+                                           <td><a href="javascript:void(0);" ng-click="editTeller(tellerid);"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                                           <td><a href="javascript:void(0);" ng-click="deleteTeller(tellerid);"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+                                            </tr>
+
+                                            </tbody>
+
+                                        </table>
+                                          <br>
+
+
+
+                                    </div>
+                                </div>
+
+                                        </form>
+
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+ <div id="tabsNavigationSimple6" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                              <div class="inn-title">
+                                  <h4></h4>
+                                  <p>KYC</p>
+                              </div>
+
+                                <div class="">
+                                    <form>
+
+                                        <div class="row">
+
+                                        </div>
+
+                                    </form>
+
+                                    <div class="">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="box-inn-sp">
+                                                 <div class="bor1">
+                                                    <div class="tab-inn" style="border-style: solid;border-color: rgba(45, 58, 64, 0.04);">
+
+                                                      <table id="dtable5" class="display" cellspacing="0" width="100%">
+                                                         <thead style="background-color: #269abc;">
+                                                                <tr>
+                                                                    <th style="color: #ffffff;">S.N.</th>
+
+                                                                    <th style="color: #ffffff;">{{'Name'|translate}}</th>
+                                                                    <th style="color: #ffffff;">{{'Region'|translate}}</th>
+                                                                    <th style="color: #ffffff;">{{'SIDE_COUNTRY'|translate}}</th>
+                                                                    <th style="color: #ffffff;">Action</th>
+                                                                    <th style="color: #ffffff;">{{'RemoveBlacklist'|translate}}</th>
+
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody>
+                                                                <tr ng-repeat ="remit in remitterDetails  track by $index">
+                                                                    <td>{{$index+1}}</td>
+
+                                                                    <td>{{remit.remittername +" "+ remit.remittersurName}}</td>
+                                                                    <td>{{remit.region}}</td>
+                                                                    <td>{{remit.issueCountry}}</td>
+                                                                    <td><span class="label label-success" data-toggle="modal" data-target="#smallModal" ng-click="transaction_history(remit.remittername,remit.remittersurName)">{{'TransactionHistory'|translate}}</span></td>
+                                                                    <!--<td><button class="label label-success" data-toggle="modal" data-target="#smallModal" ng-click="transaction_history(remit.remittername,remit.remittersurName)">Transaction History</button></td>-->
+                                                                  <td><a href="javascript:void(0);" ng-click="deleteBlacklist(remit);"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+
+                                                                </tr>
+
+
+
+                                                            </tbody>
+                                                        </table>
+
+    <div id="smallModal" class="modal modal-fixed-footer" style="width: 50%; ">
+
+                                      <div class="modal-header" style="background-color: white;padding: 0px !important; height:55px;" >
+                                          <button type="button" role="button" class="btn btn-success blacklist" ng-click="blacklistadd()">
+                                           {{'AddtoBlacklist'|translate}}
+                                              </button>
+
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-right:10px; padding:5px; margin-top:-7px;">&times; </button>
+     <img src="/assets/images/transactions.png" style="width:50px; height:40px; margin-left:300px; align:center; margin-top:-50px;">
+        <div style="margin-left:270px; margin-top:-26px; padding:3px;" > <b>{{'TransactionHistory'|translate}}</b></div>
+    </div>
+    <div class="modal-content">
+
+
+     <table data-editable data-editable-spy class="responsive-table striped table" style="z-index:-10;    width: 600px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid grey;
+    box-sizing: border-box;" ng-repeat ="kyc in kyctransaction  track by $index" >
+    <thead>
+
+        <tr>
+            <th colspan="3">{{'TransactionNumber'|translate}}</th>
+            <td style="text-align: center"> {{kyc.transactionNumber}}</td>
+
+        </tr>
+    </thead>
+    <tbody>
+
+
+        <tr>
+            <th colspan="3">{{'Date'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.transactionDate |date:'MM/dd/yyyy'}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'SIDE_BRANCH_ID'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.branchID}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'TellerID'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.tellerID.tellerID}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'MENU_REMITTER'|translate}}</th>
+
+            <td style="text-align: center" class="col-md-3"> {{kyc.remittername +" "+ kyc.remittersurName}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'RemitterAddress'|translate}}</th>
+
+            <td style="text-align: center" class="col-md-3"> {{kyc.remitteraddress}} </td>
+
+        </tr>
+          <tr>
+            <th colspan="3">{{'RemitterTelephone'|translate}}</th>
+
+            <td style="text-align: center" class="col-md-3"> {{kyc.remittermobile}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'MENU_BENEFICIARY'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.beneficiaryname +" "+ kyc.beneficiarysurName}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'BeneficiaryAddress'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.beneficiaryaddress}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'BeneficiaryTelephone'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.beneficiarymobile}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'AmountInLocalCCY'|translate}}</th>
+            <td class="col-md-1" style="text-align: center"> {{kyc.amount}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'DestinationCountry'|translate}}</th>
+            <td class="col-md-1" style="text-align: center"> {{kyc.country}} </td>
+        </tr>
+        <tr>
+            <th colspan="3">{{'Status'|translate}}</th>
+            <td class="col-md-1" style="text-align: center"> {{kyc.status}}</td>
+        </tr>
+        <tr>
+            <th colspan="3">CCY</th>
+            <td class="col-md-1" style="text-align: center"> {{kyc.currency}}</td>
+        </tr>
+
+
+    </tbody>
+</table>
+        <hr>
+
+
+    </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                  </div>
+                                                     <br> <br>
+
+
+
+                                                    <!-- <div class="row" style="margin-left: 2px; margin-top: -12px;">
+ <button type="button"role="button" class="btn btn-success app-button">
+                                              Edit
+                                              </button>
+                                             <button type="button"role="button" class="btn btn-success app-button123">
+                                              Save
+                                              </button>
+
+                                            <button type="button"role="button" class="btn btn-success app-button1">
+                                              Refresh
+                                              </button>
+
+                                                    </div> -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    </form>
+
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+<div id="tabsNavigationSimple4" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>{{'ControllerDetail'|translate}}</p>
+                                </div>
+                                <div class="bor">
+                                    <form name="admincontrollerform">
+                                    <div class="row">
+                                            <div class="input-field col s3">
+                                                <select ng-model="controllerBranch"  id="conbranch" required="required">
+                                                    <!-- <option value="" disabled >Branch ID</option> -->
+                                              <option ng-repeat ="branch in branchdata track by $index" value="{{branch.branchID}}" ng-selected="controllerBranch = branch.branchID">{{branch.branchID}}</option>
+                                                                </select>
+                                                                <label for="list-title"><font color="black">{{'SIDE_BRANCH_ID'|translate}}</font></label>
+                                                                </div>
+                                                                <div class="input-field col s3">
+                                                                     <input id="list-title" type="email" class="validate" ng-model="controlleremail" name="controlleremail" required="required">
+                                                                      <label for="list-title" class="active"><font color="black">Email</font>  <span class="error" ng-show="admincontrollerform.controlleremail.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                  <span class="error" ng-show="admincontrollerform.controlleremail.$error.email">
+    {{'Notvalidemail'|translate}}</span>
+
+                                                                </div>
+
+                                            <div class="input-field col s3">
+                                                 <input id="list-title" type="text" class="validate" ng-model="controllerename" name="controllerename" required="required" ng-pattern="usernamepattern" required="required">
+                                                                <label for="list-title" class="active"> <font color="black">{{'SIDE_FULL_NAME'|translate}}</font>  <span class="error" ng-show="admincontrollerform.controllerename.$error.required"  style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="admincontrollerform.controllerename.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+
+                                            </div>
+                                          <div class="input-field col s3">
+                                            <select multiple ng-model ="controllerdays" id="controldays">
+                                            <!-- <option value="" disabled>Workdays</option> -->
+                                                  <option value="Monday">Monday</option>
+                                                    <option value="Tuesday">Tuesday</option>
+                                                    <option value="Wednesday">Wednesday</option>
+                                                    <option value="Thursday">Thursday</option>
+                                                      <option value="Friday">Friday</option>
+                                                      <option value="Saturday">Saturday</option>
+                                                      <option value="Sunday">Sunday</option>
+                                                </select>
+
+                                      <label for="list-title"><font color="black">{{'SIDE_WORKING_DAYS'|translate}}</font></label>
+
+                                            </div>
+                                           
+                                        </div>
+
+                                         <div class="row">
+                                            <div class="input-field col s3">
+                                                 <!-- <input id="list-title" type="text" class="validate" ng-model="controlleraddress">
+                                                                <label for="list-title"> Address</label> -->
+                                                                            <input id="list-title" type="text" class="validate" ng-model="controlleraddress" name="controlleraddress" required="required">
+                                                                <label for="list-title" class="active"><font color="black"> {{'SIDE_ADDRESS1'|translate}} </font>  <span class="error" ng-show="admincontrollerform.controlleraddress.$error.required" style="float:right;padding-right: 20px;font-size: 10px" >*</span></label>
+                                                                <!-- <span class="error" ng-show="admincontrollerform.controlleraddress.$error.pattern">{{'Pleaseentervalidaddress'|translate}}</span> -->
+
+                                                                </div>
+                                            <!-- <div class="input-field col s3">
+
+                                <select ng-model="controllercountry" id="concountry">
+
+<option ng-repeat="loc in countrylist" value="{{loc.countryName}}" ng-selected="controllercoun == loc.countryName">{{loc.countryName}}</option>
+                                  </select>
+
+                                                <label for="list-title"><font color="black">Country</font></label>
+
+                                            </div> -->
+
+                                            <div class="input-field col s3">
+                                                 <!-- <input id="list-title" type="number" class="validate" ng-model="controllerhours" >
+                                                                <label for="list-title">Working Hours</label> -->
+                                                                 <input id="list-title" type="text" class="validate" ng-model="controllerhours" ng-pattern="workingpattern" name="controllerhours" required="required">
+                                                                <label for="list-title" class="active"><font color="black">{{'SIDE_WORKING_HOURS'|translate}} </font> <span class="error" ng-show="admincontrollerform.controllerhours.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="admincontrollerform.controllerhours.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+
+                                                                </div>
+
+                                            <div class="input-field col s3">
+
+                                                <input id="list-title" type="tel" class="validate" ng-model="controllerphone" name="controllerphone" required="required" ng-pattern="phoneNumberpattern" maxlength="14">
+                                                <label for="list-title" class="active"> <font color="black">{{'SIDE_CONTACT_WITH_COUNTRY_CODE'|translate}} </font> <span class="error" ng-show="admincontrollerform.controllerphone.$error.required" style="float:right;padding-right: 20px;font-size: 10px" >*</span></label>
+
+                                                  
+                                                  <br><span class="error" ng-show="admincontrollerform.controllerphone.$error.pattern">{{'PleasematchpatternCountryCode'|translate}}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+
+
+                                           <div class="row" align="right" style="margin-right: 17px; margin-top: -50px">
+
+                                                 <button type="button"role="button" class="btn btn-success app-button" ng-click="createController();" id="addbtn3" >
+                                             {{'SIDE_ADD'|translate}}
+                                              </button>
+                                              <button type="button"role="button" class="btn btn-success app-button" ng-click="updateController();" id="savebtn3" ng-init="hidesavebtn()">
+                                           {{'SIDE_SAVE'|translate}}
+                                           </button>
+
+                                            <button type="button"role="button" class="btn btn-success app-button1" ng-click="resetController()"  id="resetbtn3" style="width: auto;">
+                                              {{'SIDE_RESET'|translate}}
+                                              </button>
+
+
+                                        </div>
+
+
+                                    <hr>
+
+
+                                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="box-inn-sp">
+
+                                <div class="tab-inn" style="border-style: solid;
+    border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+                        <table id="dtable3" class="display" cellspacing="0" width="100%">
+                            <thead style="background-color: #269abc;">
+                                            <tr>
+                                                <th style="color: #ffffff;">S.N.</th>
+                                                <th style="color: #ffffff;">{{'SIDE_BRANCH_ID'|translate}}</th>
+                                                <th style="color: #ffffff;">{{'ControllerID'|translate}}</th>
+                                                 <th style="color: #ffffff;">{{'SIDE_FULL_NAME'|translate}}</th>
+                                                 <th style="color: #ffffff;"> {{'SIDE_CONTACT'|translate}}</th>
+                                                <th style="color: #ffffff;"> Email </th>
+                                                <th style="color: #ffffff;"> {{'SIDE_ADDRESS1'|translate}} </th>
+                                               <!--  <th style="color: #ffffff;"> {{'SIDE_COUNTRY'|translate}} </th> -->
+                                                <th style="color: #ffffff;"> {{'SIDE_WORKING_HOURS'|translate}} </th>
+                                                <th style="color: #ffffff;"> {{'SIDE_WORKING_DAYS'|translate}} </th>
+                                                <th style="color: #ffffff;"> {{'SIDE_MAC_ADDRESS'|translate}}</th>
+                                                <th style="color: #ffffff;"> {{'SIDE_Enable_Disable'|translate}} </th>
+                                                <th style="color: #ffffff;"> {{'SIDE_EDIT'|translate}} </th>
+                                                <th style="color: #ffffff;"> {{'Delete'|translate}} </th>
+
+
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr ng-repeat ="control in controllerDetails track by $index">
+
+                                                <td>{{$index+1}}</td>
+                                                <td>{{control.branchID}}</td>
+                                                <td>{{control.controllerID}}</td>
+                                                <td>{{control.name}} </td>
+                                                <td>{{control.phone}} </td>
+                                                <td>{{control.email}} </td>
+                                                <td>{{control.address}}</td>
+                                               <!--  <td> {{control.country}}</td> -->
+                                                <td> {{control.hoursOfWorkDaily}}</td>
+                                                <td>
+                                                  <span>{{control.workdays[0]}}</span>
+                                                  <span>{{control.workdays[1]}}</span></br>
+                                                  <span>{{control.workdays[2]}}</span>
+                                                  <span>{{control.workdays[3]}}</span></br>
+                                                  <span>{{control.workdays[4]}}</span>
+                                                  <span>{{control.workdays[5]}}</span>
+                                                </td>
+                                                <td>{{control.controlmac}}</td>
+                                                 <td>  <button type="button" role="button" class="btn btn-success app-button enablecontrol"  ng-model="branch.isActive" ng-click="controlactiveCheck(control)">{{control.isActive === false ? 'Disable' : 'Enable'}}</button> </td>
+                                                 <td><a href="javascript:void(0);" ng-click="editController(control);"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                                                 <td><a href="javascript:void(0);" ng-click="deleteController(control);"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+                                            </tr>
+
+
+
+                                        </tbody>
+                                    </table>
+
+
+                                </div>
+
+                                  <br>
+
+                               <!-- <div class="row" style="margin-left: 2px;">
+
+                                                 <button type="button"role="button" class="btn btn-success app-button">
+                                              Save
+                                              </button>
+                                             <button type="button"role="button" class="btn btn-success app-button123">
+                                              Print
+                                              </button>
+
+                                            <button type="button"role="button" class="btn btn-success app-button1">
+                                              Reset
+                                              </button>
+                                    </div> -->
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                                        </div>
+
+                                        <br>
+
+
+
+
+<!----------------------------------------Paying money--------------------------------------------!-->
+    <!----------------------------------------Paying money--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+<div id="tabsNavigationSimple7" class="tab-pane fade in">
+                            <div class="row">
+                        <div class="col-md-12">
+                            <div class="box-inn-sp">
+                              <div class="inn-title">
+                                  <h4></h4>
+                                  <p>{{'RemitterList'|translate}}</p>
+                              </div>
+                              <div class="bor1">
+                                <div class="tab-inn">
+
+                                    <div class="table-responsive table-desi">
+                                      <table id="dtable666" class="display" cellspacing="0" width="100%">
+                                         <thead style="background-color: #269abc;">
+                                             <tr>
+                                                 <th style="color: #ffffff;">S.N</th>
+
+                                                    <th style="color: #ffffff;">{{'SIDE_COUNTRY'|translate}}</th>
+
+                                                    <th style="color: #ffffff;">{{'FirstName'|translate}}</th>
+                                                    <th style="color: #ffffff;">{{'Lastname'|translate}}</th>
+                                                     <th style="color: #ffffff;">Email</th>
+                                                    <th style="color: #ffffff;">{{'SIDE_ADDRESS1'|translate}}</th>
+                                                    <th style="color: #ffffff;">{{'SIDE_CONTACT'|translate}}</th>
+                                                    <th style="color: #ffffff;">{{'Amount'|translate}}</th>
+
+                                                    <th style="color: #ffffff;"> {{'SIDE_Enable_Disable'|translate}} </th>
+
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat ="remit in remitterDetails  track by $index">
+                                                    <td>{{$index+1}}</td>
+                                                      <td>{{remit.issueCountry}} </td>
+                                                    <td>{{remit.remittername}}</td>
+
+                                                    <td>{{remit.remittersurName}}
+                                                    </td>
+                                                    <td>{{remit.remitteremail}}  </td>
+
+                                                    <td>{{remit.remitteraddress}}</td>
+                                                    <td>{{remit.remittermobile}}</td>
+                                                    <td>{{remit.amount}} </td>
+
+
+                                                     <td>  <button type="button" role="button" class="btn btn-success app-button enableremit"   ng-click="remitactiveCheck(remit)">{{remit.status === 'Blacklist' ? 'Disable' : 'Enable'}}</button> </td>
+
+
+                                                </tr>
+
+
+                                            </tbody>
+
+                                        </table>
+
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+
+
+                         <br>
+
+
+<!--
+                                        <div class="row" style="margin-left: 4px; margin-top: -12px;">
+
+
+                                             <button type="button"role="button" class="btn btn-success app-button123">
+                                             Import
+                                              </button>
+
+
+
+                                    </div> -->
+
+
+
+                                     </form>
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div id="tabsNavigationSimple20" class="tab-pane fade in">
+                                                    <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="box-inn-sp">
+                                                      <div class="inn-title">
+                                                          <h4></h4>
+                                                          <p>{{'BeneficiaryList'|translate}}</p>
+                                                      </div>
+                                                      <div class="bor1">
+                                                        <div class="tab-inn">
+
+                                                            <div class="table-responsive table-desi">
+                                                              <table id="dtable10" class="display" cellspacing="0" width="100%">
+                                                                 <thead style="background-color: #269abc;">
+                                                                     <tr>
+                                                                         <th style="color: #ffffff;">S.N</th>
+                                                                            <th style="color: #ffffff;">{{'SIDE_COUNTRY'|translate}}</th>
+                                                                            <th style="color: #ffffff;">{{'FirstName'|translate}}</th>
+                                                                            <th style="color: #ffffff;">{{'Lastname'|translate}}</th>
+                                                                             <th style="color: #ffffff;">Email</th>
+                                                                            <th style="color: #ffffff;">{{'SIDE_ADDRESS1'|translate}}</th>
+                                                                            <th style="color: #ffffff;">{{'SIDE_CONTACT'|translate}}</th>
+                                                                            <th style="color: #ffffff;">{{'Amount'|translate}}</th>
+                                                                            <th style="color: #ffffff;"> {{'SIDE_Enable_Disable'|translate}}</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr ng-repeat ="benef in beneficiaryDetails  track by $index">
+                                                                            <td>{{$index+1}}</td>
+                                                                            <td> {{benef.country}} </td>
+                                                                            <td>{{benef.beneficiaryname}}
+                                                                            </td>
+                                                                            <td>{{benef.beneficiarysurName}}
+                                                                            </td>
+                                                                            <td>{{benef.beneficiaryemail}}</td>
+                                                                            <td>{{benef.beneficiaryaddress}}</td>
+                                                                            <td> {{benef.beneficiarymobile}}</td>
+                                                                            <td>{{benef.amount}}</td>
+
+                                                                             <td>  <button type="button" role="button" class="btn btn-success app-button enablebenef"   ng-click="benefactiveCheck(benef)">{{benef.status === 'Blacklist' ? 'Disable' : 'Enable'}}</button> </td>
+
+
+                                                                        </tr>
+
+
+                                                                    </tbody>
+
+                                                                </table>
+
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                 <br>
+
+
+
+
+
+
+
+                                                             </form>
+
+
+
+
+
+
+
+
+
+                        <!----------------------------------------Print Report--------------------------------------------!-->
+                            <!----------------------------------------Print Report--------------------------------------------!-->
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+<div id="tabsNavigationSimple8" class="tab-pane fade in">
+                            <div class="row">
+                        <div class="col-md-12">
+                            <div class="box-inn-sp">
+                               <div class="inn-title">
+                               <p>{{'TransactionDetail'|translate}}</p>
+                                   </div>
+                                   <div class="row">
+                                   <div class="col-md-12">
+                                     <div class="bor1">
+                                <div class="tab-inn">
+
+                                    <div class="table-responsive table-desi">
+                                      <table id="dtable7" class="display" cellspacing="0" width="100%">
+                                         <thead style="background-color: #269abc;">
+                                             <tr>
+                                                   <th style="color: #ffffff;">S.N</th>
+                                                   <th style="color: #ffffff;">{{'Date'|translate}}</th>
+                                                    <th style="color: #ffffff;">{{'TransactionNo'|translate}}</th>
+                                                    <th style="color: #ffffff;">{{'Amount'|translate}}</th>
+                                                    <th style="color: #ffffff;">{{'MENU_REMITTER'|translate}}</th>
+                                                     <th style="color: #ffffff;">{{'MENU_BENEFICIARY'|translate}}</th>
+                                                     <th style="color: #ffffff;">Destination</th>
+                                                     <th style="color: #ffffff;">{{'Status'|translate}}</th>
+                                                     <th style="color: #ffffff;">CCY</th>
+
+
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr ng-repeat ="trans in transactiondata track by $index">
+                                                  <td>{{$index+1}}</td>
+                                                  <td>{{trans.transactionDate |date:'MM/dd/yyyy'}} </td>
+                                                  <td>{{trans.transactionNumber}}</td>
+                                                    <td>{{trans.amount}}</td>
+                                                    <td>{{trans.remittername +" "+ trans.remittersurName}}</td>
+                                                    <td>{{trans.beneficiaryname +" "+ trans.beneficiarysurName}}</td>
+                                                    <td>{{trans.country}}</td>
+                                                    <td>{{trans.status}}</td>
+                                                    <td>{{trans.currency}}</td>
+
+
+                                                </tr>
+
+
+
+                                            </tbody>
+
+
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                                </div>
+
+
+
+  </div>
+  </div>
+
+<br>
+  <div class="row" style="margin-left: 34px;">
+     <!--  <button type="button" role="button" class="btn btn-success app-button123">
+          import
+      </button> -->
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------Print Report--------------------------------------------!-->
+    <!----------------------------------------Print Report--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    <!----------------------Add Tariff Field-------------------------------------------------------------------------------------------->
+
+                        <div id="tabsNavigationSimple9" class="tab-pane fade ">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>{{'TariffDetail'|translate}}</p>
+                                </div>
+                                <div class="bor">
+                                    <form name="admintariffform">
+                                        <div class="row" id="AddTariff">
+                                            <div class="input-field col s3">
+                                                 <select ng-model="tariffcountry" ng-change="getCurrency1(tariffcountry);" id="tarifcont">
+                                                   <!-- <option value="" disabled >Country </option> -->
+                                                    <option ng-repeat="loc in countrylist" value="{{loc.countryName}}" ng-selected=" tariffcountry == tcountry">{{loc.countryName}}</option>
+                                                    </select>
+
+
+
+                                                <label for="list-title"><font color="black">{{'SIDE_COUNTRY'|translate}}</font> </label>
+                                            </div>
+                                             <div class="input-field col s3">
+                                               <input id="list-title" type="text" class="validate" ng-model ="tariffcurrency" disabled value="{{tariffcurrency}}">
+                                               <label class="active"> <font color="black">{{'Currency'|translate}}</font> </label>
+                                            </div>
+                                             <div class="input-field col s3">
+                                              <select ng-model="tariffbranchid" id="tarifbran">
+                                                
+                                                <option ng-repeat ="branch in branchdata track by $index" value="{{branch.branchID}}" ng-selected>{{branch.branchID}}</option>
+                                                </select>
+                                                <label for="list-title"><font color="black">{{'SIDE_BRANCH_ID'|translate}}</font></label>
+                                            </div>
+
+                                            <div class="input-field col s3">
+                                                
+                                                <input id="list-title4" type="text" class="validate number4" ng-model="tariffmin" name="tariffmin" required="required" ng-pattern="payementpattern">
+                                                <label for="last_name" class="active"><font color="black">Min-MT</font> <span class="error" ng-show="admintariffform.tariffmin.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                              <span class="error" ng-show="admintariffform.tariffmin.$error.pattern">{{'Pleaseenteralnumberonly'|translate}} </span>
+                                            </div>
+
+
+                                           
+                                            </div>
+                                            <div class="row">
+                                             <div class="input-field col s3">
+                                                
+                                                 <input id="list-title5" type="text" class="validate number5" ng-model="tariffmax" name="tariffmax" required="required" ng-pattern="payementpattern">
+                                                <label for="last_name" class="active"><font color="black">Max-MT</font><span class="error" ng-show="admintariffform.tariffmax.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                              <span class="error" ng-show="admintariffform.tariffmax.$error.pattern">{{'Pleaseenteralnumberonly'|translate}} </span>
+                                            </div>
+                                            <div class="input-field col s3">
+                                                <input id="list-title" type="text" class="validate" ng-model="tariff" name="tariff" required="required" ng-pattern="payementpattern">
+                                                <label for="list-title" class="active"><font color="black">Tariff</font><span class="error" ng-show="admintariffform.tariff.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                 <span class="error" ng-show="admintariffform.tariff.$error.pattern">{{'Pleaseenteralnumberonly'|translate}} </span>
+                                            </div>
+
+                                            <div class="input-field col s3">
+                                                <!-- <input id="list-title" type="text" class="validate" ng-model="tax" >
+                                                <label for="list-title">Tax</label> -->
+                                                 <input id="list-title" type="text" class="validate" ng-model="tax" name="tax" required="required" ng-pattern="workingpattern">
+                                                <label for="list-title" class="active"><font color="black">{{'Tax'|translate}}</font><span class="error" ng-show="admintariffform.tax.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                 <span class="error" ng-show="admintariffform.tax.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+                                            </div>
+
+                                           
+                                            </div>
+
+                                            <div class="row" align="right" style="margin-top:-55px;">
+
+                                                 <button type="button"role="button" class="btn btn-success app-button" ng-click="createTariff()" id="addbtn5">
+                                              {{'SIDE_ADD'|translate}}
+                                              </button>
+                                              <button type="button"role="button" class="btn btn-success app-button" ng-click="updateTariff();" id="savebtn5" ng-init="hidesavebtn()">
+                                                {{'SIDE_SAVE'|translate}}
+                                                </button>
+                                             <button type="button"role="button" class="btn btn-success app-button1" ng-click="resetTariff()" id="resetbtn5" style="width: auto;">
+                                             {{'SIDE_RESET'|translate}}
+                                              </button>
+
+
+                                            </div>
+                                          </form>
+                                            <hr>
+
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="box-inn-sp">
+
+                                                        <div class="tab-inn" style="border-style: solid;
+    border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+
+                                      <table id="dtable8888" class="display" cellspacing="0" width="100%">
+                                      <thead style="background-color: #269abc;">
+                                        <tr>
+                                          <th style="color: #ffffff;">S.N</th>
+                                            <th style="color: #ffffff;">{{'SIDE_COUNTRY'|translate}}</th>
+                                            <th style="color: #ffffff;">{{'Currency'|translate}}</th>
+                                            <th style="color: #ffffff;">Min-MT</th>
+                                            <th style="color: #ffffff;">Max-MT</th>
+                                            <th  style="color: #ffffff;"align="center">Tariff </th>
+                                            <th style="color: #ffffff;">{{'Tax'|translate}}</th>
+                                            <th style="color: #ffffff;">{{'TariffExcludedTax'|translate}}</th>
+                                            <th style="color: #ffffff;"> {{'SIDE_BRANCH_ID'|translate}}</th>
+                                            <th style="color: #ffffff;">{{'SIDE_EDIT'|translate}}</th>
+                                            <th style="color: #ffffff;">{{'Delete'|translate}}</th>
+
+                                           </tr>
+                                        </thead>
+
+                                                                <tbody>
+                                                                  <tr ng-repeat ="tariff in tariffdata track by $index">
+
+                                                                       <td>{{$index+1}}</td>
+                                                                       <td>{{tariff.country}}</td>
+                                                                        <td>{{tariff.currency}}</td>
+                                                                        <td>{{tariff.minAmount}}</td>
+                                                                        <td>{{tariff.maxAmount}}</td>
+                                                                        <td>{{tariff.tariff}}</td>
+                                                                        <td>{{tariff.tax +"%"}}</td>
+                                                                        <td>{{tariff.tariffExclude}}</td>
+                                                                        <td>{{tariff.branchID}} </td>
+                                                                         <td><a href="javascript:void(0);" ng-click="editTariff(tariff);"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                                                                         <td><a href="javascript:void(0);" ng-click="deleteTariff(tariff);"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+
+                                                        </div>
+                                                        <br>
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+
+
+                                        <br>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div id=tabsNavigationSimple5 class="tab-pane fade ">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>{{'CountryLimitDetail'|translate}}</p>
+                                </div>
+                                <div class="bor">
+                                    <form name="admincountrylimit">
+                                        <div class="row" >
+                                            <div class="input-field col s3">
+                                                 <select ng-model="countrylimit" ng-change="getCurrency(countrylimit);" id="conlimit">
+                                                   <!-- <option value="" disabled >Country</option> -->
+                                                   <option ng-repeat="loc in countrylist" value="{{loc.countryName}}" ng-selected="countrylim == loc.countryName ">{{loc.countryName}}</option>
+                                                </select>
+
+                                         <label for="list-title"><font color="black">{{'SIDE_COUNTRY'|translate}}</font></label>
+                                            </div>
+                                             <div class="input-field col s3" >
+
+                                              <input id="list-title" type="text" class="validate" ng-model ="currency" name="currency" required="required" disabled value="{{currency}}">
+                                                 <label class="active"><font color="black"> {{'Currency'|translate}}</font></label>
+
+                                            </div>
+
+                                            <div class="input-field col s3">
+                                                <input id="list-title3" type="text" class="validate number3" ng-model="monthlylimit" name="monthlylimit" required="required" ng-pattern="payementpattern" maxlength="15">
+                                                <label class="active"><font color="black">{{'SIDE_PAYMENT_LIMIT_PER_MONTH'|translate}}</font><span class="error" ng-show="admincountrylimit.monthlylimit.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                               <span class="error" ng-show="admincountrylimit.monthlylimit.$error.pattern">{{'Pleaseenteralnumberonly'|translate}} </span>
+                                            </div>
+
+
+                                            <div class="input-field col s3">
+                                                <!-- <input id="list-title" type="text" class="validate" ng-model="region" name="region" required="required">
+                                                <label for="list-title">Region</label> -->
+                                                   <input id="list-title" type="text" class="validate" ng-model="region" required="required" ng-pattern="usernamepattern" name="region">
+                                                                <label for="list-title" class="active"><font color="black">{{'Region'|translate}} </font> <span class="error" ng-show="admincountrylimit.region.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="admincountrylimit.region.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+
+                                            </div>
+                                              </div>
+                                            <div class="row" align="right" style=" margin-right: 4px;">
+
+                                                 <button type="button"role="button" class="btn btn-success app-button" ng-click="createCountry()" id="addbtn4">
+                                              {{'SIDE_ADD'|translate}}
+                                              </button>
+                                              <button type="button"role="button" class="btn btn-success app-button" ng-click="updateCountry();" id="savebtn4" ng-init="hidesavebtn()">
+                                              {{'SIDE_SAVE'|translate}}
+                                              </button>
+                                          <button type="button"role="button" class="btn btn-success app-button1" ng-click="resetCountry()" id="resetbtn4" style="width: auto;">
+                                             {{'SIDE_RESET'|translate}}
+                                              </button>
+
+
+                                            </div>
+                                            </form>
+                                          <hr>
+
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="box-inn-sp">
+
+                                                        <div class="tab-inn" style="border-style: solid;
+    border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+
+                                                  <table id="dtable4" dt-instance="dtInstance" class="display" cellspacing="0" width="100%">
+                                                      <thead style="background-color: #269abc;">
+                                                      <tr>
+                                                      <th style="color: #ffffff;">S.N</th>
+                                                      <th style="color: #ffffff;">{{'SIDE_COUNTRY'|translate}}</th>
+                                                      <th style="color: #ffffff;"> {{'Currency'|translate}} </th>
+                                                      <th style="color: #ffffff;">{{'SIDE_PAYMENT_LIMIT_PER_MONTH'|translate}}</th>
+                                                      <th style="color: #ffffff;">{{'Region'|translate}}</th>
+                                                      <th style="color: #ffffff;">{{'SIDE_EDIT'|translate}}</th>
+                                                      <th style="color: #ffffff;">{{'Delete'|translate}}</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                                <tbody>
+                                                                  <tr ng-repeat ="country in countrylimitDetails track by $index">
+                                                                       <td>{{$index+1}}</td>
+                                                                        <td>{{country.countryName}}</td>
+                                                                        <td>{{country.currency}}</td>
+                                                                        <td>{{country.paymentLimit}}</td>
+                                                                        <td>{{country.region}}</td>
+                                                                         <td>
+                                                        <a href="javascript:void(0);" ng-click="editCountry(country);"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                                                        <td><a href="javascript:void(0);" ng-click="deleteCountry(country);"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+
+
+                                                                    </tr>
+
+
+                                                                </tbody>
+                                                            </table>
+
+                                                        </div>
+                                                        <br>
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            <!-- <div class="row" align="right" style="    margin-right: 4px;">
+
+                                                            <button type="button"role="button" class="btn btn-success app-button">
+                                              Save
+                                              </button>
+
+
+                                                        </div> -->
+
+
+
+
+
+
+
+                                        <br>
+
+                                        <!----------------------------------------Paying money--------------------------------------------!-->
+                                        <!----------------------------------------Paying money--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+
+   <!---------------------------------------------------------------Commission Sharing!---------------------->
+
+                        <div id="tabsNavigationSimple10" class="tab-pane fade ">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>{{'CommissionDetail'|translate}}</p>
+                                </div>
+                                <div class="bor">
+                                    <form name="comisionform">
+                                        <div class="row" id="">
+                                            <div class="input-field col s3">
+                                                <!-- <input id="list-title" type="text" class="validate" ng-model="sendercomision">
+
+
+                                          <label for="list-title">Sender_Comm</label> -->
+                                          <input id="list-title" type="text" class="validate" ng-model="sendercomision" name="sendercomision" required="required" ng-pattern="workingpattern">
+<label for="list-title" class="active"><font color="black">Sender_Comm</font><span class="error" ng-show="comisionform.sendercomision.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+ <span class="error" ng-show="comisionform.sendercomision.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+                                            </div>
+
+                                            <div class="input-field col s3">
+                                                <!-- <input id="list-title" type="text" class="validate" ng-model="platformcomision">
+                                                <label>Platform_Comm</label> -->
+                                                <input id="list-title" type="text" class="validate" ng-model="platformcomision" name="platformcomision" required="required" ng-pattern="workingpattern">
+<label for="list-title" class="active"><font color="black">Platform_Comm</font><span class="error" ng-show="comisionform.platformcomision.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+ <span class="error" ng-show="comisionform.platformcomision.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+                                            </div>
+
+                                            <div class="input-field col s3">
+                                               <!--  <input id="list-title" type="text" class="validate" ng-model="benefcomision">
+                                                <label for="list-title">Benef_Comm</label> -->
+                                                 <input id="list-title" type="text" class="validate" ng-model="benefcomision" name="benefcomision" required="required" ng-pattern="workingpattern">
+<label for="list-title" class="active"><font color="black">Benef_Comm</font><span class="error" ng-show="comisionform.benefcomision.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+ <span class="error" ng-show="comisionform.benefcomision.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+                                            </div>
+                                            <div class="input-field col s3">
+                                              <select ng-model="comisionbranchid" id="comisonbranch">
+                                              <!-- <option value="" disabled >Branch ID</option> -->
+                                              <option ng-repeat ="branch in branchdata track by $index" value="{{branch.branchID}}" ng-selected="comisionbranchid == {{branch.branchID}}" >{{branch.branchID}}</option>
+                                              </select>
+                                              <label for="list-title"><font color="black">{{'SIDE_BRANCH_ID'|translate}}</font></label>
+                                            </div>
+                                    </div>
+                                            <div class="row" align="right" style=" margin-right: 4px;">
+
+                                                 <button type="button"role="button" class="btn btn-success app-button" ng-click="createshare()" id="addbtn6">
+                                             {{'SIDE_ADD'|translate}}
+                                              </button>
+                                              <button type="button"role="button" class="btn btn-success app-button" ng-click="updateComision();" id="savebtn6" ng-init="hidesavebtn()">
+                                                {{'SIDE_SAVE'|translate}}
+                                                </button>
+                                             <button type="button"role="button" class="btn btn-success app-button1" ng-click="resetshare()" id="resetbtn6" style="width: auto;">
+                                             {{'SIDE_RESET'|translate}}
+                                              </button>
+
+
+                                            </div>
+                                          </form>
+                                           <hr>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="box-inn-sp">
+
+                                                        <div class="tab-inn" style="border-style: solid;
+    border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+
+                                                                      <table id="dtable9" class="display" cellspacing="0" width="100%">
+                                                                        <thead style="background-color: #269abc;">
+                                                                        <tr>
+                                                                        <th style="color: #ffffff;">S.N</th>
+                                                                        <th style="color: #ffffff;">Sender_Comm</th>
+                                                                        <th style="color: #ffffff;">Platform_Comm</th>
+                                                                        <th style="color: #ffffff;">Benef_Comm</th>
+                                                                        <th style="color: #ffffff;">{{'SIDE_BRANCH_ID'|translate}}</th>
+                                                                        <th style="color: #ffffff;">{{'SIDE_EDIT'|translate}}</th>
+                                                                        <th style="color: #ffffff;">{{'Delete'|translate}}</th>
+
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+                                                                    <tr ng-repeat ="comision in comissiondata track by $index">
+                                                                        <td>{{$index+1}}</td>
+                                                                        <td>{{comision.sendercomision +"%"}}</td>
+                                                                        <td>{{comision.platformcomsion+"%"}}</td>
+                                                                        <td>{{comision.benefcomision+"%"}}</td>
+                                                                        <td>{{comision.branchID}}</td>
+
+                                                                        <td><a href="javascript:void(0);" ng-click="editComision(comision);"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                                                                        <td><a href="javascript:void(0);" ng-click="deleteComision(comision);"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+
+                                                        </div>
+                                                        <br>
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+
+
+
+
+
+                                        <br>
+
+                                       
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                        <div id="tabsNavigationSimple2" class="tab-pane fade in active">
+                            <div class="inn-title">
+                                                            <p>{{'BranchDetail'|translate}}</p>
+
+
+                                                        </div>
+                            <div class="bor">
+                                <form name="adminbranchform">
+                                    <div class="row">
+                                        <div class="input-field col s3">
+
+                                                 <input type="text"  name="branchID" ng-model="branchID" required="required" class="validate" ng-pattern="branchpattern" maxlength="6">
+                                                 <label class="active"><font color="black">{{'SIDE_BRANCH_ID'|translate}} </font> <span class="error" ng-show="adminbranchform.branchID.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                 <span class="error" ng-show="adminbranchform.branchID.$error.pattern" >{{'Pleaseenteralphabetandnumberonly'|translate}}</span>
+
+
+                                            </div>
+                                         <div class="input-field col s3">
+
+                                           <select ng-model="country" id ="cot">
+
+                                             <option ng-repeat="loc in countrylist" value="{{loc.countryName}}" ng-selected="countryname == {{loc.countryName}}">{{loc.countryName}}</option>
+                                           </select>
+                                           
+                                               <label class="list-title"><font color="black">{{'ChooseaCountry'|translate}}</font></label>
+                                         </div>
+                                          <div class="input-field col s6" style="margin-top:15px;">
+                                              <select multiple ng-model ="workdays" id="days">
+                                              <!-- <option value="" disabled=""><font color="black">Workdays</font></option> -->
+                                                  <option value="Monday">Monday</option>
+                                                    <option value="Tuesday">Tuesday</option>
+                                                    <option value="Wednesday">Wednesday</option>
+                                                    <option value="Thursday">Thursday</option>
+                                                      <option value="Friday">Friday</option>
+                                                      <option value="Saturday">Saturday</option>
+                                                      <option value="Sunday">Sunday</option>
+                                                </select>
+                                              <label for="list-title"><font color="black">{{'SIDE_WORKING_DAYS'|translate}}</font></label>
+
+                                            </div>
+
+                                   
+
+                                            </div>
+                                             <div class="row">
+                                            <div class="input-field col s3">
+                                                 <input id="list-title" type="text" class="validate" ng-model="Address1" name="Address1" ng-pattern="address" required="required">
+                                                <label class="active"><font color="black">{{'SIDE_ADDRESS'|translate}} </font><span class="error" ng-show="adminbranchform.Address1.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                <span class="error" ng-show="adminbranchform.Address1.$error.pattern">{{'Pleaseentervalidaddress'|translate}} </span>
+
+                                            </div>
+                                            <div class="input-field col s3">
+                                                 <input id="list-title" type="text" class="validate" ng-model="Address2" name="Address2" ng-pattern="address" required="required">
+                                                <label class="active"><font color="black">{{'Address2'|translate}} </font><span class="error" ng-show="adminbranchform.Address2.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                <span class="error" ng-show="adminbranchform.Address2.$error.pattern">{{'Pleaseentervalidaddress'|translate}}</span>
+
+                                            </div>
+
+                                             <div class="input-field col s3">
+                                                 <input id="list-title" type="email" class="validate" ng-model="email" name="email" required="required">
+                                                <!-- <label>Email</label> -->
+                                                 <label for="list-title" class="active"><font color="black">Email</font>  <span class="error" ng-show="adminbranchform.email.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+   <span class="error" ng-show="adminbranchform.email.$error.email">
+    {{'Notvalidemail'|translate}}</span>
+
+                                            </div>
+                                             <div class="input-field col s3">
+                                                
+                                                <input id="list-title1" type="text" class="validate number1" ng-model="paymentLimit" name="paymentLimit" required="required" ng-pattern="payementpattern">
+                                                <label for="last_name" class="active"><font color="black">{{'SIDE_PAYMENT_LIMIT'|translate}}</font> <span class="error" ng-show="adminbranchform.paymentLimit.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                              <span class="error" ng-show="adminbranchform.paymentLimit.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+                                            </div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="input-field col s3">
+                                                 
+                                                <input id="list-title" type="tel" class="validate" ng-model="telephone" name="telephone" ng-pattern="phoneNumberpattern" required="required" maxlength="15">
+                                                <label for="list-title" class="active"><font color="black">{{'SIDE_TELEPHONE'|translate}}</font><span class="error" ng-show="adminbranchform.telephone.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                
+                                                  <br><span class="error" ng-show="adminbranchform.telephone.$error.pattern">{{'PleasematchpatternCountryCode'|translate}}</span>
+                                            </div>
+                                             <div class="input-field col s3">
+                                                
+                                                                                       <input id="list-title" type="text" class="validate" ng-model="hoursOfWorkDaily" ng-pattern="workingpattern" name="hoursOfWorkDaily" required="required">
+                                                                <label for="list-title" class="active"><font color="black">{{'SIDE_WORKING_HOURS'|translate}}</font> <span class="error" ng-show="adminbranchform.hoursOfWorkDaily.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="adminbranchform.hoursOfWorkDaily.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+
+                                            </div>
+
+                                               <div class="input-field col s3">
+                                                 
+                                                <input id="list-title" type="text" class="validate" ng-model="fullName" required="required" ng-pattern="usernamepattern" name="fullName">
+                                                                <label for="list-title" class="active"><font color="black">{{'NameoftheInstitution'|translate}}</font><span class="error" ng-show="adminbranchform.fullName.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="adminbranchform.fullName.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+
+                                            </div>
+                                            <div class="input-field col s3">
+                                                 <input id="list-title" type="text" class="validate" ng-model="contact" name="contact" required="required" ng-pattern="usernamepattern" maxlength="70">
+                                                <label class="active"><font color="black">{{'ContactName'|translate}}</font><span class="error" ng-show="adminbranchform.contact.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                <span class="error" ng-show="adminbranchform.contact.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+
+                                                
+                                            </div>
+                                            </div>
+
+
+
+
+
+                                     <div class="row" align="right" style="margin-right: 16px;">
+
+                                     <button class="btn btn-success app-button" ng-click="addBranch();" id="addbtn">{{'SIDE_ADD'|translate}} </button>
+                                      <button type="button"role="button" class="btn btn-success app-button" ng-click="saveBranch();" id="savebtn" ng-init="hidesavebtn()" >{{'SIDE_SAVE'|translate}}</button>
+                                       <button type="button"role="button" class="btn btn-success app-button1" ng-click="resetBranch();" id="resetbtn" style="width: auto;">{{'SIDE_RESET'|translate}}</button>
+
+                                    </div>
+
+</form>
+<hr>
+
+
+                                    <div class="sb2-2-3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="box-inn-sp">
+                                <div class="tab-inn" style="border-style: solid;border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+                                  <table id="dtable1" class="display" cellspacing="0" width="100%">
+                                      <thead style="background-color: #269abc;">
+                                            <tr>
+                                            <th style="color: #ffffff;">S.N.</th>
+                                            <th style="color: #ffffff;">{{'SIDE_BRANCH_ID'|translate}}</th>
+                                            <th style="color: #ffffff;">{{'NameoftheInstitution'|translate}}</th>
+                                            <th style="color: #ffffff;">{{'SIDE_COUNTRY'|translate}}</th>
+
+                                              <th style="color: #ffffff;">{{'SIDE_TELEPHONE'|translate}}</th>
+
+                                                <th style="color: #ffffff;">Email</th>
+                                                 <th style="color: #ffffff;">{{'SIDE_PAYMENT_LIMIT'|translate}}</th>
+                                                  <th style="color: #ffffff;">{{'SIDE_WORKING_HOURS'|translate}}</th>
+                                                   <th style="color: #ffffff;">{{'SIDE_WORKING_DAYS'|translate}}</th>
+                                                   <th style="color: #ffffff;"> {{'SIDE_Enable_Disable'|translate}} </th>
+                                                   <th style="color: #ffffff;">{{'SIDE_EDIT'|translate}}</th>
+                                                   <th style="color: #ffffff;">{{'Delete'|translate}}</th>
+
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                          <tr style="height: 20px;" ng-repeat ="branch in branchdata track by $index">
+                              <td>{{$index+1}}</td>
+                              <td>{{branch.branchID}}</td>
+                              <td>{{branch.fullName}}</td>
+                               <td>{{branch.country}}</td>
+                                <td>{{branch.telephone}}</td>
+
+                                  <td>{{branch.email}}</td>
+                              <td>{{branch.paymentLimit}} </td>
+                                <td>{{branch.hoursOfWorkDaily}}</td>
+                                 <td>
+                                   <span>{{branch.workdays[0]}}</span>
+                                   <span>{{branch.workdays[1]}}</span>
+                                   <span>{{branch.workdays[2]}}</span></br>
+                                   <span>{{branch.workdays[3]}}</span>
+                                   <span>{{branch.workdays[4]}}</span>
+                                   <span>{{branch.workdays[5]}}</span>
+                                 </td>
+
+
+                                 <td>  <button type="button" role="button" class="btn btn-success app-button enablebranch"  ng-model="branch.isActive" ng-click="activeCheck(branch)">{{branch.isActive === false ? 'Disable' : 'Enable'}}</button> </td>
+                                 <td><a href="javascript:void(0);" ng-click="editBranch(branch);"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                                 <td><a href="javascript:void(0);" ng-click="deleteBranch(branch);"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+
+                          </tr>
+
+                                        </tbody>
+                                    </table>
+
+</div>
+                                </div>
+                                 <br><br>
+
+                                <!-- <div class="row" style="margin-left: 4px; margin-top: -15px;">
+
+                                                 <button type="button"role="button" class="btn btn-success app-button">
+                                              Save
+                                              </button>
+                                             <button type="button"role="button" class="btn btn-success app-button123">
+                                              Print
+                                              </button>
+
+                                            <button type="button"role="button" class="btn btn-success app-button1">
+                                              Reset
+                                              </button>
+
+                                    </div> -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>  <!-- sb2-2-2-->
+                    </div>
+
+                    <!--change supplier-->
+                    <div id="tabsNavigationSimple12345" class="tab-pane fade in">
+                        <div class="box-inn-sp">
+                            <div class="inn-title">
+                                <h4></h4>
+                                <p>{{'SupplierDetail'|translate}}</p>
+                            </div>
+                            <div class="bor">
+                                <form name="supervisorsupplier" id="supplierform">
+
+                                    <div class="row">
+                                        <div class="input-field col s3">
+                                          <input id="last_name" type="text"  class="validate" ng-model="supplierName" name="supplierName" required="required" ng-pattern="usernamepattern" required="required">
+                                                            <label for="list-title" class="active"><font color="black">{{'SIDE_FULL_NAME'|translate}}</font>  <span class="error" ng-show="supervisorsupplier.supplierName.$error.required"  style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                            <span class="error" ng-show="supervisorsupplier.supplierName.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}/span>
+                                        </div>
+                                        <div class="input-field col s3">
+                                            <input id="last_name" type="email"  class="validate" ng-model="supplierEmail" name="supplierEmail" required="required">
+                                                                                 <label for="list-title" class="active"><font color="black">Email  </font> <span class="error" ng-show="supervisorsupplier.supplierEmail.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                              <span class="error" ng-show="supervisorsupplier.supplierEmail.$error.email">
+                    {{'Notvalidemail'|translate}}</span>
+                                        </div>
+
+                                        <div class="input-field col s3">
+                                          <select  ng-model="superlierCountry" id="suplr">
+                                           <!--  <option value="" disabled ><font color="black">Country</font></option> -->
+                                            <option ng-repeat="loc in countrylist" value="{{loc.countryName}}" ng-selected="superlierCount =={{loc.countryName}}">{{loc.countryName}}</option>
+
+                                               </select>
+
+                                               <label for="list-title"><font color="black">{{'SIDE_COUNTRY'|translate}}</font></label>
+                                        </div>
+                                         <div class="input-field col s3">
+
+                                            <input id="list-title" type="text" class="validate" ng-model="suplierContact" name="suplierContact" ng-pattern="phoneNumbr" required="required" maxlength="13">
+                                            <label for="list-title" class="active"><font color="black">{{'SIDE_CONTACT_WITH_COUNTRY_CODE'|translate}}</font>  <span class="error" ng-show="supervisorsupplier.suplierContact.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                              
+                                              <br><span class="error" ng-show="supervisorsupplier.suplierContact.$error.pattern">{{'PleasematchpatternCountryCode'|translate}}</span>
+
+                                        </div>
+                                        </div>
+                                       
+
+                                </form>
+
+
+
+                                 <div class="row" align="right" style="margin-right: 16px;">
+
+                                           <button type="button"role="button" class="btn btn-success app-button" ng-click="addSupplier();" id="addbtn12345">
+                                          {{'SIDE_ADD'|translate}}
+
+                                          </button>
+                                          <button type="button"role="button" class="btn btn-success app-button" ng-click="updateSupplier();" id="savebtn12345" ng-init="hidesavebtn()">
+                                          {{'SIDE_SAVE'|translate}}
+                                          </button>
+
+                                        <button type="button"role="button" class="btn btn-success app-button1"  ng-click="resetSupplier();" id="resetbtn12345" style="width: auto;">
+                                          {{'SIDE_RESET'|translate}}
+                                          </button>
+
+                                </div>
+                                <hr>
+
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="box-inn-sp">
+
+                                                    <div class="tab-inn" style="border-style: solid;
+                    border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+
+                                                        <table id="dtable22" class="display" cellspacing="0" width="100%">
+                                                                <thead style="background-color: #269abc;">
+                                                                <tr>
+                                                                    <th style="color: #ffffff;">S.N</th>
+                                                                    <th style="color: #ffffff;">{{'SupplierCode'|translate}}</th>
+                                                                    <th style="color: #ffffff;">{{'SupplierName'|translate}}</th>
+                                                                    <th style="color: #ffffff;">Email</th>
+                                                                    <th style="color: #ffffff;">{{'country'|translate}}</th>
+                                                                    
+                                                                    <th style="color: #ffffff;">{{'SIDE_CONTACT'|translate}}</th>
+                                                                    <th style="color: #ffffff;">{{'SIDE_Enable_Disable'|translate}}</th>
+                                                                    <th style="color: #ffffff;">{{'SIDE_EDIT'|translate}}</th>
+                                                                    <th style="color: #ffffff;">{{'Delete'|translate}}</th>
+
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody>
+                                                                <tr ng-repeat ="suplier in suplierDetails track by $index">
+                                                                    <td>{{$index+1}}</td>
+                                                                    <td>{{suplier.supplierCode}}</td>
+                                                                    <td>{{suplier.supplierName}}</td>
+                                                                    <td>{{suplier.email}}</td>
+                                                                    <td>{{suplier.country}}</td>
+                                                                    
+                                                                    <td>{{suplier.contact}}</td>
+                                                                  <td>  <button type="button" role="button" class="btn btn-success app-button enablesuper"  ng-model="suplier.isActive" ng-click="suplieractiveCheck(suplier)">{{suplier.isActive === false ? 'Disable' : 'Enable'}}</button> </td>
+
+                                                  <td><a href="javascript:void(0);" ng-click="editSupplier(suplier);"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                                                  <td><a href="javascript:void(0);" ng-click="deleteSupplier(suplier);"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+
+                                                    </div>
+                                                    <br>
+
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+
+                                <div class="row">
+                                </div>
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- change supplier-->
+
+                    <!--change -->
+
+                                            <div id="tabsNavigationSimple77" class="tab-pane fade ">
+                                              <div class="box-inn-sp">
+                                                  <div class="inn-title">
+                                                      <h4></h4>
+                                                      <p>{{'CountryAddDetail'|translate}}</p>
+                                                  </div>
+                                                  <div class="bor">
+                                                      <form name="currencyadd">
+                                                          <div class="row" id="">
+                                                              <div class="input-field col s3">
+                                                                <input id="list-title" type="text" class="validate" ng-model ="countryName"  name="countryName" ng-pattern ="workingdays">
+                                                                <label class="active"><font color="black"> {{'SIDE_COUNTRY'|translate}}</font> <span class="error" ng-show="currencyadd.countryName.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                              <span class="error" ng-show="currencyadd.countryName.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+                                                              </div>
+                                                               <div class="input-field col s3">
+                                                                 <input id="list-title" type="text" class="validate" ng-model ="currencyName" name="currencyName" ng-pattern ="workingdays">
+                                                                 <label class="active"> <font color="black">{{'Currency'|translate}} </font><span class="error" ng-show="currencyadd.currencyName.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                              <span class="error" ng-show="currencyadd.currencyName.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+                                                              </div>
+                                                              </div>
+                                                              <div class="row">
+
+
+                                                              <div class="row" align="right" style="margin-right:185px;margin-top:-50px;">
+
+                                                                   <button type="button"role="button" class="btn btn-success app-button" ng-click="createCountryCurrency()"  id="addbtn12345678">
+                                                                {{'SIDE_ADD'|translate}}
+                                                                </button>
+                                                                <button type="button"role="button" class="btn btn-success app-button" ng-click="updateSupplier();" id="savebtn12345678" ng-init="hidesavebtn()">
+                                          {{'SIDE_SAVE'|translate}}
+                                          </button>
+                                                                <button type="button"role="button" class="btn btn-success app-button1"  ng-click="resetCountryCurrency();" style="width: auto;" id="resetbtn12345678" >
+                                              {{'SIDE_RESET'|translate}}
+                                              </button>
+
+                                                              </div>
+                                                              </form>
+                                                              <hr>
+
+
+                                                              <div class="row">
+                                                                  <div class="col-md-12">
+                                                                      <div class="box-inn-sp">
+
+                                                                          <div class="tab-inn" style="border-style: solid;
+                      border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+
+                                                                    <table id="dtable445" class="display" cellspacing="0" width="100%">
+                                                                        <thead style="background-color: #269abc;">
+                                                                        <tr>
+                                                                        <th style="color: #ffffff;">S.N</th>
+                                                                        <th style="color: #ffffff;">{{'SIDE_COUNTRY'|translate}}</th>
+                                                                        <th style="color: #ffffff;"> {{'Currency'|translate}} </th>
+                                                                         <th style="color: #ffffff;">{{'SIDE_EDIT'|translate}}</th>
+                                                                        <th style="color: #ffffff;"> {{'Delete'|translate}} </th>
+
+                                                                          </tr>
+                                                                      </thead>
+
+                                                                                  <tbody>
+                                                                                    <tr ng-repeat ="country in countrycurrencylist track by $index">
+                                                                                         <td>{{$index+1}}</td>
+                                                                                          <td>{{country.countryName}}</td>
+                                                                                          <td>{{country.currencyName}}</td>
+                                                                                           <td><a href="javascript:void(0);" ng-click="editcountrycurrency(country);"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                                                  <td><a href="javascript:void(0);" ng-click="deletecountrycurrency(country);"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+
+                                                                                      </tr>
+
+
+                                                                                  </tbody>
+                                                                              </table>
+
+                                                                          </div>
+
+
+
+
+                                                                      </div>
+
+                                                                  </div>
+
+                                                              </div>
+
+
+
+                                                  </div>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                    <!--change -->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

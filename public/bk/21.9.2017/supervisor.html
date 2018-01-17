@@ -1,0 +1,2273 @@
+
+     <style>
+        .in{padding-right: 0px !important;}
+        .error {
+   color: red;
+ }
+
+    </style>
+
+</head>
+
+<body>
+    <!--== MAIN CONTRAINER ==-->
+    <div class="container-fluid sb1" >
+        <div class="row" style="height: 60px;">
+            <!--== LOGO ==-->
+            <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+                <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <a href="#" class="atab-menu"><i class="fa fa-bars tab-menu" aria-hidden="true"></i></a>
+                <!-- <a href="index-2.html" class="logo"><img src="/assets/images/logo1.png" alt="" />
+                </a> -->
+            </div>
+            <!--== SEARCH ==-->
+
+            <!--== MY ACCCOUNT ==-->
+            
+        </div>
+    </div>
+
+    <!--== BODY CONTNAINER ==-->
+    <div class="container-fluid sb2" style="">
+        <div class="row">
+            <div class="sb2-1" style= "overflow:scroll; position:fixed ">
+                <!---- USER INFO ==-->
+                <div class="sb2-12" align="center">
+                    <ul>
+
+                        <li>
+                            <h5>{{'Welcome'|translate}} :{{tokendata.name}} </h5>
+                        </li>
+
+                        <br>
+
+                        <span style="font-size: 12px;">Email:</span><i>{{tokendata.email}}</i></br>
+                        <span style="font-size: 12px;"> {{'SupervisorID'|translate}}:</span>  <i>{{tokendata.supervisiorID}}</i><br>
+                        <span style="font-size: 12px;">{{'SIDE_BRANCH_ID'|translate}}:<i> {{tokendata.branchID}}</i> </span>
+
+                    </ul>
+                </div>
+                <!--== LEFT MENU ==-->
+                <div class="sb2-13" style="height:100% ">
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <!-- <li><a href="javascript:void(0);" ><i class="fa fa-bar-chart" aria-hidden="true"></i><b> {{'MENU_DASHBOARD'|translate}}</b></a>
+                        </li> -->
+                        <li class="teller123"><a ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple2" data-toggle="tab" class=" "><i class="fa fa-snowflake-o" aria-hidden="true"></i> <b>{{'MENU_TELLER'|translate}}</b></a>
+
+                        </li>
+
+                        <li class="kyc123"><a ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple4" data-toggle="tab" class=""><i class="fa fa-address-card" aria-hidden="true"></i> <b>KYC</b></a>
+
+                        </li>
+                        <li class=" user123"><a ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple5" data-toggle="tab" class=""><i class="fa fa-user-circle-o" aria-hidden="true"></i> <b>{{'MENU_REMITTER'|translate}}</b></a>
+
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple20"><i class="fa fa-user-circle-o" aria-hidden="true"></i><span><b>{{'MENU_BENEFICIARY'|translate}}</b></span></a>
+                       </li>
+                        <li class="report123"><a ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple6" data-toggle="tab" class=" "><i class="fa fa-file-image-o" aria-hidden="true"></i> <b>{{'SIDE_REPORTS'|translate}}</b></a>
+
+                        </li>
+ <li class=" limit123"><a ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple7" data-toggle="tab" class=""><i class="fa fa-globe" aria-hidden="true"></i> <b>{{'SIDE_COUNTRY_LIMIT'|translate}} </b></a>
+
+
+                        </li>
+                        <li class="controller123"><a ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple8" data-toggle="tab" class=" controller123"><i class="fa fa-hdd-o" aria-hidden="true"></i> <b>{{'SIDE_CONTROLLER'|translate}}</b></a>
+
+
+                        </li>
+                        <li><a ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple99" data-toggle="tab" class=""><i class="fa fa-credit-card" aria-hidden="true" ></i> <b>{{'SIDE_Reimbursement'|translate}}</b></a>
+
+
+                        </li>
+                          <li class ="tariff123"><a ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple10" data-toggle="tab" class=" "><i class="fa fa-usd" aria-hidden="true"></i> <b>Tariff</b></a>
+
+
+                        </li>
+                          <li class=" commission123"><a ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple11" data-toggle="tab" class=" "><i class="fa fa-share-alt-square" aria-hidden="true"></i> <b>{{'SIDE_COMMISSION_SHARING'|translate}}</b></a>
+
+
+                        </li>
+                            <li class="closed"><a href="javascript:void(0)" class=""><i class="fa fa-language" aria-hidden="true"></i> <b>{{'MENU_LANGUAGE' |translate}}</b></a>
+                           <ul>
+                             <li ng-click="changeLanguage('de')"><a href="">{{ 'BUTTON_LANG_DE' | translate }}</a>
+                             </li>
+                             <li ng-click="changeLanguage('en')"><a href="">{{ 'BUTTON_LANG_EN' | translate }}</a>
+                             </li>
+                           </ul>
+                         </li>
+
+                         <li ><a href="javascript:void(0);" class="" ng-click="supervisorLogout();"><i class="fa fa-sign-in" aria-hidden="true"></i><b> {{'MENU_Logout' | translate}}</b></a>
+
+                            </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="sb2-2">
+                <!-- <div class="sb2-2-2">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        </li>
+                        <li class="active-bre"><a href="#"> Tariffs</a>
+                        </li>
+                    </ul>
+                </div> -->
+                <div class="sb2-2-add-blog sb2-2-1">
+                    <h2></h2>
+                    <br>
+
+                   <!--  <ul class="nav nav-tabs tab-list">
+
+
+                        <li class="active teller123"><a data-toggle="tab"  ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple2" ><i class="fa fa-snowflake-o" aria-hidden="true"></i> <span>Teller</span></a>
+                        </li>
+
+                        <li class="kyc123"><a data-toggle="tab" ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple4" ><i class="fa fa-address-card" aria-hidden="true" style="padding-right:15px;"></i><span>KYC</span></a>
+                        </li>
+                     <li class="user123"><a data-toggle="tab" ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple5" ><i class="fa fa-user-circle-o" aria-hidden="true"></i> <span>Remitter</span></a>
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple20"><i class="fa fa-user-circle-o" aria-hidden="true"></i><span><b>Beneficiary</b></span></a>
+                       </li>
+
+                        <li  class="report123"><a data-toggle="tab" ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple6"><i class="fa fa-file-image-o" aria-hidden="true"></i> <span>Reports</span></a>
+                        </li>
+                      <li class="limit123"><a data-toggle="tab" ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple7" ><i class="fa fa-globe" aria-hidden="true"></i> <span>Country Limit </span></a>
+                        </li>
+
+                     <li  class="controller123"><a data-toggle="tab" ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple8"><i class="fa fa-hdd-o" aria-hidden="true"></i> <span>Controller</span></a>
+                        </li>
+                     <li><a data-toggle="tab" ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple99" ><i class="fa fa-credit-card" aria-hidden="true" style="padding-right:15px;"></i><span>Reimbursement</span></a>
+                        </li>
+                        <li class="tariff123"><a data-toggle="tab" ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple10" ><i class="fa fa-usd" aria-hidden="true"></i> <span>Tariff</span></a>
+                        </li>
+                        <li  class="commission123"><a data-toggle="tab" ng-href="http://localhost:3000/#/superdashboard#tabsNavigationSimple11"><i class="fa fa-share-alt-square" aria-hidden="true"></i> <span>Commission Sharing</span></a>
+                        </li>
+                    </ul>
+ -->
+                    <div class="tab-content">
+                        <div id="home">
+                            <div class="box-inn-sp">
+
+                            </div>
+                        </div>
+
+
+
+                        <div id="tabsNavigationSimple2" class="tab-pane fade in active">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>{{'TellerDetail'|translate}}</p>
+                                </div>
+                                <div class="bor">
+                                    <form name="supertellerform" id="tellerform" >
+                                        <div class="row">
+                                              <div class="input-field col s3 hideteller">
+
+
+                                                 <select ng-model="tellerid" id="tell" ng-change="getpayment(tellerid);" ng-options="value as value for (key,value) in telleriddata2" material-select watch>
+
+                                                 </select>
+
+                                                <label for="list-title"><font color="black">{{'TellerID'|translate}}</font></label>
+                                            </div>
+                                            <div class="input-field col s3 telleridhide" style="display:none;" >
+                                                <input id="list-title" type="text" class="validate" disabled value="{{tellerid}}" style="color: #444">
+                                                <label for="list-title" class="active"><font color="black">{{'TellerID'|translate}}</font></label>
+                                            </div>
+
+                                            <div class="input-field col s3">
+                                                <input id="list-title" type="email" class="validate" ng-model="telleremail" name="telleremail" required="required">
+                                                <label for="list-title" class="active"><font color="black">Email</font>
+                                                  <span class="error" ng-show="supertellerform.telleremail.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="supertellerform.telleremail.$error.email">
+                                                                  {{'Notvalidemail'|translate}}</span>
+                                            </div>
+
+                                            <div class="input-field col s3">
+                                                <input id="list-title" type="text" class="validate" ng-model="tellername" name="tellername" >
+                                                 <label for="list-title" class="active"><font color="black">{{'SIDE_FULL_NAME'|translate}}</font> <span class="error" ng-show="supertellerform.tellername.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="supertellerform.tellername.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+                                            </div>
+                                            <div class="input-field col s3">
+                                                <input id="list-title1" type="text" class="validate number" ng-model="tellerlimit" name="tellerlimit" value="{{tellerlimit}}">
+                                                <label for="last_name" class="active"><font color="black">{{'SIDE_PAYMENT_LIMIT_PER_MONTH'|translate}}</font><span class="error" ng-show="supertellerform.tellerlimit.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                              <span class="error" ng-show="supertellerform.tellerlimit.$error.pattern">{{'Pleaseenteralnumberonly'|translate}} </span>
+                                            </div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="input-field col s3">
+                                                <input id="list-title" type="text" class="validate" ng-model="tellercontact" name="tellercontact"  ng-pattern="phoneNumberpattern" maxlength="14">
+                                                <label for="list-title" class="active"><font color="black">{{'SIDE_CONTACT_WITH_COUNTRY_CODE'|translate}}</font>  <span class="error" ng-show="supertellerform.tellercontact.$error.required" style="float:right;padding-right: 20px;font-size: 10px" >*</span></label>
+
+
+                                                  <br><span class="error" ng-show="supertellerform.tellercontact.$error.pattern">{{'PleasematchpatternCountryCode'|translate}}</span>
+                                            </div>
+                                           <!--  <div class="input-field col s3">
+                                                <input id="list-title" type="text" class="validate" ng-model="logintime">
+
+                                                <label for="list-title" class="active"><font color="black">{{'SIDE_LOGIN_TIME_ALLOW'|translate}}</font></label>
+                                            </div> -->
+
+                                            <div class="input-field col s3">
+                                                <input id="list-title" type="text" class="validate" ng-model="telleraddress" name="telleraddress" >
+                                                                <label for="list-title" class="active"> <font color="black">{{'SIDE_ADDRESS1'|translate}} </font> <span class="error" ng-show="supertellerform.telleraddress.$error.required" style="float:right;padding-right: 20px;font-size: 10px" >*</span></label>
+                                                                <span class="error" ng-show="supertellerform.telleraddress.$error.pattern">{{'Pleaseentervalidaddress'|translate}}</span>
+                                            </div>
+                                             <div class="input-field col s3" style="margin-top: -5px;">
+                                                 <span><font color="black"><b>{{'LoginTime'|translate}}</b><small> (24hours format)</small></font></span>
+                                                 <input type="time" id="list-title" name="input" ng-model="logintime"
+                                                 placeholder="HH:mm:ss" min="01:00:00" max="24:00:00" class="validate"/>
+
+                                            </div>
+                                            <div class="input-field col s3" style="margin-top: -5px;">
+                                               <span><font color="black"><b>{{'LogoutTime'|translate}}</b><small> (24hours format)</small></font></span>
+                                               <input type="time" id="list-title" name="input" ng-model="logouttime"
+                                               placeholder="HH:mm:ss" min="01:00:00" max="24:00:00" class="validate"/>
+
+                                            </div>
+                                            </div>
+
+                                     <div class="row" align="right" style="margin-right: 16px;margin-top:0px">
+
+                                               <button type="button"role="button" class="btn btn-success app-button"  ng-click="createTeller();" id="addbtn">
+                                              {{'SIDE_ADD'|translate}}
+
+                                              </button>
+                                              <button type="button"role="button" class="btn btn-success app-button" ng-click="updateTeller();" id="savebtn" ng-init="hidesavebtn()">
+                                              {{'SIDE_SAVE'|translate}}
+                                              </button>
+
+                                            <button type="button"role="button" class="btn btn-success app-button1"  ng-click="resetTeller();" id="resetbtn" style="width: auto;">
+                                              {{'SIDE_RESET'|translate}}
+                                              </button>
+                                              <button type="button"role="button" class="btn btn-success app-button" ng-click="cancelTeller();" id="canceltellerbtn" ng-init="hidesavebtn()" >{{'Cancel'|translate}}</button>
+
+                                    </div>
+                                    </form>
+                                            <hr>
+
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="box-inn-sp">
+                                                    <div class="input-group serch-wrap" style="box-sizing: border-box;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;background-color: white;">
+        <div class="input-group-addon search-icon"><i class="fa fa-search"></i></div>
+        <input type="text" class="form-control search-text" placeholder="Search.." ng-model="searchtellerlist">
+      </div><hr>
+
+                                                        <div class="tab-inn" style="border-style: solid;
+    border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+    
+
+                                                        <table  class="display table striped" cellspacing="0" width="100%">
+                                                                <thead>
+                                                                    <tr>
+                                                                      <td>
+                                                                       <a href="" ng-click="sortType = 'tellerID'; sortReverse = !sortReverse">
+                                                                        <b>{{'TellerID'|translate}}</b>
+                                                                        <span ng-show="sortType == 'tellerID' && !sortReverse" class="fa fa-caret-down"></span>
+                                                                        <span ng-show="sortType == 'tellerID' && sortReverse" class="fa fa-caret-up"></span>
+                                                                      </a>
+                                                                    </td>
+                                                                    <td>
+                                                                     <a href="" ng-click="sortType = 'email'; sortReverse = !sortReverse">
+                                                                      <b>Email</b>
+                                                                      <span ng-show="sortType == 'email' && !sortReverse" class="fa fa-caret-down"></span>
+                                                                      <span ng-show="sortType == 'email' && sortReverse" class="fa fa-caret-up"></span>
+                                                                    </a>
+                                                                  </td>
+                                                                  <td>
+                                                                   <a href="" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+                                                                    <b>{{'Name'|translate}}</b>
+                                                                    <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+                                                                    <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+                                                                  </a>
+                                                                </td>
+                                                                <td>
+                                                                 <a href="" ng-click="sortType = 'paymentLimit'; sortReverse = !sortReverse">
+                                                                  <b>{{'SIDE_CASH_PAYMENT_LIMIT'|translate}}</b>
+                                                                  <span ng-show="sortType == 'paymentLimit' && !sortReverse" class="fa fa-caret-down"></span>
+                                                                  <span ng-show="sortType == 'paymentLimit' && sortReverse" class="fa fa-caret-up"></span>
+                                                                </a>
+                                                              </td>
+                                                              <td>
+                                                               <a href="" ng-click="sortType = 'phone'; sortReverse = !sortReverse">
+                                                                <b>{{'SIDE_CONTACT'|translate}}</b>
+                                                                <span ng-show="sortType == 'phone' && !sortReverse" class="fa fa-caret-down"></span>
+                                                                <span ng-show="sortType == 'phone' && sortReverse" class="fa fa-caret-up"></span>
+                                                              </a>
+                                                            </td>
+                                                            <td>
+                                                             <a href="" ng-click="sortType = 'address'; sortReverse = !sortReverse">
+                                                              <b>{{'SIDE_ADDRESS1'|translate}}</b>
+                                                              <span ng-show="sortType == 'address' && !sortReverse" class="fa fa-caret-down"></span>
+                                                              <span ng-show="sortType == 'address' && sortReverse" class="fa fa-caret-up"></span>
+                                                            </a>
+                                                          </td>
+                                                          <td><b>{{'SIDE_LOGIN_TIME_ALLOW'|translate}}</b></td>
+                                                          <td><b>{{'SIDE_MAC_ADDRESS'|translate}}</b></td>
+
+                                                            <td><b> {{'SIDE_Enable_Disable'|translate}}</b></td>
+                                                            <td><b>{{'SIDE_EDIT'|translate}}</b></td>
+                                                            <td><b>{{'Delete'|translate}}</b></td>
+
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+                                                                    <tr ng-repeat ="tellerinfo in tellerDetails  | orderBy:sortType:sortReverse | filter: searchtellerlist |startFrom:currentPageteller*pageSizeteller | limitTo:pageSizeteller ">
+
+                                                                        <td>{{tellerinfo.tellerID}}</td>
+                                                                        <td>{{tellerinfo.email| decodeHtmlEntity | stripslashes }}</td>
+                                                                        <td>{{tellerinfo.name| decodeHtmlEntity | stripslashes }}</td>
+                                                                        <td>{{tellerinfo.paymentLimit}}</td>
+                                                                        <td>{{tellerinfo.phone}}</td>
+                                                                          <td>{{tellerinfo.address| decodeHtmlEntity | stripslashes }}</td>
+                                                                        <td>{{tellerinfo.startTime + "--" +tellerinfo.endTime}} </td>
+                                                                        <td>{{tellerinfo.tellermac}}</td>
+                                                                        <td>  <button type="button" role="button" class="btn btn-success app-button enabletellerid"  ng-model="tellerid.isActive" ng-click="telleractiveCheck(tellerinfo)">{{tellerinfo.isActive === false ? 'Disable' : 'Enable'}}</button> </td>
+                                                                         <td><a href="javascript:void(0);" ng-click="editTeller(tellerinfo);"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                                                                         <td><a href="javascript:void(0);" ng-click="deleteTeller(tellerinfo);"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+
+                                                                    </tr>
+
+
+
+                                                                </tbody>
+                                                            </table>
+                                                            <hr>
+                                                            <button ng-disabled="currentPageteller == 0" ng-click="currentPageteller=currentPageteller-1">
+                                                               Previous
+                                                           </button>
+                                                           {{currentPageteller+1}}/{{numberOfPagesteller()}}
+                                                           <button ng-disabled="currentPageteller >= tellerDetails.length/pageSizeteller - 1" ng-click="currentPageteller=currentPageteller+1">
+                                                               Next
+                                                           </button>
+
+                                                        </div>
+                                                        <br>
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                        <!-- </div> -->
+
+                                        <br>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+<!--
+                        <div id="menu5" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>Paying Supervisor</p>
+                                </div>
+                                <div class="bor">
+                                    <form>
+                                        <div class="row">
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s6">
+                                                <input id="last_name" type="text" value="#457845" class="validate">
+                                                <label for="last_name"><font color="black">Code</font></label>
+                                                <input type="submit" class="waves-effect waves-light btn-large" value="Find Supervisor">
+
+                                            </div>
+
+                                        </div>
+                                        <br>
+
+                                        <div class="row">
+                                            <div class="input-field col s3">
+                                                <input id="last_name" type="text" value="#41245DG" class="validate">
+                                                <label for="last_name"><font color="black">Invoice Number</font></label>
+
+                                            </div>
+                                            <div class="input-field col s3">
+                                                <input id="last_name" type="date" value="17-05-2017" class="validate">
+                                                <label for="last_name"><font color="black">Date</font></label>
+
+                                            </div>
+                                            <div class="input-field col s3">
+                                                <input id="last_name" type="text" value="10000" class="validate">
+                                                <label for="last_name"><font color="black">Amount</font></label>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="inn-title">
+                                                <h4></h4>
+                                                <p>Account Number Of The Supervisor To pay (Remitter)</p>
+                                            </div>
+                                        </div>
+                                        <br>
+
+                                        <div class="row">
+                                            <div class="input-field col s3">
+                                                <input id="last_name" type="text" value="" class="validate">
+                                                <label for="last_name"><font color="black">Name Of The Remitter</font></label>
+
+                                            </div>
+
+                                            <div class="input-field col s3" align="left">
+                                                <input id="last_name" type="text" value="" class="validate">
+                                                <label for="last_name"><font color="black">Contact</font></label>
+
+                                            </div>
+
+                                            <input type="submit" class="waves-effect waves-light btn-large" style="    margin-top: 6px;
+    margin-left: 129px;" value="Search Invoice" align="right">
+                                            <input type="submit" class="waves-effect waves-light btn-large" value="Pay & Print Reciept" align="right" style="background-color: #089208;">
+
+                                        </div>
+
+                                    </form>
+
+                                    <br>
+
+                                    <div class="row">
+                                    </div>
+
+
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+
+                             <!--    </div>
+                            </div>
+                        </div>  -->
+
+                        <div id="tabsNavigationSimple3" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>Supplier Detail</p>
+                                </div>
+                                <div class="bor">
+                                    <form name="supervisorsupplier" id="supplierform">
+
+                                        <div class="row">
+                                            <div class="input-field col s3">
+                                              <input id="last_name" type="text"  class="validate" ng-model="supplierName" name="supplierName" required="required"  required="required">
+                                                                <label for="list-title"><font color="black">Full Name</font>  <span class="error" ng-show="supervisorsupplier.supplierName.$error.required"  style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="supervisorsupplier.supplierName.$error.pattern">Please enter alphabet only</span>
+                                            </div>
+                                            <div class="input-field col s3">
+                                                <input id="last_name" type="email"  class="validate" ng-model="supplierEmail" name="supplierEmail" required="required">
+                                                                                     <label for="list-title"><font color="black">Email  </font> <span class="error" ng-show="supervisorsupplier.supplierEmail.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                  <span class="error" ng-show="supervisorsupplier.supplierEmail.$error.email">
+    Not valid email!</span>
+                                            </div>
+
+                                            <div class="input-field col s3">
+                                              <select  ng-model="superlierCountry" id="suplr">
+                                                <option value="" disabled ><font color="black">Country</font></option>
+                                                <option ng-repeat="loc in countrylist" value="{{loc.countryName}}" ng-selected="superlierCount =={{loc.countryName}}">{{loc.countryName}}</option>
+
+                                                   </select>
+
+                                                   <!-- <label for="list-title">Country</label> -->
+                                            </div>
+                                            <div class="input-field col s3">
+                                                 <input id="list-title" type="text" class="validate" ng-model="superlierRegion" required="required"  name="superlierRegion">
+                                                                <label for="list-title"><font color="black">Region </font> <span class="error" ng-show="supervisorsupplier.superlierRegion.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="supervisorsupplier.superlierRegion.$error.pattern">Please enter alphabet only</span>
+                                            </div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="input-field col s3">
+
+                                                <input id="list-title" type="text" class="validate" ng-model="suplierContact" name="suplierContact" ng-pattern="phoneNumbr" required="required" maxlength="13">
+                                                <label for="list-title"><font color="black">Contact with CountryCode</font>  <span class="error" ng-show="supervisorsupplier.suplierContact.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                  <span class="error" ng-show="supervisorsupplier.suplierContact.$error.minlength">Phone no not less that 10 char.</span>
+                                                  <span class="error" ng-show="supervisorsupplier.suplierContact.$error.maxlength">Phone no not more than 11 char.</span>
+                                                  <br><span class="error" ng-show="supervisorsupplier.suplierContact.$error.pattern">Please match pattern [CountryCode+MobileNumber]</span>
+
+                                            </div>
+                                            </div>
+
+                                    </form>
+
+
+
+                                     <div class="row" align="right" style="    margin-right: 16px;">
+
+                                               <button type="button"role="button" class="btn btn-success app-button" ng-click="addSupplier();" id="addbtn1">
+                                              Add
+
+                                              </button>
+                                              <button type="button"role="button" class="btn btn-success app-button" ng-click="updateSupplier();" id="savebtn1" ng-init="hidesavebtn()">
+                                              Save
+                                              </button>
+
+                                            <button type="button"role="button" class="btn btn-success app-button1"  ng-click="resetSupplier();" id="resetbtn1">
+                                              Reset
+                                              </button>
+
+                                    </div>
+                                    <hr>
+
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="box-inn-sp">
+
+                                                        <div class="tab-inn" style="border-style: solid;
+    border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+
+                                                           
+
+                                                        </div>
+                                                        <br>
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                    <div class="row">
+                                    </div>
+                                    </form>
+
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tabsNavigationSimple4" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>KYC</p>
+                                </div>
+                                <div class="">
+                                    <form>
+
+                                        <div class="row">
+
+                                        </div>
+
+                                    </form>
+
+                                    <div class="">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="box-inn-sp">
+                                                   <div class="bor1">
+                                                    <div class="tab-inn" style="border-style: solid;border-color: rgba(45, 58, 64, 0.04);">
+                                                      <div class="input-group serch-wrap" style="box-sizing: border-box;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;background-color: white;">
+       <div class="input-group-addon search-icon"><i class="fa fa-search"></i></div>
+       <input type="text" class="form-control search-text" placeholder="Search.." ng-model="searchkyclist">
+     </div><hr>
+                                                      <table  class="display table striped" cellspacing="0" width="100%">
+                                                         <thead>
+                                                                <tr>
+                                                                  <td >
+                                                                   <a href="" ng-click="sortType = 'remittername'; sortReverse = !sortReverse">
+                                                                    <b>{{'Name'|translate}} </b>
+                                                                    <span ng-show="sortType == 'remittername' && !sortReverse" class="fa fa-caret-down"></span>
+                                                                    <span ng-show="sortType == 'remittername' && sortReverse" class="fa fa-caret-up"></span>
+                                                                  </a>
+                                                                </td>
+                                                                <td>
+                                                                 <a href="" ng-click="sortType = 'region'; sortReverse = !sortReverse">
+                                                                  <b>{{'Region'|translate}} </b>
+                                                                  <span ng-show="sortType == 'region' && !sortReverse" class="fa fa-caret-down"></span>
+                                                                  <span ng-show="sortType == 'region' && sortReverse" class="fa fa-caret-up"></span>
+                                                                </a>
+                                                              </td>
+                                                              <td>
+                                                               <a href="" ng-click="sortType = 'issueCountry'; sortReverse = !sortReverse">
+                                                                <b>{{'country'|translate}} </b>
+                                                                <span ng-show="sortType == 'issueCountry' && !sortReverse" class="fa fa-caret-down"></span>
+                                                                <span ng-show="sortType == 'issueCountry' && sortReverse" class="fa fa-caret-up"></span>
+                                                              </a>
+                                                            </td>
+
+
+
+                                                                    <td><b>Action</b></td>
+                                                                    <td><b>{{'RemoveBlacklist'|translate}}</b></td>
+
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody>
+                                                                <tr ng-repeat ="remit in remitterDetails | orderBy:sortType:sortReverse | filter: searchkyclist|startFrom:currentPageKYC*pageSizeKYC | limitTo:pageSizeKYC">
+
+
+                                                                    <td>{{remit.remittername +" "+ remit.remittersurName | decodeHtmlEntity | stripslashes}}</td>
+                                                                    <td>{{remit.region | decodeHtmlEntity | stripslashes}}</td>
+                                                                    <td>{{remit.issueCountry | decodeHtmlEntity | stripslashes}}</td>
+                                                                    <td><span class="label label-success" data-toggle="modal" data-target="#smallModal" ng-click="transaction_history(remit.remittername,remit.remittersurName)">{{'TransactionHistory'|translate}}</span></td>
+                                                                    <!--<td><button class="label label-success" data-toggle="modal" data-target="#smallModal" ng-click="transaction_history(remit.remittername,remit.remittersurName)">Transaction History</button></td>-->
+                                                                       <td><a href="javascript:void(0);" ng-click="deleteBlacklist(remit);"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+
+                                                                </tr>
+
+
+
+                                                            </tbody>
+                                                        </table>
+                                                        <hr>
+                                                        <button ng-disabled="currentPageKYC == 0" ng-click="currentPageKYC=currentPageKYC-1">
+                                             Previous
+                                         </button>
+                                         {{currentPageKYC+1}}/{{numberOfPagesKYC()}}
+                                         <button ng-disabled="currentPageKYC >= remitterDetails.length/pageSizeKYC - 1" ng-click="currentPageKYC=currentPageKYC+1">
+                                             Next
+                                         </button>
+
+
+    <div id="smallModal" class="modal modal-fixed-footer" style="width: 50%; ">
+
+                                            <div class="modal-header" style="background-color: white;padding: 0px !important; height:55px;" >
+                                                <button type="button" role="button" class="btn btn-success blacklist" ng-click="blacklistadd()">
+                                                 {{'AddtoBlacklist'|translate}}
+                                                    </button>
+
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-right:10px; padding:5px; margin-top:-7px;">&times; </button>
+           <img src="/assets/images/transactions.png" style="width:50px; height:40px; margin-left:300px; align:center; margin-top:-50px;">
+              <div style="margin-left:270px; margin-top:-26px; padding:3px;" > <b>{{'TransactionHistory'|translate}}</b></div>
+          </div>
+          <div class="modal-content">
+
+
+           <table data-editable data-editable-spy class="responsive-table striped table" style="z-index:-10;    width: 600px;
+          height: 100px;
+          padding: 5px;
+          border: 1px solid grey;
+          box-sizing: border-box;" ng-repeat ="kyc in kyctransaction  track by $index" >
+          <thead>
+
+              <tr>
+                  <th colspan="3">{{'TransactionNumber'|translate}}</th>
+                  <td style="text-align: center"> {{kyc.transactionNumber}}</td>
+
+              </tr>
+          </thead>
+          <tbody>
+
+
+
+        <tr>
+            <th colspan="3">{{'Date'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.transactionDate |date:'dd/MM/yyyy'}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'SIDE_BRANCH_ID'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.branchID| decodeHtmlEntity | stripslashes}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'TellerID'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.tellerID.tellerID}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'MENU_REMITTER'|translate}}</th>
+
+            <td style="text-align: center" class="col-md-3"> {{kyc.remittername +" "+ kyc.remittersurName| decodeHtmlEntity | stripslashes}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'RemitterAddress'|translate}}</th>
+
+            <td style="text-align: center" class="col-md-3"> {{kyc.remitteraddress| decodeHtmlEntity | stripslashes}} </td>
+
+        </tr>
+          <tr>
+            <th colspan="3">{{'RemitterTelephone'|translate}}</th>
+
+            <td style="text-align: center" class="col-md-3"> {{kyc.remittermobile}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'MENU_BENEFICIARY'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.beneficiaryname +" "+ kyc.beneficiarysurName| decodeHtmlEntity | stripslashes}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'BeneficiaryAddress'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.beneficiaryaddress| decodeHtmlEntity | stripslashes}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'BeneficiaryTelephone'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.beneficiarymobile}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'AmountInLocalCCY'|translate}}</th>
+            <td class="col-md-1" style="text-align: center"> {{kyc.amount}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'DestinationCountry'|translate}}</th>
+            <td class="col-md-1" style="text-align: center"> {{kyc.country| decodeHtmlEntity | stripslashes}} </td>
+        </tr>
+        <tr>
+            <th colspan="3">{{'Status'|translate}}</th>
+            <td class="col-md-1" style="text-align: center"> {{kyc.status| decodeHtmlEntity | stripslashes}}</td>
+        </tr>
+        <tr>
+            <th colspan="3">CCY</th>
+            <td class="col-md-1" style="text-align: center"> {{kyc.currency| decodeHtmlEntity | stripslashes}}</td>
+        </tr>
+
+
+          </tbody>
+      </table>
+              <hr>
+
+
+          </div>
+
+  </div>
+
+                                                    </div>
+                                                  </div>
+                                                    <br>
+
+
+
+
+
+
+
+                                                    <br>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    </form>
+
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+<div id=tabsNavigationSimple5 class="tab-pane fade in">
+  <div class="row">
+<div class="col-md-12">
+  <div class="box-inn-sp">
+    <div class="inn-title">
+        <h4></h4>
+        <p>{{'RemitterList'|translate}}</p>
+    </div>
+    <div class="bor1">
+      <div class="tab-inn">
+
+        <div class="input-group serch-wrap" style="box-sizing: border-box;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;background-color: white;">
+      <div class="input-group-addon search-icon"><i class="fa fa-search"></i></div>
+      <input type="text" class="form-control search-text" placeholder="Search.." ng-model="searchremiterlist">
+    </div><hr>
+
+            <table  class="display table striped" cellspacing="0" width="100%">
+               <thead>
+                   <tr>
+                     <td >
+                       <a href="" ng-click="sortType = 'issueCountry'; sortReverse = !sortReverse">
+                        <b>{{'SIDE_COUNTRY'|translate}} </b>
+                        <span ng-show="sortType == 'issueCountry' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'issueCountry' && sortReverse" class="fa fa-caret-up"></span>
+                      </a>
+                    </td>
+                    <td >
+                      <a href="" ng-click="sortType = 'remittername'; sortReverse = !sortReverse">
+                       <b>{{'FirstName'|translate}} </b>
+                       <span ng-show="sortType == 'remittername' && !sortReverse" class="fa fa-caret-down"></span>
+                       <span ng-show="sortType == 'remittername' && sortReverse" class="fa fa-caret-up"></span>
+                     </a>
+                   </td>
+                   <td >
+                     <a href="" ng-click="sortType = 'remittersurName'; sortReverse = !sortReverse">
+                      <b>{{'Lastname'|translate}} </b>
+                      <span ng-show="sortType == 'remittersurName' && !sortReverse" class="fa fa-caret-down"></span>
+                      <span ng-show="sortType == 'remittersurName' && sortReverse" class="fa fa-caret-up"></span>
+                    </a>
+                  </td>
+                  <td >
+                    <a href="" ng-click="sortType = 'remitteremail'; sortReverse = !sortReverse">
+                     <b>Email </b>
+                     <span ng-show="sortType == 'remitteremail' && !sortReverse" class="fa fa-caret-down"></span>
+                     <span ng-show="sortType == 'remitteremail' && sortReverse" class="fa fa-caret-up"></span>
+                   </a>
+                 </td>
+                 <td >
+                   <a href="" ng-click="sortType = 'remitteraddress'; sortReverse = !sortReverse">
+                    <b>{{'SIDE_ADDRESS1'|translate}} </b>
+                    <span ng-show="sortType == 'remitteraddress' && !sortReverse" class="fa fa-caret-down"></span>
+                    <span ng-show="sortType == 'remitteraddress' && sortReverse" class="fa fa-caret-up"></span>
+                  </a>
+                </td>
+                <td >
+                  <a href="" ng-click="sortType = 'remittermobile'; sortReverse = !sortReverse">
+                   <b>{{'SIDE_CONTACT'|translate}} </b>
+                   <span ng-show="sortType == 'remittermobile' && !sortReverse" class="fa fa-caret-down"></span>
+                   <span ng-show="sortType == 'remittermobile' && sortReverse" class="fa fa-caret-up"></span>
+                 </a>
+               </td>
+               <td >
+                 <a href="" ng-click="sortType = 'amount'; sortReverse = !sortReverse">
+                  <b>{{'Amount'|translate}} </b>
+                  <span ng-show="sortType == 'amount' && !sortReverse" class="fa fa-caret-down"></span>
+                  <span ng-show="sortType == 'amount' && sortReverse" class="fa fa-caret-up"></span>
+                </a>
+              </td>
+
+
+
+
+
+              <td> <b>{{'SIDE_Enable_Disable'|translate}}</b> </td>
+
+
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr ng-repeat ="remit in remitterDetails | orderBy:sortType:sortReverse | filter: searchremiterlist|startFrom:currentPageRemiter*pageSizeRemiter | limitTo:pageSizeRemiter">
+
+                            <td>{{remit.issueCountry| decodeHtmlEntity | stripslashes }} </td>
+                          <td>{{remit.remittername| decodeHtmlEntity | stripslashes }}</td>
+
+                          <td>{{remit.remittersurName| decodeHtmlEntity | stripslashes }}
+                          </td>
+                          <td>{{remit.remitteremail| decodeHtmlEntity | stripslashes }}  </td>
+
+                          <td>{{remit.remitteraddress| decodeHtmlEntity | stripslashes }}</td>
+                          <td>{{remit.remittermobile}}</td>
+                          <td>{{remit.amount}} </td>
+
+
+                           <td>  <button type="button" role="button" class="btn btn-success app-button enableremit"   ng-click="remitactiveCheck(remit)">{{remit.status === 'Blacklist' ? 'Disable' : 'Enable'}}</button> </td>
+
+
+                      </tr>
+
+
+                  </tbody>
+
+              </table>
+              <hr>
+              <button ng-disabled="currentPageRemiter == 0" ng-click="currentPageRemiter=currentPageRemiter-1">
+                                             Previous
+                                         </button>
+                                         {{currentPageRemiter+1}}/{{numberOfPagesRemiter()}}
+             <button ng-disabled="currentPageRemiter >= remitterDetails.length/pageSizeRemiter - 1" ng-click="currentPageRemiter=currentPageRemiter+1">
+                 Next
+             </button>
+
+
+        </div>
+      </div>
+  </div>
+
+
+<br>
+
+
+<!--
+              <div class="row" style="margin-left: 4px; margin-top: -12px;">
+
+
+                   <button type="button"role="button" class="btn btn-success app-button123">
+                   Import
+                    </button>
+
+
+
+          </div> -->
+
+
+           </form>
+
+
+      </div>
+  </div>
+  </div>
+
+  <div id="tabsNavigationSimple20" class="tab-pane fade in">
+                              <div class="row">
+                          <div class="col-md-12">
+                              <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                      <p>{{'BeneficiaryList'|translate}}</p>
+                                </div>
+                                <div class="bor1">
+                                  <div class="tab-inn">
+                                    <div class="input-group serch-wrap" style="box-sizing: border-box;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;background-color: white;">
+                                            <div class="input-group-addon search-icon"><i class="fa fa-search"></i></div>
+                                            <input type="text" class="form-control search-text" placeholder="Search.." ng-model="searchbeneficiarylist">
+                                          </div><hr>
+                                        <table  class="display table striped" cellspacing="0" width="100%">
+                                           <thead>
+                                               <tr>
+                                                 <td>
+                                                 <a href="" ng-click="sortType = 'country'; sortReverse = !sortReverse">
+                                                  <b>{{'SIDE_COUNTRY'|translate}} </b>
+                                                  <span ng-show="sortType == 'country' && !sortReverse" class="fa fa-caret-down"></span>
+                                                  <span ng-show="sortType == 'country' && sortReverse" class="fa fa-caret-up"></span>
+                                                </a>
+                                              </td>
+                                              <td>
+                                              <a href="" ng-click="sortType = 'beneficiaryname'; sortReverse = !sortReverse">
+                                               <b>{{'FirstName'|translate}} </b>
+                                               <span ng-show="sortType == 'beneficiaryname' && !sortReverse" class="fa fa-caret-down"></span>
+                                               <span ng-show="sortType == 'beneficiaryname' && sortReverse" class="fa fa-caret-up"></span>
+                                             </a>
+                                           </td>
+                                           <td>
+                                               <a href="" ng-click="sortType = 'beneficiarysurName'; sortReverse = !sortReverse">
+                                                <b>{{'Lastname'|translate}} </b>
+                                                <span ng-show="sortType == 'beneficiarysurName' && !sortReverse" class="fa fa-caret-down"></span>
+                                                <span ng-show="sortType == 'beneficiarysurName' && sortReverse" class="fa fa-caret-up"></span>
+                                              </a>
+                                            </td>
+                                            <td>
+                                            <a href="" ng-click="sortType = 'beneficiaryemail'; sortReverse = !sortReverse">
+                                             <b>Email </b>
+                                             <span ng-show="sortType == 'beneficiaryemail' && !sortReverse" class="fa fa-caret-down"></span>
+                                             <span ng-show="sortType == 'beneficiaryemail' && sortReverse" class="fa fa-caret-up"></span>
+                                           </a>
+                                         </td>
+                                         <td>
+                                         <a href="" ng-click="sortType = 'beneficiaryaddress'; sortReverse = !sortReverse">
+                                          <b>{{'SIDE_ADDRESS1'|translate}} </b>
+                                          <span ng-show="sortType == 'beneficiaryaddress' && !sortReverse" class="fa fa-caret-down"></span>
+                                          <span ng-show="sortType == 'beneficiaryaddress' && sortReverse" class="fa fa-caret-up"></span>
+                                        </a>
+                                        </td>
+                                        <td>
+                                        <a href="" ng-click="sortType = 'beneficiarymobile'; sortReverse = !sortReverse">
+                                         <b>{{'SIDE_CONTACT'|translate}} </b>
+                                         <span ng-show="sortType == 'beneficiarymobile' && !sortReverse" class="fa fa-caret-down"></span>
+                                         <span ng-show="sortType == 'beneficiarymobile' && sortReverse" class="fa fa-caret-up"></span>
+                                       </a>
+                                       </td>
+                                       <td>
+                                       <a href="" ng-click="sortType = 'amount'; sortReverse = !sortReverse">
+                                        <b>{{'Amount'|translate}} </b>
+                                        <span ng-show="sortType == 'amount' && !sortReverse" class="fa fa-caret-down"></span>
+                                        <span ng-show="sortType == 'amount' && sortReverse" class="fa fa-caret-up"></span>
+                                      </a>
+                                      </td>
+
+
+                                      <td> <b>{{'SIDE_Enable_Disable'|translate}}</b></td>
+
+                                                  </tr>
+                                              </thead>
+                                              <tbody>
+                                                  <tr ng-repeat ="benef in beneficiaryDetails| orderBy:sortType:sortReverse | filter: searchbeneficiarylist|startFrom:currentPageBenef*pageSizeBenef | limitTo:pageSizeBenef ">
+
+                                                      <td> {{benef.country| decodeHtmlEntity | stripslashes}} </td>
+                                                      <td>{{benef.beneficiaryname| decodeHtmlEntity | stripslashes}}
+                                                      </td>
+                                                      <td>{{benef.beneficiarysurName| decodeHtmlEntity | stripslashes}}
+                                                      </td>
+                                                      <td>{{benef.beneficiaryemail| decodeHtmlEntity | stripslashes}}</td>
+                                                      <td>{{benef.beneficiaryaddress| decodeHtmlEntity | stripslashes}}</td>
+                                                      <td> {{benef.beneficiarymobile}}</td>
+                                                      <td>{{benef.amount}}</td>
+
+                                                       <td>  <button type="button" role="button" class="btn btn-success app-button enablebenef"   ng-click="benefactiveCheck(benef)">{{benef.status === 'Blacklist' ? 'Disable' : 'Enable'}}</button> </td>
+
+
+                                                  </tr>
+
+
+                                              </tbody>
+
+                                          </table>
+                                          <hr>
+                                          <button ng-disabled="currentPageBenef == 0" ng-click="currentPageBenef=currentPageBenef-1">
+                                              Previous
+                                          </button>
+                                          {{currentPageBenef+1}}/{{numberOfPagesBenef()}}
+                                          <button ng-disabled="currentPageBenef >= beneficiaryDetails.length/pageSizeBenef - 1" ng-click="currentPageBenef=currentPageBenef+1">
+                                              Next
+                                          </button>
+
+
+                                    </div>
+                                  </div>
+                              </div>
+
+
+                           <br>
+
+
+
+
+
+
+
+                                       </form>
+
+
+
+
+
+
+
+
+
+  <!----------------------------------------Print Report--------------------------------------------!-->
+      <!----------------------------------------Print Report--------------------------------------------!-->
+
+                                  </div>
+                              </div>
+                          </div>
+                        <div id="menu6" class="tab-pane fade in">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="box-inn-sp">
+                                        <div class="inn-title">
+                                            <p>User List</p>
+
+                                            <a class="dropdown-button drop-down-meta" href="#" data-activates="dr-users"><i class="material-icons">more_vert</i></a>
+                                            <ul id="dr-users" class="dropdown-content">
+                                                <li><a href="#">Beneficiary</a>
+                                                </li>
+                                                <li><a href="#">Remitter</a>
+                                                </li>
+
+                                                <li><a href="#"><i class="material-icons">subject</i>View All</a>
+                                                </li>
+                                            </ul>
+
+                                            <!-- Dropdown Structure -->
+
+                                        </div>
+                                        <div class="tab-inn">
+                                            <div class="table-responsive table-desi">
+                                                <table class="table table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Country</th>
+                                                            <th>First Name</th>
+                                                            <th>Last name</th>
+                                                            <th>Email</th>
+                                                            <th>Address</th>
+                                                            <th>Contact</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+
+                                                    </tbody>
+
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row" align="right" style="    margin-right: 20px;">
+
+                                        <i class="waves-effect waves-light btn-large waves-input-wrapper" style="background-color: green;"><input type="submit" class="waves-button-input" value="Update"></i>
+                                        <i class="waves-effect waves-light btn-large waves-input-wrapper" style="background-color: #1e6b98;"><input type="submit" class="waves-button-input" value="Import"></i>
+
+                                    </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!----------------------------------------Print Report--------------------------------------------!-->
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+
+
+
+
+                        <div id="tabsNavigationSimple6" class="tab-pane fade in">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="box-inn-sp">
+                                         <div class="inn-title">
+                                                            <p>{{'TransactionDetail'|translate}}</p>
+
+
+                                                        </div>
+                                                        <div class="bor1">
+                                        <div class="tab-inn">
+
+                                          <div class="input-group serch-wrap " style="box-sizing: border-box;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;background-color: white;">
+                                                 <div class="input-group-addon search-icon"><i class="fa fa-search"></i></div>
+                                                 <input type="text" class="form-control search-text" placeholder="Search.." ng-model="searchtransactionlist">
+                                               </div><hr>
+
+                                              <table  class="display table striped" cellspacing="0" width="100%">
+                                                      <thead>
+                                                        <tr>
+                                                          <td>
+                                                             <a href="" ng-click="sortType = 'transactionDate'; sortReverse = !sortReverse">
+                                                              <b>{{'Date'|translate}} </b>
+                                                              <span ng-show="sortType == 'transactionDate' && !sortReverse" class="fa fa-caret-down"></span>
+                                                              <span ng-show="sortType == 'transactionDate' && sortReverse" class="fa fa-caret-up"></span>
+                                                            </a>
+                                                          </td>
+                                                          <td>
+                                                             <a href="" ng-click="sortType = 'tellerID.name'; sortReverse = !sortReverse">
+                                                              <b>{{'SIDE_TELLER'|translate}} </b>
+                                                              <span ng-show="sortType == 'tellerID.name' && !sortReverse" class="fa fa-caret-down"></span>
+                                                              <span ng-show="sortType == 'tellerID.name' && sortReverse" class="fa fa-caret-up"></span>
+                                                            </a>
+                                                          </td>
+                                                          <td>
+                                                             <a href="" ng-click="sortType = 'transactionNumber'; sortReverse = !sortReverse">
+                                                              <b>{{'TransactionNo'|translate}} </b>
+                                                              <span ng-show="sortType == 'transactionNumber' && !sortReverse" class="fa fa-caret-down"></span>
+                                                              <span ng-show="sortType == 'transactionNumber' && sortReverse" class="fa fa-caret-up"></span>
+                                                            </a>
+                                                          </td>
+                                                          <td>
+                                                             <a href="" ng-click="sortType = 'amount'; sortReverse = !sortReverse">
+                                                              <b>{{'Amount'|translate}} </b>
+                                                              <span ng-show="sortType == 'amount' && !sortReverse" class="fa fa-caret-down"></span>
+                                                              <span ng-show="sortType == 'amount' && sortReverse" class="fa fa-caret-up"></span>
+                                                            </a>
+                                                          </td>
+                                                          <td>
+                                                             <a href="" ng-click="sortType = 'country'; sortReverse = !sortReverse">
+                                                              <b>{{'SIDE_COUNTRY'|translate}} </b>
+                                                              <span ng-show="sortType == 'country' && !sortReverse" class="fa fa-caret-down"></span>
+                                                              <span ng-show="sortType == 'country' && sortReverse" class="fa fa-caret-up"></span>
+                                                            </a>
+                                                          </td>
+                                                          <td>
+                                                             <a href="" ng-click="sortType = 'remittername'; sortReverse = !sortReverse">
+                                                              <b>{{'MENU_REMITTER'|translate}} </b>
+                                                              <span ng-show="sortType == 'remittername' && !sortReverse" class="fa fa-caret-down"></span>
+                                                              <span ng-show="sortType == 'remittername' && sortReverse" class="fa fa-caret-up"></span>
+                                                            </a>
+                                                          </td>
+                                                          <td>
+                                                             <a href="" ng-click="sortType = 'beneficiaryname'; sortReverse = !sortReverse">
+                                                              <b>{{'MENU_BENEFICIARY'|translate}} </b>
+                                                              <span ng-show="sortType == 'beneficiaryname' && !sortReverse" class="fa fa-caret-down"></span>
+                                                              <span ng-show="sortType == 'beneficiaryname' && sortReverse" class="fa fa-caret-up"></span>
+                                                            </a>
+                                                          </td>
+                                                          <td>
+                                                             <a href="" ng-click="sortType = 'status'; sortReverse = !sortReverse">
+                                                              <b>{{'Status'|translate}} </b>
+                                                              <span ng-show="sortType == 'status' && !sortReverse" class="fa fa-caret-down"></span>
+                                                              <span ng-show="sortType == 'status' && sortReverse" class="fa fa-caret-up"></span>
+                                                            </a>
+                                                          </td>
+
+
+
+
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat ="trans in transactionDetails|orderBy:sortType:sortReverse | filter: searchtransactionlist |startFrom:currentPageReport*pageSizeReport | limitTo:pageSizeReport">
+
+                                                            <td>{{trans.transactionDate |date:'yyyy-MM-dd'}}
+                                                            </td>
+                                                            <td>{{trans.tellerID.name| decodeHtmlEntity | stripslashes}}
+                                                            </td>
+                                                            <td>{{trans.transactionNumber}}</td>
+                                                            <td>{{trans.amount}}</td>
+                                                            <td>{{trans.country| decodeHtmlEntity | stripslashes}}</td>
+                                                            <td>{{trans.remittername + " " +trans.remittersurName| decodeHtmlEntity | stripslashes}}</td>
+                                                            <td>{{trans.beneficiaryname + " " +trans.beneficiarysurName| decodeHtmlEntity | stripslashes}}</td>
+                                                            <td>{{trans.status| decodeHtmlEntity | stripslashes}}</td>
+
+
+                                                        </tr>
+
+                                                    </tbody>
+
+                                                </table>
+                                                <hr>
+                                            <button ng-disabled="currentPageReport == 0" ng-click="currentPageReport=currentPageReport-1">
+                                              Previous
+                                          </button>
+                                          {{currentPageReport+1}}/{{numberOfPagesReport()}}
+                                          <button ng-disabled="currentPageReport >= transactionDetails.length/pageSizeReport - 1" ng-click="currentPageReport=currentPageReport+1">
+                                              Next
+                                          </button>
+
+
+                                        </div>
+										</div>
+                                    </div>
+
+
+
+                                   <br>
+                                     <div class="row" align="left" style="margin-left:10px;" >
+
+                                            <!--  <button type="button"role="button" class="btn btn-success app-button123">
+                                             import
+                                              </button> -->
+
+
+
+                                    </div>
+
+                                    </form>
+
+
+
+                                </div>
+                            </div>
+	</div>
+
+
+
+
+
+                        <div id="tabsNavigationSimple7" class="tab-pane fade ">
+                          <div class="box-inn-sp">
+                              <div class="inn-title">
+                                  <h4></h4>
+                                  <p>{{'CountryLimitDetail'|translate}}</p>
+                              </div>
+                              <div class="bor">
+                                 <!--  <form name="supervisorlimit">
+                                      <div class="row" id="">
+                                          <div class="input-field col s3">
+                                               <select ng-model="countrylimit" ng-change="getCurrency1(countrylimit);" id="cont"ng-init="countrylimit = '?'">
+
+                                                   <option value="?" disabled >Select Country</option>
+                                                <option ng-repeat="loc in countrylist" value="{{loc.countryName}}" ng-selected="countrylimit =={{loc.countryName}}">{{loc.countryName| decodeHtmlEntity | stripslashes}}</option>
+                                                </select>
+                                             <label for="list-title"><font color="black">{{'SIDE_COUNTRY'|translate}}</font></label>
+                                          </div>
+                                           <div class="input-field col s3">
+                                             <input id="list-title" type="text" class="validate" ng-model ="currency" disabled value="{{currency}}" style="color: #666">
+                                             <label class="active"> <font color="black">{{'Currency'|translate}} </font></label>
+
+                                          </div>
+
+                                          <div class="input-field col s3">
+                                              <input id="list-title3" type="text" class="validate number3" ng-model="monthlylimit" name="monthlylimit" required="required" ng-pattern="payementpattern">
+                                                <label class="active"><font color="black">{{'SIDE_PAYMENT_LIMIT_PER_MONTH'|translate}}<pow>*</pow></font><span class="error" ng-show="supervisorlimit.monthlylimit.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                               <span class="error" ng-show="supervisorlimit.monthlylimit.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}  </span>
+                                          </div>
+
+
+                                          <div class="input-field col s3">
+                                              <input id="list-title" type="text" class="validate" ng-model="region" required="required"  name="region">
+                                                                <label for="list-title" class="active"><font color="black">{{'Region'|translate}} </font> <span class="error" ng-show="supervisorlimit.region.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="supervisorlimit.region.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+
+                                          </div>
+                                          </div>
+
+                                          <div class="row" align="right" style=" margin-right: 4px;">
+
+                                               <button type="button"role="button" class="btn btn-success app-button" ng-click="createCountry()" id="addbtn2">
+                                            {{'SIDE_ADD'|translate}}
+                                            </button>
+                                            <button type="button"role="button" class="btn btn-success app-button" ng-click="updateCountry();" id="savebtn2" ng-init="hidesavebtn()">
+                                             {{'SIDE_SAVE'|translate}}
+                                              </button>
+                                           <button type="button"role="button" class="btn btn-success app-button1" ng-click="resetCountry()"  id="resetbtn2" style="width: auto;">
+                                             {{'SIDE_RESET'|translate}}
+                                            </button>
+                                            <button type="button"role="button" class="btn btn-success app-button" ng-click="cancelCountry();" id="cancelCountrybtn" ng-init="hidesavebtn()" >{{'Cancel'|translate}}</button>
+
+
+                                          </div>
+                                          </form> -->
+
+                                           
+
+
+                                          <div class="row">
+                                              <div class="col-md-12">
+                                                  <div class="box-inn-sp">
+
+                                                      <div class="tab-inn" style="border-style: solid;
+  border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+  <div class="input-group serch-wrap " style="box-sizing: border-box;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;background-color: white;">
+        <div class="input-group-addon search-icon"><i class="fa fa-search"></i></div>
+        <input type="text" class="form-control search-text" placeholder="Search.." ng-model="searchcountrylimit">
+      </div><hr>
+
+                                                <table  dt-instance="dtInstance" class="display table striped" cellspacing="0" width="100%">
+                                                    <thead>
+                                                     <tr>
+                                                       <td>
+                                                        <a href="" ng-click="sortType = 'countryName'; sortReverse = !sortReverse">
+                                                        <b>{{'SIDE_COUNTRY'|translate}} </b>
+                                                        <span ng-show="sortType == 'countryName' && !sortReverse" class="fa fa-caret-down"></span>
+                                                        <span ng-show="sortType == 'countryName' && sortReverse" class="fa fa-caret-up"></span>
+                                                        </a>
+                                                      </td>
+                                                      <td>
+                                                        <a href="" ng-click="sortType = 'currency'; sortReverse = !sortReverse">
+                                                        <b>{{'Currency'|translate}} </b>
+                                                        <span ng-show="sortType == 'currency' && !sortReverse" class="fa fa-caret-down"></span>
+                                                        <span ng-show="sortType == 'currency' && sortReverse" class="fa fa-caret-up"></span>
+                                                        </a>
+
+
+                                                        </td>
+                                                      <td>
+                                                         <a href="" ng-click="sortType = 'paymentLimit'; sortReverse = !sortReverse">
+                                                        <b>{{'SIDE_PAYMENT_LIMIT_PER_MONTH'|translate}}</b>
+                                                        <span ng-show="sortType == 'paymentLimit' && !sortReverse" class="fa fa-caret-down"></span>
+                                                        <span ng-show="sortType == 'paymentLimit' && sortReverse" class="fa fa-caret-up"></span>
+                                                        </a>
+
+
+                                                      </td>
+                                                      <td>
+                                                        <a href="" ng-click="sortType = 'region'; sortReverse = !sortReverse">
+                                                        <b>{{'Region'|translate}}</b>
+                                                        <span ng-show="sortType == 'region' && !sortReverse" class="fa fa-caret-down"></span>
+                                                        <span ng-show="sortType == 'region' && sortReverse" class="fa fa-caret-up"></span>
+                                                        </a>
+
+                                                      </td>
+                                                      <!-- <td><b>{{'SIDE_EDIT'|translate}}</b></td> -->
+                                                      <!-- <td><b>{{'Delete'|translate}}</b></td> -->
+                                                        </tr>
+                                                  </thead>
+
+                                                              <tbody>
+                                                                <tr ng-repeat ="country in countrylimitDetails| orderBy:sortType:sortReverse | filter: searchcountrylimit |startFrom:currentPageClimit*pageSizeClimit | limitTo:pageSizeClimit">
+
+                                                                  <td>{{country.countryName | decodeHtmlEntity | stripslashes}}</td>
+                                                                    <td>{{country.currency | decodeHtmlEntity | stripslashes}}</td>
+                                                                    <td>{{country.paymentLimit}}</td>
+                                                                    <td>{{country.region | decodeHtmlEntity | stripslashes}}</td>
+
+                                                      <!-- <td><a href="javascript:void(0);" ng-click="editCountryCurrency(country);"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td> -->
+                                                       <!-- <td><a href="javascript:void(0);" ng-click="deleteCountry(country);"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td> -->
+
+                                                                  </tr>
+
+
+                                                              </tbody>
+                                                          </table>
+                                                          <hr>
+
+                                      <button ng-disabled="currentPageClimit == 0" ng-click="currentPageClimit=currentPageClimit-1">
+                                          Previous
+                                      </button>
+                                      {{currentPageClimit+1}}/{{numberOfPagesClimit()}}
+                                      <button ng-disabled="currentPageClimit >= countrylimitDetails.length/pageSizeClimit - 1" ng-click="currentPageClimit=currentPageClimit+1">
+                                          Next
+                                      </button>
+
+                                                      </div>
+                                                      <br>
+
+
+
+                                                  </div>
+
+                                              </div>
+
+                                          </div>
+                                          <!-- <div class="row" align="right" style="    margin-right: 4px;">
+
+                                                          <button type="button"role="button" class="btn btn-success app-button">
+                                            Save
+                                            </button>
+
+
+                                                      </div> -->
+
+
+
+
+
+
+
+                                      <br>
+
+
+                              </div>
+                          </div>
+                        </div>
+
+
+
+
+                            <div id="tabsNavigationSimple8" class="tab-pane fade in">
+                                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                                            <p align="left">{{'Controllerlist'|translate}}</p>
+
+
+                                                        </div>
+                                                        <div class="bor1">
+                                <div class="tab-inn" style="border-style: solid;
+    border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+    <div class="input-group serch-wrap" style="box-sizing: border-box;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;background-color: white;">
+        <div class="input-group-addon search-icon"><i class="fa fa-search"></i></div>
+        <input type="text" class="form-control search-text" placeholder="Search.." ng-model="searchcontrollerlist">
+      </div><hr>
+            <table  class="display table striped" cellspacing="0" width="100%">
+                <thead>
+                        <tr>
+                          <td>
+                            <a href="" ng-click="sortType = 'branchID'; sortReverse = !sortReverse">
+                             <b>{{'SIDE_BRANCH_ID'|translate}} </b>
+                             <span ng-show="sortType == 'branchID' && !sortReverse" class="fa fa-caret-down"></span>
+                             <span ng-show="sortType == 'branchID' && sortReverse" class="fa fa-caret-up"></span>
+                           </a>
+                         </td>
+                         <td>
+                           <a href="" ng-click="sortType = 'controllerID'; sortReverse = !sortReverse">
+                            <b>{{'ControllerID'|translate}} </b>
+                            <span ng-show="sortType == 'controllerID' && !sortReverse" class="fa fa-caret-down"></span>
+                            <span ng-show="sortType == 'controllerID' && sortReverse" class="fa fa-caret-up"></span>
+                          </a>
+                        </td>
+                        <td>
+                          <a href="" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+                           <b>{{'SIDE_FULL_NAME'|translate}} </b>
+                           <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+                           <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+                         </a>
+                       </td>
+                       <td>
+                         <a href="" ng-click="sortType = 'phone'; sortReverse = !sortReverse">
+                          <b>{{'SIDE_CONTACT'|translate}} </b>
+                          <span ng-show="sortType == 'phone' && !sortReverse" class="fa fa-caret-down"></span>
+                          <span ng-show="sortType == 'phone' && sortReverse" class="fa fa-caret-up"></span>
+                        </a>
+                      </td>
+                      <td>
+                        <a href="" ng-click="sortType = 'email'; sortReverse = !sortReverse">
+                         <b>Email </b>
+                         <span ng-show="sortType == 'email' && !sortReverse" class="fa fa-caret-down"></span>
+                         <span ng-show="sortType == 'email' && sortReverse" class="fa fa-caret-up"></span>
+                       </a>
+                     </td>
+                     <td>
+                       <a href="" ng-click="sortType = 'country'; sortReverse = !sortReverse">
+                        <b>{{'SIDE_COUNTRY'|translate}} </b>
+                        <span ng-show="sortType == 'country' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'country' && sortReverse" class="fa fa-caret-up"></span>
+                      </a>
+                    </td>
+                    <td>
+                      <a href="" ng-click="sortType = 'hoursOfWorkDaily'; sortReverse = !sortReverse">
+                       <b>{{'SIDE_WORKING_HOURS'|translate}} </b>
+                       <span ng-show="sortType == 'hoursOfWorkDaily' && !sortReverse" class="fa fa-caret-down"></span>
+                       <span ng-show="sortType == 'hoursOfWorkDaily' && sortReverse" class="fa fa-caret-up"></span>
+                     </a>
+                   </td>
+
+                      <td><b> {{'SIDE_WORKING_DAYS'|translate}}</b> </td>
+                      <td> <b>{{'SIDE_MAC_ADDRESS'|translate}}</b></td>
+
+                            <!-- <th style="color: #ffffff;"> Edit </th> -->
+
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr ng-repeat ="control in controllerDetails | orderBy:sortType:sortReverse | filter: searchcontrollerlist |startFrom:currentPageController*pageSizeController | limitTo:pageSizeController">
+
+
+                            <td>{{control.branchID| decodeHtmlEntity | stripslashes }}</td>
+                            <td>{{control.controllerID}}</td>
+                            <td>{{control.name| decodeHtmlEntity | stripslashes }} </td>
+                            <td>{{control.phone}} </td>
+                            <td>{{control.email| decodeHtmlEntity | stripslashes }} </td>
+                            <td> {{control.country| decodeHtmlEntity | stripslashes }}</td>
+                            <td> {{control.hoursOfWorkDaily}}</td>
+                            <td>
+                              <span>{{control.workdays[0]}}</span>
+                              <span>{{control.workdays[1]}}</span></br>
+                              <span>{{control.workdays[2]}}</span>
+                              <span>{{control.workdays[3]}}</span></br>
+                              <span>{{control.workdays[4]}}</span>
+                              <span>{{control.workdays[5]}}</span>
+                            </td>
+                            <td>{{control.controlmac}}</td>
+
+                             <!-- <td><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td> -->
+                        </tr>
+
+
+
+                    </tbody>
+                </table>
+                <hr>
+                <button ng-disabled="currentPageController == 0" ng-click="currentPageController=currentPageController-1">
+                    Previous
+                </button>
+                {{currentPageController+1}}/{{numberOfPagesController()}}
+                <button ng-disabled="currentPageController >= controllerDetails.length/pageSizeController - 1" ng-click="currentPageController=currentPageController+1">
+                    Next
+                </button>
+
+
+                                </div>
+                              </div>
+                                  <br>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                            </div>
+
+
+                           <div id="tabsNavigationSimple10" class="tab-pane fade ">
+                             <div class="box-inn-sp">
+                               <div class="inn-title">
+                                   <h4></h4>
+                                   <p>{{'TariffDetail'|translate}}</p>
+                               </div>
+                               <div class="bor">
+                                <!--    <form name="admintariffform">
+                                       <div class="row" id="AddTariff">
+                                           <div class="input-field col s3">
+                                                <select ng-model="tariffcountry" ng-change="getCurrency2(tariffcountry);" id="tarif">
+                                                  
+                                                   <option ng-repeat="loc in countrylist" value="{{loc.countryName}}" ng-selected="{{loc.countryName == tariffcountry}}">{{loc.countryName| decodeHtmlEntity | stripslashes}}</option>
+                                                   </select>
+
+
+
+                                               <label for="list-title"><font color="black"> {{'SIDE_COUNTRY'|translate}} </font></label>
+                                           </div>
+                                            <div class="input-field col s3">
+                                              <input id="list-title" type="text" class="validate" ng-model ="tariffcurrency" disabled value="{{tariffcurrency}}" style="color: #666">
+                                              <label class="active"> <font color="black">{{'Currency'|translate}}</font> </label>
+                                           </div>
+                                            <div class="input-field col s3">
+
+                                                <input id="list-title" type="text" class="validate" ng-model ="tariffbranchid" disabled value="{{tokendata.branchID}}" style="color: #666">
+                                                <label for="list-title active"><font color="black">{{'SIDE_BRANCH_ID'|translate}}</font></label>
+
+
+                                            </div>
+
+                                            <div class="input-field col s3">
+                                                
+                                                <input id="list-title4" type="text" class="validate number4" ng-model="tariffmin" name="tariffmin" required="required" ng-pattern="payementpattern">
+                                                <label for="last_name" class="active"><font color="black">Min-MT</font> <span class="error" ng-show="admintariffform.tariffmin.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                              <span class="error" ng-show="admintariffform.tariffmin.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+                                            </div>
+
+
+
+                                            </div>
+                                            <div class="row">
+                                            <div class="input-field col s3">
+                                                
+                                                 <input id="list-title5" type="text" class="validate number5" ng-model="tariffmax" name="tariffmax" required="required" ng-pattern="payementpattern">
+                                                <label for="last_name" class="active"><font color="black">Max-MT</font><span class="error" ng-show="admintariffform.tariffmax.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                              <span class="error" ng-show="admintariffform.tariffmax.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+                                            </div>
+                                            <div class="input-field col s3">
+                                                <input id="list-title" type="text" class="validate" ng-model="tariff" name="tariff" required="required" ng-pattern="payementpattern">
+                                                <label for="list-title" class="active"><font color="black">Tariff</font><span class="error" ng-show="admintariffform.tariff.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                 <span class="error" ng-show="admintariffform.tariff.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+                                            </div>
+                                            <div class="input-field col s3">
+                                                
+                                                 <input id="list-title" type="text" class="validate" ng-model="tax" name="tax" required="required" ng-pattern="workingpattern" maxlength="2">
+                                                <label for="list-title" class="active"><font color="black">{{'Tax'|translate}}</font><span class="error" ng-show="admintariffform.tax.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                 <span class="error" ng-show="admintariffform.tax.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+                                            </div>
+
+                                          
+
+                                            </div>
+                                           <div class="row" align="right" style="margin-top:-55px;">
+
+                                                <button type="button"role="button" class="btn btn-success app-button" ng-click="createTariff()" id="addbtn5">
+                                             {{'SIDE_ADD'|translate}}
+                                             </button>
+                                             <button type="button"role="button" class="btn btn-success app-button" ng-click="updateTariff();" id="savebtn5" ng-init="hidesavebtn()">
+                                                {{'SIDE_SAVE'|translate}}
+                                               </button>
+                                            <button type="button"role="button" class="btn btn-success app-button1" ng-click="resetTariff()" id="resetbtn5" style="width: auto;">
+                                             {{'SIDE_RESET'|translate}}
+                                             </button>
+                                             <button type="button"role="button" class="btn btn-success app-button" ng-click="cancelTarif();" id="canceltarifbtn" ng-init="hidesavebtn()" >{{'Cancel'|translate}}</button>
+
+
+                                           </div>
+                                           </form> -->
+                                         
+
+
+                                           <div class="row">
+                                               <div class="col-md-12">
+                                                   <div class="box-inn-sp">
+
+                                                       <div class="tab-inn" style="border-style: solid;
+   border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+   <div class="input-group serch-wrap" style="box-sizing: border-box;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;background-color: white;">
+        <div class="input-group-addon search-icon"><i class="fa fa-search"></i></div>
+        <input type="text" class="form-control  search-text" placeholder="Search.." ng-model="searchtariflist">
+      </div><hr>
+
+                                     <table  class="display table striped" cellspacing="0" width="100%">
+                                     <thead>
+                                       <tr>
+                                         <td>
+                                              <a href="" ng-click="sortType = 'country'; sortReverse = !sortReverse">
+                                               <b>{{'SIDE_COUNTRY'|translate}} </b>
+                                               <span ng-show="sortType == 'country' && !sortReverse" class="fa fa-caret-down"></span>
+                                               <span ng-show="sortType == 'country' && sortReverse" class="fa fa-caret-up"></span>
+                                             </a>
+                                           </td>
+                                           <td>
+                                                <a href="" ng-click="sortType = 'currency'; sortReverse = !sortReverse">
+                                                 <b>{{'Currency'|translate}} </b>
+                                                 <span ng-show="sortType == 'currency' && !sortReverse" class="fa fa-caret-down"></span>
+                                                 <span ng-show="sortType == 'currency' && sortReverse" class="fa fa-caret-up"></span>
+                                               </a>
+                                             </td>
+                                             <td>
+                                                  <a href="" ng-click="sortType = 'minAmount'; sortReverse = !sortReverse">
+                                                   <b>Min-MT </b>
+                                                   <span ng-show="sortType == 'minAmount' && !sortReverse" class="fa fa-caret-down"></span>
+                                                   <span ng-show="sortType == 'minAmount' && sortReverse" class="fa fa-caret-up"></span>
+                                                 </a>
+                                               </td>
+                                               <td>
+                                                    <a href="" ng-click="sortType = 'maxAmount'; sortReverse = !sortReverse">
+                                                     <b>Max-MT </b>
+                                                     <span ng-show="sortType == 'maxAmount' && !sortReverse" class="fa fa-caret-down"></span>
+                                                     <span ng-show="sortType == 'maxAmount' && sortReverse" class="fa fa-caret-up"></span>
+                                                   </a>
+                                                 </td>
+                                                 <td>
+                                                      <a href="" ng-click="sortType = 'tariff'; sortReverse = !sortReverse">
+                                                       <b>Tariff</b>
+                                                       <span ng-show="sortType == 'tariff' && !sortReverse" class="fa fa-caret-down"></span>
+                                                       <span ng-show="sortType == 'tariff' && sortReverse" class="fa fa-caret-up"></span>
+                                                     </a>
+                                                   </td>
+                                                   <td>
+                                                        <a href="" ng-click="sortType = 'tax'; sortReverse = !sortReverse">
+                                                         <b>{{'Tax'|translate}}</b>
+                                                         <span ng-show="sortType == 'tax' && !sortReverse" class="fa fa-caret-down"></span>
+                                                         <span ng-show="sortType == 'tax' && sortReverse" class="fa fa-caret-up"></span>
+                                                       </a>
+                                                     </td>
+                                                     <td>
+                                                          <a href="" ng-click="sortType = 'tariffExclude'; sortReverse = !sortReverse">
+                                                           <b>{{'TariffExcludedTax'|translate}}</b>
+                                                           <span ng-show="sortType == 'tariffExclude' && !sortReverse" class="fa fa-caret-down"></span>
+                                                           <span ng-show="sortType == 'tariffExclude' && sortReverse" class="fa fa-caret-up"></span>
+                                                         </a>
+                                                       </td>
+
+
+                                            <td> <b>{{'SIDE_BRANCH_ID'|translate}}</b></td>
+                                            <!-- <td><b>{{'SIDE_EDIT'|translate}}</b></td>
+                                            <td><b>{{'Delete'|translate}}</b></td> -->
+
+                                           </tr>
+                                       </thead>
+
+                                                               <tbody>
+                                                                 <tr ng-repeat ="tariff in tariffdata| orderBy:sortType:sortReverse | filter: searchtariflist |startFrom:currentPageTarif*pageSizeTarif | limitTo:pageSizeTarif">
+
+
+                                                                      <td>{{tariff.country| decodeHtmlEntity | stripslashes}}</td>
+                                                                       <td>{{tariff.currency| decodeHtmlEntity | stripslashes}}</td>
+                                                                       <td>{{tariff.minAmount}}</td>
+                                                                       <td>{{tariff.maxAmount}}</td>
+                                                                       <td>{{tariff.tariff}}</td>
+                                                                       <td>{{tariff.tax +"%"}}</td>
+                                                                       <td>{{tariff.tariffExclude}}</td>
+                                                                       <td>{{tariff.branchID| decodeHtmlEntity | stripslashes}} </td>
+                                                                       <!--  <td><a href="javascript:void(0);" ng-click="editTariff(tariff);"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                                                                        <td><a href="javascript:void(0);" ng-click="deleteTariff(tariff);"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td> -->
+
+                                                                   </tr>
+
+                                                               </tbody>
+                                                           </table>
+                                                           <hr>
+                                                           <button ng-disabled="currentPageTarif == 0" ng-click="currentPageTarif=currentPageTarif-1">
+                                                               Previous
+                                                           </button>
+                                                           {{currentPageTarif+1}}/{{numberOfPagesTarif()}}
+                                                           <button ng-disabled="currentPageTarif >= tariffdata.length/pageSizeTarif - 1" ng-click="currentPageTarif=currentPageTarif+1">
+                                                               Next
+                                                           </button>
+
+                                                       </div>
+                                                       <br>
+
+
+
+                                                   </div>
+
+                                               </div>
+
+                                           </div>
+
+
+
+
+                                       <br>
+
+                                       <!----------------------------------------Paying money--------------------------------------------!-->
+                                       <!----------------------------------------Paying money--------------------------------------------!-->
+
+                               </div>
+                           </div>
+                          </div>
+
+
+                        <div id="tabsNavigationSimple11" class="tab-pane fade ">
+                          <div class="box-inn-sp">
+                              <div class="inn-title">
+                                  <h4></h4>
+                                  <p>{{'CommissionDetail'|translate}}</p>
+                              </div>
+                              <div class="bor">
+                                  <!--  <form name="comisionform">
+                                        <div class="row" id="">
+                                            <div class="input-field col s3">
+                                                
+                                          <input id="list-title" type="text" class="validate" ng-model="sendercomision" name="sendercomision" required="required" ng-pattern="workingpattern" maxlength="2">
+<label for="list-title" class="active"><font color="black">Sender_Comm</font><span class="error" ng-show="comisionform.sendercomision.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+ <span class="error" ng-show="comisionform.sendercomision.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+                                            </div>
+
+                                            <div class="input-field col s3">
+                                                
+                                                <input id="list-title" type="text" class="validate" ng-model="platformcomision" name="platformcomision" required="required" ng-pattern="workingpattern" maxlength="2">
+<label for="list-title" class="active"><font color="black">Platform_Comm</font><span class="error" ng-show="comisionform.platformcomision.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+ <span class="error" ng-show="comisionform.platformcomision.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+                                            </div>
+
+                                            <div class="input-field col s3">
+                                               
+                                                 <input id="list-title" type="text" class="validate" ng-model="benefcomision" name="benefcomision" required="required" ng-pattern="workingpattern" maxlength="2">
+<label for="list-title" class="active"><font color="black">Benef_Comm</font><span class="error" ng-show="comisionform.benefcomision.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+ <span class="error" ng-show="comisionform.benefcomision.$error.pattern">{{'Pleaseenteralnumberonly'|translate}} </span>
+                                            </div>
+                                          <div class="input-field col s3">
+                                            <input  type="text" class="validate" ng-model ="comisionbranchid" disabled value="{{tokendata.branchID}}" style="color: #666">
+                                              
+                                            <label for="list-title"><font color="black">{{'SIDE_BRANCH_ID'|translate | decodeHtmlEntity | stripslashes}}</font></label>
+                                          </div>
+                                          </div>
+
+                                          <div class="row" align="right" style="    margin-right: 4px;">
+
+                                               <button type="button"role="button" class="btn btn-success app-button" ng-click="createshare()" id="addbtn6">
+                                            {{'SIDE_ADD'|translate}}
+                                            </button>
+                                            <button type="button"role="button" class="btn btn-success app-button" ng-click="updateComision();" id="savebtn6" ng-init="hidesavebtn()">
+                                             {{'SIDE_SAVE'|translate}}
+                                              </button>
+                                           <button type="button"role="button" class="btn btn-success app-button1" ng-click="resetshare()" id="resetbtn6" style="width: auto;">
+                                             {{'SIDE_RESET'|translate}}
+                                            </button>
+                                            <button type="button"role="button" class="btn btn-success app-button" ng-click="cancelComision();" id="cancelComisionbtn" ng-init="hidesavebtn()">
+                                              {{'Cancel'|translate}}
+                                            </button>
+
+
+                                          </div>
+                                          </form> -->
+                                          
+                                          <div class="row">
+                                              <div class="col-md-12">
+                                                  <div class="box-inn-sp">
+
+                                                      <div class="tab-inn" style="border-style: solid;
+  border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+  <div class="input-group serch-wrap" style="box-sizing: border-box;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;background-color: white;">
+       <div class="input-group-addon search-icon"><i class="fa fa-search"></i></div>
+       <input type="text" class="form-control search-text" placeholder="Search.." ng-model="searchcomissionlist">
+     </div><hr>
+
+                                                                    <table  class="display table striped" cellspacing="0" width="100%">
+                                                                      <thead>
+                                                                        <td>
+                                                                         <a href="" ng-click="sortType = 'sendercomision'; sortReverse = !sortReverse">
+                                                                           <b>Sender_Comm</b>
+                                                                           <span ng-show="sortType == 'sendercomision' && !sortReverse" class="fa fa-caret-down"></span>
+                                                                           <span ng-show="sortType == 'sendercomision' && sortReverse" class="fa fa-caret-up"></span>
+                                                                         </a>
+                                                                       </td>
+                                                                       <td>
+                                                                        <a href="" ng-click="sortType = 'platformcomsion'; sortReverse = !sortReverse">
+                                                                          <b>Platform_Comm</b>
+                                                                          <span ng-show="sortType == 'platformcomsion' && !sortReverse" class="fa fa-caret-down"></span>
+                                                                          <span ng-show="sortType == 'platformcomsion' && sortReverse" class="fa fa-caret-up"></span>
+                                                                        </a>
+                                                                      </td>
+                                                                      <td>
+                                                                       <a href="" ng-click="sortType = 'benefcomision'; sortReverse = !sortReverse">
+                                                                         <b>Benef_Comm</b>
+                                                                         <span ng-show="sortType == 'benefcomision' && !sortReverse" class="fa fa-caret-down"></span>
+                                                                         <span ng-show="sortType == 'benefcomision' && sortReverse" class="fa fa-caret-up"></span>
+                                                                       </a>
+                                                                     </td>
+
+                                                                        <td><b>{{'SIDE_BRANCH_ID'|translate}}</b></td>
+                                                                        <!-- <td><b>{{'SIDE_EDIT'|translate}}</b></td>
+                                                                        <td><b>{{'Delete'|translate}}</b></td> -->
+
+                                                                    </tr>
+                                                              </thead>
+
+                                                              <tbody>
+                                                                  <tr ng-repeat ="comision in comissiondata | orderBy:sortType:sortReverse | filter: searchcomissionlist |startFrom:currentPagecomission*pageSizecomission | limitTo:pageSizecomission">
+
+                                                                      <td>{{comision.sendercomision +"%"}}</td>
+                                                                      <td>{{comision.platformcomsion+"%"}}</td>
+                                                                      <td>{{comision.benefcomision+"%"}}</td>
+                                                                      <td>{{comision.branchID}}</td>
+
+                                                                     <!--  <td><a href="javascript:void(0);" ng-click="editComision(comision);"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                                                                       <td><a href="javascript:void(0);" ng-click="deleteComision(comision);"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td> -->
+
+                                                                  </tr>
+
+                                                              </tbody>
+                                                          </table>
+                                                          <hr>
+                                                          <button ng-disabled="currentPagecomission == 0" ng-click="currentPagecomission=currentPagecomission-1">
+                                                         Previous
+                                                     </button>
+                                                     {{currentPagecomission+1}}/{{numberOfPagescomission()}}
+                                                     <button ng-disabled="currentPagecomission >= comissiondata.length/pageSizecomission - 1" ng-click="currentPagecomission=currentPagecomission+1">
+                                                         Next
+                                                     </button>
+
+                                                      </div>
+                                                      <br>
+
+
+
+                                                  </div>
+
+                                              </div>
+
+                                          </div>
+
+
+
+
+
+
+
+                                      <br>
+
+
+                              </div>
+                          </div>
+                        </div>
+
+
+
+
+
+                           <div id="tabsNavigationSimple99" class="tab-pane fade in">
+                                   <div class="row">
+                       <div class="col-md-12">
+                           <div class="box-inn-sp">
+                               <div class="inn-title">
+                                         <p align="left">{{'SIDE_Reimbursement'|translate}} </p>
+
+
+                                                       </div>
+                                                              <div class="bor">
+
+
+                                                                   <form name="transactionnoform">
+
+
+                                                                       <div class="row" align="left">
+
+               <input  type="text" style="width: 60%;  background-color:white;  height: 40px;
+  padding-left:20px;; border-radius:0; color:lightblue; border-style:solid;margin-left:20px;" placeholder="Transaction Number" ng-model="searchTransactionNo" name="searchTransactionNo" required="required" ng-pattern="transactionnumberpattern" maxlength="12"><span class="error" ng-show="transactionnoform.searchTransactionNo.$error.required" style="font-size: 10px">*</span>
+  <br>
+   <span class="error" ng-show="transactionnoform.searchTransactionNo.$error.pattern" style="font-size: 10px">{{'Pleaseenter12digitnumberonly'|translate}} </span>
+        <button type="button" role="spinbutton" class="btn btn-success app-button" style="margin-left: 600px;
+   padding-right: 110px; padding-left: 10px;margin-top:-110px;" ng-click="checkTransactionStatus();">
+                               {{'CheckStatus'|translate}} </button>
+                        </div>  <br>                                    <div class="row">
+                                                                   <div class="input-field col s6" style="margin-left:20px;">
+                                               <select ng-model="changeStatus" id="statuschange">
+                                                   <option value="" disabled>{{'ChangeStatus'|translate}}</option>
+                                                   <option ng-repeat="status in statusList" value="{{status.value}}" ng-selected> {{status.name}}</option>
+                                                  </select>
+                                           </div>
+                                            <button type="button" role="spinbutton" class="btn btn-success app-button" style="margin-left: 600px;
+   padding-right: 110px;
+   padding-left: 10px;margin-top:-87px;" ng-click="changeTransactionStatus();" style="width: auto;">
+                               {{'ChangeStatus'|translate}} </button>
+                                                                  </div>
+                                                                  </form>
+
+                                                           <hr>
+                               <div class="tab-inn" style="border-style: solid;
+   border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+   <div class="input-group serch-wrap" style="box-sizing: border-box;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;background-color: white;">
+        <div class="input-group-addon search-icon"><i class="fa fa-search"></i></div>
+        <input type="text" class="form-control search-text" placeholder="Search.." ng-model="searchreimbursementlist">
+      </div><hr>
+                                             <table  class="display table striped" cellspacing="0" width="100%">
+                                               <thead>
+                                               <tr>
+                                                 <td>
+                                                 <a href="" ng-click="sortType = 'transactionNumber'; sortReverse = !sortReverse">
+                                                  <b>{{'TransactionNo'|translate}} </b>
+                                                  <span ng-show="sortType == 'transactionNumber' && !sortReverse" class="fa fa-caret-down"></span>
+                                                  <span ng-show="sortType == 'transactionNumber' && sortReverse" class="fa fa-caret-up"></span>
+                                                </a>
+                                              </td>
+                                              <td>
+                                              <a href="" ng-click="sortType = 'status'; sortReverse = !sortReverse">
+                                               <b>{{'Status'|translate}} </b>
+                                               <span ng-show="sortType == 'status' && !sortReverse" class="fa fa-caret-down"></span>
+                                               <span ng-show="sortType == 'status' && sortReverse" class="fa fa-caret-up"></span>
+                                             </a>
+                                           </td>
+
+
+                                               <td>{{'TransactionHistory'|translate}}</td>
+
+
+                                           </tr>
+                                       </thead>
+
+                                       <tbody>
+                                           <tr ng-repeat ="transaction in transactionDetails|orderBy:sortType:sortReverse | filter: searchreimbursementlist|startFrom:currentPageremburse*pageSizeremburse | limitTo:pageSizeremburse">
+
+
+                                               <td>{{transaction.transactionNumber}}</td>
+                                               <td>{{transaction.status}}</td>
+                                                <td><a href="javascript:void(0);"><span class="label label-success" data-toggle="modal" data-target="#smallModal_abc" ng-click="transactionHistory(transaction)">{{'TransactionHistory'|translate}}</span></a></td>
+
+                                           </tr>
+
+                                       </tbody>
+                                   </table>
+                                   <hr>
+                                   <button ng-disabled="currentPageremburse == 0" ng-click="currentPageremburse=currentPageremburse-1">
+                                              Previous
+                                          </button>
+                                          {{currentPageremburse+1}}/{{numberOfPagesremburse()}}
+                                          <button ng-disabled="currentPageremburse >= transactionDetails.length/pageSizeremburse - 1" ng-click="currentPageremburse=currentPageremburse+1">
+                                              Next
+                                          </button>
+
+                                                       <div class="modal fade" id="smallModal_abc" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+                                                           <div class="" style="width: 100%; margin-top:100px;">
+                                                               <div class="">
+
+                                                                   <div class="modal-body">
+                                                                       <div class="">
+
+                                                                           <div class="" style="">
+
+                                                                               <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+                                                                                   <div class="row">
+                                                                                       <h4 class="modal-title" id="smallModalLabel" align="center"></h4>
+                                                                                       <div class="col-xs-6 col-sm-6 col-md-6">
+
+                                                                                       </div>
+
+                                                                                   </div>
+                                                                                   <div class="row">
+                                                                                       <div class="modal-header" style="border: none;">
+                                                                                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                                                                                       </div>
+                                                                                       <div class="text-center" style="margin-top:-45px;">
+
+                                                                                           <img src="/assets/images/transactions.png" alt="allytees-500-trans.png" width="100px" height="100px;">
+                                                                                           <h4>{{'TransactionHistory'|translate}}</h4>
+                                                                                       </div>
+
+                                                                                       <table class="table table-hover">
+                                                                                           <thead>
+                                                                                               <tr>
+                                                                                                   <th colspan="3">{{'TransactionNumber'|translate}}</th>
+                                                                                                   <td style="text-align: center"> {{transactionHistoryDeatils.transactionNumber}}</td>
+
+                                                                                               </tr>
+                                                                                           </thead>
+                                                                                           <tbody>
+                                                                                               <tr>
+                                                                                                   <th colspan="3">{{'Date'|translate}}</th>
+
+                                                                                                   <td style="text-align: center"> {{transactionHistoryDeatils.transactionDate |date:'MM/dd/yyyy'}} </td>
+
+                                                                                               </tr>
+                                                                                               <tr>
+                                                                                                   <th colspan="3">{{'MENU_REMITTER'|translate}}</th>
+
+                                                                                                   <td style="text-align: center" class="col-md-3"> {{transactionHistoryDeatils.remittername +" "+ transactionHistoryDeatils.remittersurName| decodeHtmlEntity | stripslashes}} </td>
+
+                                                                                               </tr>
+                                                                                               <tr>
+                                                                                                   <th colspan="3">{{'MENU_BENEFICIARY'|translate}}</th>
+
+                                                                                                   <td style="text-align: center">  {{transactionHistoryDeatils.beneficiaryname +" "+ transactionHistoryDeatils.beneficiarysurName| decodeHtmlEntity | stripslashes}} </td>
+
+                                                                                               </tr>
+                                                                                               <tr>
+                                                                                                   <th colspan="3">{{'AmountInLocalCCY'|translate}}</th>
+                                                                                                   <td class="col-md-1" style="text-align: center">{{transactionHistoryDeatils.amount}} </td>
+
+                                                                                               </tr>
+                                                                                               <tr>
+                                                                                                   <th colspan="3">{{'DestinationCountry'|translate}}</th>
+                                                                                                   <td class="col-md-1" style="text-align: center"> {{transactionHistoryDeatils.country| decodeHtmlEntity | stripslashes}} </td>
+                                                                                               </tr>
+                                                                                               <tr>
+                                                                                                   <th colspan="3">{{'Status'|translate}}</th>
+                                                                                                   <td class="col-md-1" style="text-align: center"> {{transactionHistoryDeatils.status| decodeHtmlEntity | stripslashes}}</td>
+                                                                                               </tr>
+                                                                                               <tr>
+                                                                                                   <th colspan="3">CCY</th>
+                                                                                                   <td class="col-md-1" style="text-align: center"> {{transactionHistoryDeatils.currency| decodeHtmlEntity | stripslashes}}</td>
+                                                                                               </tr>
+
+                                                                                           </tbody>
+                                                                                       </table>
+
+
+                                                                                   </div>
+                                                                                   </div>
+                                                                               </div>
+                                                                           </div>
+                                                                       </div>
+
+                                                                   </div>
+                                                               </div>
+
+                                                           </div>
+                                                       </div> <!--change above-->
+
+
+                               </div>
+
+                                 <br>
+
+
+
+                           </div>
+                       </div>
+                   </div>
+
+                           </div>
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>

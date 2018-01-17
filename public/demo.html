@@ -1,0 +1,12 @@
+<div>
+  <p>{{ 'HEADLINE' | translate }}</p>
+  <p>{{ 'PARAGRAPH' | translate }}</p>
+  <p translate>PASSED_AS_TEXT</p>
+  <p translate="PASSED_AS_ATTRIBUTE"></p>
+  <p translate>{{ 'PASSED_AS_INTERPOLATION' }}</p>
+  <p translate="{{ 'PASSED_AS_INTERPOLATION' }}"></p>
+  <p translate="VARIABLE_REPLACEMENT" translate-values="{ name: 'PascalPrecht' }"></p>
+  <p translate>MISSING_TRANSLATION</p>
+  <button ng-click="changeLanguage('de')" translate="BUTTON_LANG_DE"></button>
+  <button ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN"></button>
+</div>

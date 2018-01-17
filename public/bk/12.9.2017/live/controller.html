@@ -1,0 +1,1740 @@
+
+    <style>
+        .in{padding-right: 0px !important;}
+    </style>
+    <style>
+    .ul
+    {
+
+        margin-right: 5px;
+        padding: 5px;}</style>
+
+</head>
+
+
+    <div class="container-fluid sb1">
+        <div class="row" style="height: 60px">
+            <!--== LOGO ==-->
+            <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+                <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <a href="#" class="atab-menu"><i class="fa fa-bars tab-menu" aria-hidden="true"></i></a>
+                <!-- <a href="index-2.html" class="logo"><img src="/assets/images/logo1.png" alt="" />
+                </a> -->
+            </div>
+            <!--== SEARCH ==-->
+
+            <!--== MY ACCCOUNT ==-->
+            <div class="col-md-8 col-sm-3 col-xs-6" style="float: right;">
+                <!-- Dropdown Trigger -->
+                <a class='waves-effect dropdown-button top-user-pro' href="javascript:void(0);" data-activates='top-menu'><!--img src="/assets/images/user/6.png" alt="" /-->{{ 'SIDE_ACCOUNT' | translate }}<i class="fa fa-angle-down" aria-hidden="true"></i>
+                </a>
+
+
+                <!-- Dropdown Structure -->
+                <ul id='top-menu' class='dropdown-content top-menu-sty'>
+                   <!--  <li><a href="setting.html" class="waves-effect"><i class="fa fa-cogs" aria-hidden="true"></i>Admin Setting</a>
+                    </li>
+
+                    <li class="divider"></li> -->
+                    <li><a href="javascript:void(0);" class="ho-dr-con-last waves-effect" ng-click="controllerLogout()"><i class="fa fa-sign-in" aria-hidden="true"></i> {{'MENU_Logout' | translate}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--== BODY CONTNAINER ==-->
+    <div class="container-fluid sb2">
+        <div class="row">
+            <div class="sb2-1" style="position: fixed; overflow: scroll;">
+                <!--== USER INFO ==-->
+                <div class="sb2-12" align="center">
+                    <ul>
+
+                        <li>
+                            <h5>{{'Welcome'|translate}}:{{logtokendata.name}} </h5>
+                        </li>
+
+                        <br>
+
+                        <span style="font-size: 16px;">{{logtokendata.email}}</span>
+                        <span style="font-size: 12px;"> {{'ControllerID'|translate}}:</span>  <i>{{logtokendata.branchID}}</i><br>
+                        <span style="font-size: 12px;">{{'SIDE_BRANCH_ID'|translate}}: <i> {{logtokendata.controllerID}}</i> </span>
+
+
+
+                    </ul>
+                </div>
+                <!--== LEFT MENU ==-->
+                <div class="sb2-13" style="height:100%">
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li><a href="javascript:void(0);"><i class="fa fa-bar-chart" aria-hidden="true"></i><b> {{'MENU_DASHBOARD'|translate}}</b></a>
+                        </li>
+                        <li><a ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple2" data-toggle="tab" class=""><i class="fa fa-id-badge" aria-hidden="true"></i> <b>{{'MENU_TELLER'|translate}}</b></a>
+
+                        </li>
+
+
+                        <li><a ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple4" data-toggle="tab" class=""><i class="fa fa-file" aria-hidden="true"></i> <b>{{'SIDE_REPORTS'|translate}}</b></a>
+
+                        </li>
+ <li><a ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple5" data-toggle="tab" class=""><i class="fa fa-file" aria-hidden="true"></i> <b>{{'SIDE_COUNTRY_LIMIT'|translate}}</b></a>
+
+                        </li> <li><a ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple6" data-toggle="tab" class=""><i class="fa fa-file" aria-hidden="true"></i> <b>Transaction</b></a>
+
+                        </li>
+                         <li><a ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple7" data-toggle="tab" class=""><i class="fa fa-file" aria-hidden="true"></i> <b>Tariff </b></a>
+
+                        </li>
+                       <li><a ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple8" data-toggle="tab" class=""><i class="fa fa-file" aria-hidden="true"></i> <b>{{'SIDE_COMMISSION_SHARING'|translate}}</b></a>
+
+                        </li>
+                         <li><a ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple9" data-toggle="tab" class=""><i class="fa fa-file" aria-hidden="true"></i> <b>{{'MENU_REMITTER'|translate}} </b></a>
+
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple50"><i class="fa fa-user-circle" aria-hidden="true"></i> <span><b>{{'MENU_BENEFICIARY'|translate}}</b></span></a>
+                        </li>
+
+                        <li><a ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple11" data-toggle="tab" class=""><i class="fa fa-file" aria-hidden="true"></i> <b>{{'SIDE_Reimbursement'|translate}} </b></a>
+
+                        </li>
+                         <li class="closed"><a href="javascript:void(0)" class=""><i class="fa fa-language" aria-hidden="true"></i> <b>{{'MENU_LANGUAGE' |translate}}</b></a>
+                           <ul>
+                             <li ng-click="changeLanguage('de')"><a href="">{{ 'BUTTON_LANG_DE' | translate }}</a>
+                             </li>
+                             <li ng-click="changeLanguage('en')"><a href="">{{ 'BUTTON_LANG_EN' | translate }}</a>
+                             </li>
+                           </ul>
+                         </li>
+
+                         <li ><a href="index.html" class=""><i class="fa fa-sign-in" aria-hidden="true"></i><b> {{'MENU_Logout' | translate}}</b></a>
+
+                            </li>
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="sb2-2" >
+                <!-- <div class="sb2-2-2">
+                    <ul >
+                        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        </li>
+                        <li class="active-bre"><a href="#"> Tariffs</a>
+                        </li>
+                    </ul>
+                </div> -->
+                <div class="sb2-2-add-blog sb2-2-1" >
+                    <h2></h2>
+                    <br>
+
+                    <!-- <ul class="nav nav-tabs tab-list">
+
+
+                        <li class="active"><a data-toggle="tab" ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple2"><i class="fa fa-money" aria-hidden="true"></i> <span>Teller</span></a>
+                        </li>
+
+
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple4"><i class="fa fa-user-circle" aria-hidden="true"></i> <span>Reports</span></a>
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple5"><i class="fa fa-user-circle" aria-hidden="true"></i> <span>Country Limit</span></a>
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple6"><i class="fa fa-user-circle" aria-hidden="true"></i> <span>Transaction</span></a>
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple7"><i class="fa fa-user-circle" aria-hidden="true"></i> <span>Tariff Grid</span></a>
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple8"><i class="fa fa-user-circle" aria-hidden="true"></i> <span>Commission Sharing Grid</span></a>
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple9"><i class="fa fa-user-circle" aria-hidden="true"></i> <span>Remitter</span></a>
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple50"><i class="fa fa-user-circle" aria-hidden="true"></i> <span>Beneficiary</span></a>
+                        </li>
+
+                         <li><a data-toggle="tab" ng-href="http://localhost:3000/#/ControllerDashboard#tabsNavigationSimple11"><i class="fa fa-user-circle" aria-hidden="true"></i> <span>Reimbursement</span></a>
+                        </li>
+
+
+
+                    </ul>
+ -->
+                    <div class="tab-content">
+                        <div id="home">
+                            <div class="box-inn-sp">
+
+                            </div>
+                        </div>
+
+                        <!----------------------------------------Paying money--------------------------------------------!-->
+                        <!----------------------------------------Paying money--------------------------------------------!-->
+
+                        <div id="tabsNavigationSimple2" class="tab-pane fade in active">
+
+
+
+
+
+
+
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+
+                                                        <div class="inn-title">
+                                                            <p>Teller List</p>
+
+
+                                                        </div>
+                                                           <div class="bor">
+                                                        <div class="tab-inn" style="border-style: solid;
+    border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+                                                       <form>
+
+                                                     <table id="dtable301" class="display" cellspacing="0" width="100%">
+                                                             <thead style="background-color: #269abc;">
+                                                             <tr>
+                                                                 <th style="color: #ffffff;">S.N</th>
+                                                                 <th style="color: #ffffff;">{{'TellerID'|translate}}</th>
+                                                                 <th style="color: #ffffff;"> {{'Name'|translate}}</th>
+                                                                 <th style="color: #ffffff;">Email</th>
+                                                                 <th style="color: #ffffff;">{{'SIDE_CASH_PAYMENT_LIMIT'|translate}}</th>
+                                                                 <!-- <th style="color: #ffffff;">Cash Balance</th> -->
+                                                                 <th style="color: #ffffff;">{{'SIDE_LOGIN_TIME_ALLOW'|translate}}</th>
+                                                                 <th style="color: #ffffff;">{{'SIDE_MAC_ADDRESS'|translate}}</th>
+                                                             </tr>
+
+                                                                </thead>
+
+                                                                <tbody>
+                                                                  <tr ng-repeat ="tellerinfo in tellerDetails track by $index">
+                                                                      <td>{{$index+1}}</td>
+                                                                      <td>{{tellerinfo.tellerID}}</td>
+                                                                        <td>{{tellerinfo.name}}</td>
+                                                                        <td>{{tellerinfo.email}}</td>
+                                                                        <td>{{tellerinfo.paymentLimit}}</td>
+                                                                        <!-- <td>100000</td> -->
+                                                                        <td>{{tellerinfo.logintime}}</td>
+                                                                        <td>{{tellerinfo.tellermac}}</td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </form>
+                                                        </div>
+                                                        </div>
+                                                        <br>
+
+
+
+
+
+                                                </div>
+
+                                            </div>
+
+
+                                        <br>
+
+
+
+
+
+                        </div>
+
+                        <div id="menu5" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>Paying Supplier</p>
+                                </div>
+                                <div class="bor">
+                                    <form>
+                                        <div class="row">
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s6">
+                                                <input id="last_name" type="text" value="#457845" class="validate">
+                                                <label for="last_name">Code</label>
+                                                <input type="submit" class="waves-effect waves-light btn-large" value="Find Supplier">
+
+                                            </div>
+
+                                        </div>
+                                        <br>
+
+                                        <div class="row">
+                                            <div class="input-field col s3">
+                                                <input id="last_name" type="text" value="#41245DG" class="validate">
+                                                <label for="last_name">Invoice Number</label>
+
+                                            </div>
+                                            <div class="input-field col s3">
+                                                <input id="last_name" type="text" value="17-05-2017" class="validate">
+                                                <label for="last_name">Date</label>
+
+                                            </div>
+                                            <div class="input-field col s3">
+                                                <input id="last_name" type="text" value="10000" class="validate">
+                                                <label for="last_name">Amount</label>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="inn-title">
+                                                <h4></h4>
+                                                <p>Account Number Of The Supplier To pay (Remitter)</p>
+                                            </div>
+                                        </div>
+                                        <br>
+
+                                        <div class="row">
+                                            <div class="input-field col s3">
+                                                <input id="last_name" type="text" value="" class="validate">
+                                                <label for="last_name">Name Of The Remitter</label>
+
+                                            </div>
+
+                                            <div class="input-field col s3" align="left">
+                                                <input id="last_name" type="text" value="" class="validate">
+                                                <label for="last_name">Contact</label>
+
+                                            </div>
+
+                                            <input type="submit" class="waves-effect waves-light btn-large" style="    margin-top: 6px;
+    margin-left: 129px;" value="Search Invoice" align="right">
+                                            <input type="submit" class="waves-effect waves-light btn-large" value="Pay & Print Reciept" align="right" style="background-color: #089208;">
+
+                                        </div>
+
+                                    </form>
+
+                                    <br>
+
+                                    <div class="row">
+                                    </div>
+
+
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="menu3" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>Supervisor Detail</p>
+                                </div>
+                                <div class="bor">
+                                    <form>
+                                        <div class="row">
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s6">
+                                                <select multiple>
+                                                    <option value="AF">Select</option>
+                                                    <option value="AF">Branch ID 1212454</option>
+                                                    <option value="AX">Branch ID 78871484</option>
+                                                    <option value="AX">Branch ID 78481112</option>
+
+                                                </select>
+                                                <label for="list-title">Branch ID</label>
+                                            </div>
+                                            <div class="input-field col s6">
+                                                <input id="last_name" type="text" value="155ADFA" class="validate">
+                                                <label for="last_name">Supervisor ID</label>
+                                            </div>
+                                            <div class="input-field col s6">
+                                                <input id="last_name" type="text" value="00-00-00-XX-00-X0" class="validate">
+                                                <label for="last_name">Mac Address</label>
+                                            </div>
+
+                                        </div>
+                                    </form>
+
+                                    <br>
+                                    <div class="row" align="right">
+
+                                        <input type="submit" class="waves-effect waves-light btn-large" value="Search Transaction">
+
+                                    </div>
+
+                                    <div class="row">
+                                    </div>
+                                    </form>
+
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tabsNavigationSimple3"  class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p><input type="Search" placeholder="Search" style="width: 24%; float: right; background-color: aliceblue;padding-bottom: 2px;padding-left: 20px; border-radius: 4px; height: 23px;
+    margin-top: -2px; color: black;">KYC</p>
+                                </div>
+                                <div class="">
+                                    <form>
+
+                                        <div class="row">
+
+                                        </div>
+
+                                    </form>
+
+                                    <div class="">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="box-inn-sp">
+
+                                                    <div class="tab-inn" style="border-style: solid;border-color: rgba(45, 58, 64, 0.04);">
+                                                        <table class="responsive-table striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>S.N.</th>
+                                                                    <th>Type</th>
+                                                                    <th>Name</th>
+                                                                    <th>Region</th>
+                                                                    <th>Country</th>
+                                                                    <th>Action</th>
+
+
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>01</td>
+                                                                    <td>Remitter</td>
+                                                                    <td>Alex Mortaza</td>
+                                                                    <td>Region</td>
+                                                                    <td>Australia</td>
+                                                                    <td><a href="#"><span class="label label-success" data-toggle="modal" data-target="#smallModal">Transaction History</span></a></td>
+                                                                     <td>
+
+                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>02</td>
+                                                                    <td>Beneficiary</td>
+                                                                    <td>Loseph Martin</td>
+                                                                    <td>Region</td>
+                                                                    <td>UK</td>
+                                                                    <td><a href="#"><span class="label label-success" data-toggle="modal" data-target="#smallModal">Transaction History</span></a></td>
+                                                                     <td>
+
+                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>03</td>
+                                                                    <td>Remitter</td>
+                                                                    <td>Alex Mortaza</td>
+                                                                    <td>Region</td>
+                                                                    <td>Australia</td>
+                                                                    <td><a href="#"><span class="label label-success" data-toggle="modal" data-target="#smallModal">Transaction History</span></a></td>
+                                                                     <td>
+
+                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>04</td>
+                                                                    <td>Beneficiary</td>
+                                                                    <td>Loseph Martin</td>
+                                                                    <td>Region</td>
+                                                                    <td>UK</td>
+                                                                    <td><a href="#"><span class="label label-success" data-toggle="modal" data-target="#smallModal">Transaction History</span></a></td>
+                                                                     <td>
+
+                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>05</td>
+                                                                    <td>Remitter</td>
+                                                                    <td>Alex Mortaza</td>
+                                                                    <td>Region</td>
+                                                                    <td>Australia</td>
+                                                                    <td><a href="#"><span class="label label-success" data-toggle="modal" data-target="#smallModal">Transaction History</span></a></td>
+                                                                     <td>
+
+                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>06</td>
+                                                                    <td>Beneficiary</td>
+                                                                    <td>Loseph Martin</td>
+                                                                    <td>Region</td>
+                                                                    <td>UK</td>
+                                                                    <td><a href="#"><span class="label label-success" data-toggle="modal" data-target="#smallModal">Transaction History</span></a></td>
+                                                                     <td>
+
+                                                    </td>
+
+                                                                </tr>
+                                                                 <tr>
+                                                                    <td>07</td>
+                                                                    <td>Beneficiary</td>
+                                                                    <td>Loseph Martin</td>
+                                                                    <td>Region</td>
+                                                                    <td>UK</td>
+                                                                    <td><a href="#"><span class="label label-success" data-toggle="modal" data-target="#smallModal">Transaction History</span></a></td>
+                                                                     <td>
+
+                                                    </td>
+
+                                                                </tr>
+                                                                 <tr>
+                                                                    <td>08</td>
+                                                                    <td>Beneficiary</td>
+                                                                    <td>Loseph Martin</td>
+                                                                    <td>Region</td>
+                                                                    <td>UK</td>
+                                                                    <td><a href="#"><span class="label label-success" data-toggle="modal" data-target="#smallModal">Transaction History</span></a></td>
+                                                                     <td>
+
+                                                    </td>
+
+                                                                </tr>
+                                                                 <tr>
+                                                                    <td>09</td>
+                                                                    <td>Beneficiary</td>
+                                                                    <td>Loseph Martin</td>
+                                                                    <td>Region</td>
+                                                                    <td>UK</td>
+                                                                    <td><a href="#"><span class="label label-success" data-toggle="modal" data-target="#smallModal">Transaction History</span></a></td>
+                                                                     <td>
+
+                                                    </td>
+
+                                                                </tr>
+                                                                 <tr>
+                                                                    <td>09</td>
+                                                                    <td>Beneficiary</td>
+                                                                    <td>Loseph Martin</td>
+                                                                    <td>Region</td>
+                                                                    <td>UK</td>
+                                                                    <td><a href="#"><span class="label label-success" data-toggle="modal" data-target="#smallModal">Transaction History</span></a></td>
+                                                                     <td>
+
+                                                    </td>
+
+                                                                </tr>
+                                                                 <tr>
+                                                                    <td>10</td>
+                                                                    <td>Beneficiary</td>
+                                                                    <td>Loseph Martin</td>
+                                                                    <td>Region</td>
+                                                                    <td>UK</td>
+                                                                    <td><a href="#"><span class="label label-success" data-toggle="modal" data-target="#smallModal">Transaction History</span></a></td>
+                                                                     <td>
+
+                                                    </td>
+
+                                                                </tr>
+
+                                                            </tbody>
+
+                                                        </table>
+
+
+
+    <div id="smallModal" class="modal modal-fixed-footer" style="width: 50%; ">
+                                      <div class="modal-header" style="background-color: white;padding: 0px !important; height:55px;">
+
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-right:10px; padding:5px;">&times;
+                                                                                            </button>
+     <img src="/assets/images/transactions.png" alt="allytees-500-trans.png" width="40" height="40" style="margin-left:45%;" >
+        <div style="margin-left:40%;" > <b>Transaction History</b></div>
+    </div>
+    <div class="modal-content">
+
+
+                                                                                        <table data-editable data-editable-spy class="responsive-table striped table" style="z-index:-10;    width: 600px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid grey;
+    box-sizing: border-box;">
+                                                                                            <thead>
+
+                                                                                                <tr>
+                                                                                                    <th colspan="3">Transaction Number</th>
+                                                                                                    <td style="text-align: center"> #457DGJDG </td>
+
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <th colspan="3">Date</th>
+
+                                                                                                    <td style="text-align: center"> 25-05-2017 </td>
+
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <th colspan="3">Remitter</th>
+
+                                                                                                    <td style="text-align: center" class="col-md-3"> Henriques Marel </td>
+
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <th colspan="3">Beneficiary</th>
+
+                                                                                                    <td style="text-align: center"> Rojer Fedral </td>
+
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <th colspan="3">Amount In Local CCY</th>
+                                                                                                    <td class="col-md-1" style="text-align: center"> 10000 </td>
+
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <th colspan="3">Destination</th>
+                                                                                                    <td class="col-md-1" style="text-align: center"> Australia </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <th colspan="3">Status</th>
+                                                                                                    <td class="col-md-1" style="text-align: center"> Pending</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <th colspan="3">CCY</th>
+                                                                                                    <td class="col-md-1" style="text-align: center"> FCFA</td>
+                                                                                                </tr>
+
+
+                                                                                            </tbody>
+                                                                                        </table>
+        <hr>
+
+        <table data-editable data-editable-spy class="responsive-table striped table" style="width: 600px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid grey;
+    box-sizing: border-box;">
+                                                                                            <thead>
+
+                                                                                                <tr>
+                                                                                                    <th colspan="3">Transaction Number</th>
+                                                                                                    <td style="text-align: center"> #457DGJDG </td>
+
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <th colspan="3">Date</th>
+
+                                                                                                    <td style="text-align: center"> 25-05-2017 </td>
+
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <th colspan="3">Remitter</th>
+
+                                                                                                    <td style="text-align: center" class="col-md-3"> Henriques Marel </td>
+
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <th colspan="3">Beneficiary</th>
+
+                                                                                                    <td style="text-align: center"> Rojer Fedral </td>
+
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <th colspan="3">Amount In Local CCY</th>
+                                                                                                    <td class="col-md-1" style="text-align: center"> 10000 </td>
+
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <th colspan="3">Destination</th>
+                                                                                                    <td class="col-md-1" style="text-align: center"> Australia </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <th colspan="3">Status</th>
+                                                                                                    <td class="col-md-1" style="text-align: center"> Pending</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <th colspan="3">CCY</th>
+                                                                                                    <td class="col-md-1" style="text-align: center"> FCFA</td>
+                                                                                                </tr>
+
+
+                                                                                            </tbody>
+                                                                                        </table>
+
+    </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <br>
+                                                    <div class="row" style="margin-left: 8px;">
+
+                                                     <button type="button"role="button" class="btn btn-success app-button">
+                                              edit
+                                              </button>
+                                             <button type="button"role="button" class="btn btn-success app-button123">
+                                              save
+                                              </button>
+
+                                            <button type="button"role="button" class="btn btn-success app-button1">
+                                              Refresh
+                                              </button>
+
+                                                        <div class="pagination" style="margin-top: -2px;">
+  <a href="#">&laquo;</a>
+  <a class="active" href="#">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+
+                                                    </div>
+
+</div>
+
+                                                    <br>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    </form>
+
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="menu6" class="tab-pane fade in">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="box-inn-sp">
+                                        <div class="inn-title">
+                                            <p>User List</p>
+
+                                            <a class="dropdown-button drop-down-meta" href="#" data-activates="dr-users"><i class="material-icons">more_vert</i></a>
+                                            <ul id="dr-users" class="dropdown-content">
+                                                <li><a href="#">Beneficiary</a>
+                                                </li>
+                                                <li><a href="#">Remitter</a>
+                                                </li>
+
+                                                <li><a href="#"><i class="material-icons">subject</i>View All</a>
+                                                </li>
+                                            </ul>
+
+                                            <!-- Dropdown Structure -->
+
+                                        </div>
+                                        <div class="tab-inn">
+                                            <div class="table-responsive table-desi">
+                                                <table class="table table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Country</th>
+                                                            <th>First Name</th>
+                                                            <th>Last name</th>
+                                                            <th>Email</th>
+                                                            <th>Address</th>
+                                                            <th>Contact</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Africa
+                                                            </td>
+                                                            <td><a href="#"><span class="list-enq-name">Johnson</span></a>
+                                                            </td>
+                                                            <td>Buttler</td>
+                                                            <td>buttler1245@dummy.com</td>
+                                                            <td>Street 25,Main Market </td>
+                                                            <td>
+                                                                +21 2124455454
+                                                            </td>
+
+                                                        </tr>
+
+                                                    </tbody>
+
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row" align="right" style="    margin-right: 20px;">
+
+                                        <i class="waves-effect waves-light btn-large waves-input-wrapper" style="background-color: green;"><input type="submit" class="waves-button-input" value="Update"></i>
+                                        <i class="waves-effect waves-light btn-large waves-input-wrapper" style="background-color: #1e6b98;"><input type="submit" class="waves-button-input" value="Import"></i>
+
+                                    </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!----------------------------------------Print Report--------------------------------------------!-->
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+
+
+
+
+                        <div id="tabsNavigationSimple4"  class="tab-pane fade in">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="box-inn-sp">
+                                         <div class="inn-title">
+                                                            <p>{{'TransactionDetail'|translate}}</p>
+
+
+                                                        </div>
+                                                        <div class="bor1">
+                                        <div class="tab-inn">
+
+                                            <div class="table-responsive table-desi">
+                                              <table id="dtable302" class="display" cellspacing="0" width="100%">
+                                                      <thead style="background-color: #269abc;">
+                                                        
+                                                         <tr>
+                                                          <th style="color: #ffffff;">S.N</th>
+                                                             <th style="color: #ffffff;">{{'Date'|translate}}</th>
+                                                            <th style="color: #ffffff;">{{'SIDE_TELLER'|translate}}</th>
+                                                            <th style="color: #ffffff;">{{'TransactionNo'|translate}}</th>
+                                                            <th style="color: #ffffff;">{{'Amount'|translate}}</th>
+                                                            <th style="color: #ffffff;">{{'SIDE_COUNTRY'|translate}}</th>
+                                                            <th style="color: #ffffff;">{{'MENU_REMITTER'|translate}}</th>
+                                                            <th style="color: #ffffff;">{{'MENU_BENEFICIARY'|translate}}</th>
+                                                            <th style="color: #ffffff;">{{'Status'|translate}}</th>
+
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat ="trans in transactionDetails track by $index">
+                                                          <td>{{$index+1}}</td>
+                                                            <td>{{trans.transactionDate |date:'MM/dd/yyyy'}}
+                                                            </td>
+                                                            <td>{{trans.tellerID.name}}
+                                                            </td>
+                                                            <td>{{trans.transactionNumber}}</td>
+                                                            <td>{{trans.amount}}</td>
+                                                            <td>{{trans.country}}</td>
+                                                            <td>{{trans.remittername + " " +trans.remittersurName}}</td>
+                                                            <td>{{trans.beneficiaryname + " " +trans.beneficiarysurName}}</td>
+                                                            <td>{{trans.status}}</td>
+
+
+                                                        </tr>
+
+                                                    </tbody>
+
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+
+ <br>
+                                    <div class="row" style="margin-left: 24px;">
+
+
+                                            <!--  <button type="button"role="button" class="btn btn-success app-button123">
+                                              Import
+                                              </button> -->
+
+
+
+                                    </div>
+
+                                    </form>
+
+
+                                </div>
+                            </div>
+    </div>
+
+    <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------Add Country Limit---------!---------------->
+
+
+                        <div id="tabsNavigationSimple5"  class="tab-pane fade in">
+                           <div class="row">
+                                                <div class="col-md-12">
+
+                                                        <div class="inn-title">
+                                                            <p>{{'CountryLimitDetail'|translate}}</p>
+
+
+                                                        </div>
+                                                        <div class="bor1">
+                                                        <div class="tab-inn" style="border-style: solid;
+    border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+                                                       <form>
+                                                         <table id="dtable303" class="display" cellspacing="0" width="100%">
+                                                             <thead style="background-color: #269abc;">
+                                                             <tr>
+                                                             <th style="color: #ffffff;">S.N</th>
+                                                      <th style="color: #ffffff;">{{'SIDE_COUNTRY'|translate}}</th>
+                                                      <th style="color: #ffffff;"> {{'Currency'|translate}} </th>
+                                                      <th style="color: #ffffff;">{{'SIDE_PAYMENT_LIMIT_PER_MONTH'|translate}}</th>
+                                                      <th style="color: #ffffff;">{{'Region'|translate}}</th>
+
+                                                               </tr>
+                                                           </thead>
+
+                                                                       <tbody>
+                                                                         <tr ng-repeat ="country in countrylimitDetails track by $index">
+                                                                              <td>{{$index+1}}</td>
+                                                                               <td>{{country.countryName}}</td>
+                                                                               <td>{{country.currency}}</td>
+                                                                               <td>{{country.paymentLimit}}</td>
+                                                                               <td>{{country.region}}</td>
+
+
+                                                                           </tr>
+
+
+                                                                       </tbody>
+                                                                   </table>
+
+</form>
+                                                        </div>
+                                                      </div>
+                                                        <br>
+
+
+
+                                                </div>
+
+                                            </div>
+                                            <!-- <div class="row" align="right" style="    margin-right: 4px;">
+
+                                                            <button type="button"role="button" class="btn btn-success app-button">
+                                              Save
+                                              </button>
+
+
+                                                        </div> -->
+
+
+                        </div>
+
+
+
+          
+
+
+                        <div id="tabsNavigationSimple6"  class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>{{'TransactionList'|translate}}</p>
+                                </div>
+                                <div class="">
+                                    <form>
+
+                                        <div class="row">
+
+                                        </div>
+
+                                    </form>
+
+                                    <div class="">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="box-inn-sp">
+                                                  <div class="bor1">
+                                                    <div class="tab-inn" style="border-style: solid;border-color: rgba(45, 58, 64, 0.04);">
+                                                      <table id="dtable304" class="display" cellspacing="0" width="100%">
+                                                         <thead style="background-color: #269abc;">
+                                                                <tr>
+                                                                    <th style="color: #ffffff;">S.N.</th>
+
+                                                                    <th style="color: #ffffff;">{{'Name'|translate}}</th>
+                                                                    <th style="color: #ffffff;">{{'Region'|translate}}</th>
+                                                                    <th style="color: #ffffff;">{{'country'|translate}}</th>
+                                                                    <th style="color: #ffffff;">Action</th>
+
+
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody>
+                                                              <tr ng-repeat ="remit in remitterDetails  track by $index">
+                                                                  <td>{{$index+1}}</td>
+
+                                                                  <td>{{remit.remittername +" "+ remit.remittersurName}}</td>
+                                                                  <td>{{remit.region}}</td>
+                                                                  <td>{{remit.issueCountry}}</td>
+                                                                    <td><span class="label label-success" data-toggle="modal" data-target="#smallModal2" ng-click="transaction_history(remit.remittername,remit.remittersurName)">{{'TransactionHistory'|translate}}</span></td>
+
+
+                                                                </tr>
+
+
+
+                                                            </tbody>
+
+                                                        </table>
+
+
+
+                                                        <!-- testing -->
+<div id="smallModal2" class="modal modal-fixed-footer" style="width: 50%; ">
+    <div class="modal-header" style="background-color: white;padding: 0px !important; height:55px;">
+
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-right:10px; padding:5px;">&times;
+                                                                                            </button>
+     <img src="/assets/images/transactions.png" alt="allytees-500-trans.png" width="40" height="40" style="margin-left:45%;" >
+        <div style="margin-left:40%;" > <b>{{'TransactionHistory'|translate}}</b></div>
+    </div>
+    <div class="modal-content">
+
+      <table data-editable data-editable-spy class="responsive-table striped table" style="z-index:-10;    width: 600px;
+     height: 100px;
+     padding: 5px;
+     border: 1px solid grey;
+     box-sizing: border-box;" ng-repeat ="kyc in kyctransaction  track by $index" >
+     <thead>
+
+         <tr>
+             <th colspan="3">{{'TransactionNumber'|translate}}</th>
+            <td style="text-align: center"> {{kyc.transactionNumber}}</td>
+
+
+         </tr>
+     </thead>
+     <tbody>
+
+ <tr>
+            <th colspan="3">{{'Date'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.transactionDate |date:'MM/dd/yyyy'}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'SIDE_BRANCH_ID'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.branchID}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'TellerID'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.tellerID.tellerID}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'MENU_REMITTER'|translate}}</th>
+
+            <td style="text-align: center" class="col-md-3"> {{kyc.remittername +" "+ kyc.remittersurName}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'RemitterAddress'|translate}}</th>
+
+            <td style="text-align: center" class="col-md-3"> {{kyc.remitteraddress}} </td>
+
+        </tr>
+          <tr>
+            <th colspan="3">{{'RemitterTelephone'|translate}}</th>
+
+            <td style="text-align: center" class="col-md-3"> {{kyc.remittermobile}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'MENU_BENEFICIARY'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.beneficiaryname +" "+ kyc.beneficiarysurName}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'BeneficiaryAddress'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.beneficiaryaddress}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'BeneficiaryTelephone'|translate}}</th>
+
+            <td style="text-align: center"> {{kyc.beneficiarymobile}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'AmountInLocalCCY'|translate}}</th>
+            <td class="col-md-1" style="text-align: center"> {{kyc.amount}} </td>
+
+        </tr>
+        <tr>
+            <th colspan="3">{{'DestinationCountry'|translate}}</th>
+            <td class="col-md-1" style="text-align: center"> {{kyc.country}} </td>
+        </tr>
+        <tr>
+            <th colspan="3">{{'Status'|translate}}</th>
+            <td class="col-md-1" style="text-align: center"> {{kyc.status}}</td>
+        </tr>
+        <tr>
+            <th colspan="3">CCY</th>
+            <td class="col-md-1" style="text-align: center"> {{kyc.currency}}</td>
+        </tr>
+
+     </tbody>
+   </table>
+        <hr>
+
+
+    </div>
+
+  </div>
+                                                        <!-- testing end -->
+
+                                                    </div>
+
+                                                  </div>
+                                                    <br>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    </form>
+
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+                                    <!----------------------------------------Print Report--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+<!------------------------------------------------------------Tariff Grid--------------->
+ <!----------------------------------------------------------Tariff List---------------------------------------!-->
+                              <div id="tabsNavigationSimple7"  class="tab-pane fade ">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="box-inn-sp">
+                                                        <div class="inn-title">
+                                                            <p>{{'TariffList'|translate}}</p>
+
+
+                                                        </div>
+                                                        <div class="bor1">
+                                                        <div class="tab-inn" style="border-style: solid;
+    border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+
+    <table id="dtable305" class="display" cellspacing="0" width="100%">
+    <thead style="background-color: #269abc;">
+      <tr>
+         <th style="color: #ffffff;">S.N</th>
+        <th style="color: #ffffff;">{{'SIDE_COUNTRY'|translate}}</th>
+        <th style="color: #ffffff;">{{'Currency'|translate}}</th>
+        <th style="color: #ffffff;">Min-MT</th>
+        <th style="color: #ffffff;">Max-MT</th>
+        <th  style="color: #ffffff;"align="center">Tariff </th>
+        <th style="color: #ffffff;">{{'Tax'|translate}}</th>
+        <th style="color: #ffffff;">{{'TariffExcludedTax'|translate}}</th>
+        <th style="color: #ffffff;"> {{'SIDE_BRANCH_ID'|translate}}</th>
+
+
+
+         </tr>
+      </thead>
+
+                              <tbody>
+                                <tr ng-repeat ="tariff in tariffdata track by $index">
+
+                                     <td>{{$index+1}}</td>
+                                     <td>{{tariff.country}}</td>
+                                      <td>{{tariff.currency}}</td>
+                                      <td>{{tariff.minAmount}}</td>
+                                      <td>{{tariff.maxAmount}}</td>
+                                      <td>{{tariff.tariff}}</td>
+                                      <td>{{tariff.tax +"%"}}</td>
+                                      <td><center>{{tariff.tariffExclude }}<center></td>
+                                      <td>{{tariff.branchID}} </td>
+
+
+                                  </tr>
+
+                              </tbody>
+                          </table>
+
+                                                        </div>
+                                                      </div>
+                                                        <br>
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row" align="right" style="    margin-right: 4px;">
+
+                                                            <!-- <button type="button"role="button" class="btn btn-success app-button">
+                                              Print
+                                              </button> -->
+
+
+                                                        </div>
+                                  </div>
+
+
+
+<div id="tabsNavigationSimple8"  class="tab-pane fade ">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="box-inn-sp">
+                                                        <div class="inn-title">
+
+                <p> {{'CommissionSharingList'|translate}}</p>
+
+
+
+
+                                                        </div>
+                                                        <div class="bor1">
+                         <div class="tab-inn" style="border-style: solid;border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+
+                           <table id="dtable306" class="display" cellspacing="0" width="100%">
+                             <thead style="background-color: #269abc;">
+                             <tr>
+                             <th style="color: #ffffff;">S.N</th>
+                             <th style="color: #ffffff;">Sender_Comm</th>
+                             <th style="color: #ffffff;">Platform_Comm</th>
+                             <th style="color: #ffffff;">Benef_Comm</th>
+                              <th style="color: #ffffff;">{{'SIDE_BRANCH_ID'|translate}}</th>
+
+
+                         </tr>
+                     </thead>
+
+                     <tbody>
+                         <tr ng-repeat ="com in comissiondata1 track by $index">
+                             <td>{{$index+1}}</td>
+                             <td>{{com.sendercomision +"%"}}</td>
+                             <td>{{com.platformcomsion+"%"}}</td>
+                             <td>{{com.benefcomision+"%"}}</td>
+                             <td>{{com.branchID}}</td>
+
+
+                           </tr>
+
+                     </tbody>
+                 </table>
+
+                                                        </div>
+                                                      </div>
+                                                        <br>
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="row" align="right" style="    margin-right: 4px;">
+
+                                                            <!-- <button type="button"role="button" class="btn btn-success app-button">
+                                           Print
+                                              </button> -->
+
+
+                                                        </div>
+
+
+
+
+                                        </div>
+
+         
+
+
+<div id="tabsNavigationSimple9"  class="tab-pane fade in">
+                            <div class="row">
+                        <div class="col-md-12">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <p>{{'RemitterList'|translate}} </p>
+
+                                </div>
+                                <div class="bor1">
+                                  <div class="tab-inn">
+
+                                      <div class="table-responsive table-desi">
+                                        <table id="dtable307" class="display" cellspacing="0" width="100%">
+                                           <thead style="background-color: #269abc;">
+                                               <tr>
+                                                   <th style="color: #ffffff;">S.N</th>
+
+                                                      <th style="color: #ffffff;">{{'SIDE_COUNTRY'|translate}}</th>
+
+                                                        <th style="color: #ffffff;">{{'FirstName'|translate}}</th>
+                                                        <th style="color: #ffffff;">{{'Lastname'|translate}}</th>
+                                                         <th style="color: #ffffff;">Email</th>
+                                                        <th style="color: #ffffff;">{{'SIDE_ADDRESS1'|translate}}</th>
+                                                        <th style="color: #ffffff;">{{'SIDE_CONTACT'|translate}}</th>
+                                                        <th style="color: #ffffff;">{{'Amount'|translate}}</th>
+
+
+
+
+                                                  </tr>
+                                              </thead>
+                                              <tbody>
+                                                  <tr ng-repeat ="rem in remitterDetails  track by $index">
+                                                      <td>{{$index+1}}</td>
+                                                        <td>{{rem.issueCountry}} </td>
+                                                      <td>{{rem.remittername}}</td>
+
+                                                      <td>{{rem.remittersurName}}
+                                                      </td>
+                                                      <td>{{rem.remitteremail}}  </td>
+
+                                                      <td>{{rem.remitteraddress}}</td>
+                                                      <td>{{rem.remittermobile}}</td>
+                                                      <td>{{rem.amount}} </td>
+
+
+
+                                                  </tr>
+
+
+                                              </tbody>
+
+                                          </table>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>  <!-- -->
+
+
+                         <br>
+
+
+
+                                        <div class="row" style="margin-left: 4px; margin-top: -12px;">
+
+                                                <!-- <button type="button"role="button" class="btn btn-success app-button">
+                                            Print
+                                              </button> -->
+
+
+
+                                    </div>
+
+
+
+                                     </form>
+
+
+
+
+
+
+
+
+
+<!----------------------------------------Print Report--------------------------------------------!-->
+    <!----------------------------------------Print Report--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="tabsNavigationSimple50" class="tab-pane fade in">
+                                                    <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="box-inn-sp">
+                                                      <div class="inn-title">
+                                                          <h4></h4>
+                                                          <p>{{'BeneficiaryList'|translate}}</p>
+                                                      </div>
+                                                      <div class="bor1">
+                                                        <div class="tab-inn">
+
+                                                            <div class="table-responsive table-desi">
+                                                              <table id="dtable308" class="display" cellspacing="0" width="100%">
+                                                                 <thead style="background-color: #269abc;">
+                                                                     <tr>
+                                                                         <th style="color: #ffffff;">S.N</th>
+                                                    <th style="color: #ffffff;">{{'SIDE_COUNTRY'|translate}}</th>
+                                                    <th style="color: #ffffff;">{{'FirstName'|translate}}</th>
+                                                    <th style="color: #ffffff;">{{'Lastname'|translate}}</th>
+                                                     <th style="color: #ffffff;">Email</th>
+                                                    <th style="color: #ffffff;">{{'SIDE_ADDRESS1'|translate}}</th>
+                                                    <th style="color: #ffffff;">{{'SIDE_CONTACT'|translate}}</th>
+                                                    <th style="color: #ffffff;">{{'Amount'|translate}}</th>
+
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr ng-repeat ="ben in beneficiaryDetails1  track by $index">
+                                                                            <td>{{$index+1}}</td>
+                                                                            <td> {{ben.country}} </td>
+                                                                            <td>{{ben.beneficiaryname}}
+                                                                            </td>
+                                                                            <td>{{ben.beneficiarysurName}}
+                                                                            </td>
+                                                                            <td>{{ben.beneficiaryemail}}</td>
+                                                                            <td>{{ben.beneficiaryaddress}}</td>
+                                                                            <td> {{ben.beneficiarymobile}}</td>
+                                                                            <td>{{ben.amount}}</td>
+
+
+
+                                                                        </tr>
+
+
+                                                                    </tbody>
+
+                                                                </table>
+
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                 <br>
+
+
+
+
+
+
+
+                                                             </form>
+
+
+
+
+
+
+
+
+
+                        <!----------------------------------------Print Report--------------------------------------------!-->
+                            <!----------------------------------------Print Report--------------------------------------------!-->
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                          <div id="tabsNavigationSimple11" class="tab-pane fade in">
+                                  <div class="row">
+                      <div class="col-md-12">
+                          <div class="box-inn-sp">
+                              <div class="inn-title">
+                                        <p align="left">{{'SIDE_Reimbursement'|translate}} </p>
+
+
+                                                      </div>
+
+
+                                                      <div class="bor1">
+                          <div class="tab-inn" style="border-style: solid;
+border-color: rgba(45, 58, 64, 0.04); padding: 0px;">
+
+                                        <table id="dtable147" class="display" cellspacing="0" width="100%">
+                                          <thead style="background-color: #269abc;">
+                                         <tr>
+                                               <th style="color: #ffffff;">S.N</th>
+                                               <th style="color: #ffffff;">{{'TransactionNo'|translate}}</th>
+                                               <th style="color: #ffffff;">{{'Status'|translate}}</th>
+
+                                               <th style="color: #ffffff;">{{'TransactionHistory'|translate}}</th>
+
+
+                                           </tr>
+                                  </thead>
+
+                                  <tbody>
+                                      <tr ng-repeat ="transaction in reimburesementTransaction  track by $index">
+
+                                          <td>{{$index+1}}</td>
+                                          <td>{{transaction.transactionNumber}}</td>
+                                          <td>{{transaction.status}}</td>
+                                           <td><a href="javascript:void(0);"><span class="label label-success" data-toggle="modal" data-target="#smallModal_abc" ng-click="transactionHistory(transaction)">{{'TransactionHistory'|translate}}</span></a></td>
+
+                                      </tr>
+
+                                  </tbody>
+                              </table>
+
+                                                  <div class="modal fade" id="smallModal_abc" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+                                                      <div class="" style="width: 100%; margin-top:100px;">
+                                                          <div class="">
+
+                                                              <div class="modal-body">
+                                                                  <div class="">
+
+                                                                      <div class="" style="">
+
+                                                                          <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+                                                                              <div class="row">
+                                                                                  <h4 class="modal-title" id="smallModalLabel" align="center"></h4>
+                                                                                  <div class="col-xs-6 col-sm-6 col-md-6">
+
+                                                                                  </div>
+
+                                                                              </div>
+                                                                              <div class="row">
+                                                                                  <div class="modal-header" style="border: none;">
+                                                                                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                                                                                  </div>
+                                                                                  <div class="text-center" style="margin-top:-45px;">
+
+                                                                                      <img src="/assets/images/transactions.png" alt="allytees-500-trans.png" width="100px" height="100px;">
+                                                                                      <h4>{{'TransactionHistory'|translate}}</h4>
+                                                                                  </div>
+
+                                                                                  <table class="table table-hover">
+                                                                                      <thead>
+                                                                                          <tr>
+                                                                                              <th colspan="3">{{'TransactionNumber'|translate}}</th>
+                                                                                              <td style="text-align: center"> {{transactionHistoryDeatils.transactionNumber}}</td>
+
+                                                                                          </tr>
+                                                                                      </thead>
+                                                                                      <tbody>
+                                                                                          <tbody>
+                                                                                               <tr>
+                                                                                                   <th colspan="3">{{'Date'|translate}}</th>
+
+                                                                                                   <td style="text-align: center"> {{transactionHistoryDeatils.transactionDate |date:'MM/dd/yyyy'}} </td>
+
+                                                                                               </tr>
+                                                                                               <tr>
+                                                                                                   <th colspan="3">{{'MENU_REMITTER'|translate}}</th>
+
+                                                                                                   <td style="text-align: center" class="col-md-3"> {{transactionHistoryDeatils.remittername +" "+ transactionHistoryDeatils.remittersurName}} </td>
+
+                                                                                               </tr>
+                                                                                               <tr>
+                                                                                                   <th colspan="3">{{'MENU_BENEFICIARY'|translate}}</th>
+
+                                                                                                   <td style="text-align: center">  {{transactionHistoryDeatils.beneficiaryname +" "+ transactionHistoryDeatils.beneficiarysurName}} </td>
+
+                                                                                               </tr>
+                                                                                               <tr>
+                                                                                                   <th colspan="3">{{'AmountInLocalCCY'|translate}}</th>
+                                                                                                   <td class="col-md-1" style="text-align: center">{{transactionHistoryDeatils.amount}} </td>
+
+                                                                                               </tr>
+                                                                                               <tr>
+                                                                                                   <th colspan="3">{{'DestinationCountry'|translate}}</th>
+                                                                                                   <td class="col-md-1" style="text-align: center"> {{transactionHistoryDeatils.country}} </td>
+                                                                                               </tr>
+                                                                                               <tr>
+                                                                                                   <th colspan="3">{{'Status'|translate}}</th>
+                                                                                                   <td class="col-md-1" style="text-align: center"> {{transactionHistoryDeatils.status}}</td>
+                                                                                               </tr>
+                                                                                               <tr>
+                                                                                                   <th colspan="3">CCY</th>
+                                                                                                   <td class="col-md-1" style="text-align: center"> {{transactionHistoryDeatils.currency}}</td>
+                                                                                               </tr>
+
+                                                                                           </tbody>
+
+                                                                                      </tbody>
+                                                                                  </table>
+
+
+                                                                              </div>
+                                                                              </div>
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+
+                                                              </div>
+                                                          </div>
+
+                                                      </div>
+                                                    </div>
+                                                  </div> <!--change above-->
+
+
+
+                                <br>
+
+
+
+
+                          </div>
+                      </div>
+                  </div>
+
+                          </div>
+
+
+
+
+  <!-------------------------------------------------------------------------------- Reimbursement Ends ---------------------->
+
+<!-----ranjit----->
+
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,142 @@
+
+
+
+    <!--== MAIN CONTRAINER ==-->
+    <div class="container-fluid sb1" >
+        <div class="row" style="height: 60px;">
+            <!--== LOGO ==-->
+            <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+                <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+
+                <!-- <a href="#" class="logo"><img src="/assets/images/logo1.png" alt="" />
+                </a> -->
+            </div>
+              </div>
+    </div>
+
+
+
+
+        <div class="app">
+        <!-- START APP CONTAINER -->
+        <div class="app-container">
+            <div class="app-login-box">
+                <div class="app-login-box-user">
+                <!-- <img src="/assets/images/logo1.png" alt="John Doe" style="border-radius:0;"></div> -->
+                <div class="app-login-box-title">
+                    <div class="title">Supervisor Login</div>
+                    <div class="subtitle">Sign in to your account</div>
+                </div>
+                <div class="app-login-box-container">
+                    <form name="myForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="login" placeholder="Supervisor ID" ng-model="supervisorID" required>
+                        </div>
+                        <div class="form-group">
+                          <input type="email" class="form-control" name="input" placeholder="Email" ng-model="email" required>
+                          <span class="error" ng-show="myForm.input.$error.email">
+                            Not valid email!</span>
+
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" placeholder="Password" ng-model="password" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6 col-xs-6">
+                                    <div class="app-checkbox">
+                                        <label>
+                                            <input type="checkbox" name="app-checkbox-1" value="0" ng-click="home()"> 
+                                            <i class="fa fa-home" aria-hidden="true"></i>Home</label><br>
+                                            <p>
+                                            <a data-toggle="modal" data-target="#myModalHorizontal">
+                                                Forgot Password
+                                                                                        </a> </p>
+                                                                                        </form>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog"
+                                                 aria-labelledby="myModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <!-- Modal Header -->
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close"
+                                                               data-dismiss="modal">
+                                                                   <span aria-hidden="true">&times;</span>
+                                                                   <span class="sr-only">Close</span>
+                                                            </button>
+                                                           <label> <h4 class="modal-title" id="myModalLabel">
+                                                                Send my Password
+                                                               </h4> </label>
+                                                        </div>
+
+                                                        <!-- Modal Body -->
+                                                        <div class="modal-body">
+
+                                                            <form class="form-horizontal" role="form" name="supervisorforgotform">
+                                                              <div class="form-group">
+                                                                <label  class="col-sm-2 control-label"
+                                                                          for="inputEmail3">Email</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="email" class="form-control"
+                                                                    id="inputEmail3" ng-model="superemail" name="superemail" />
+                                                                    <span class="error" ng-show="supervisorforgotform.superemail.$error.required">Required!</span>
+                            <span class="error" ng-show="supervisorforgotform.superemail.$error.email">
+                              Not valid email!</span>
+                                                                </div>
+                                                              </div>
+                                                     </form>
+                                                         </div>
+
+                                                        <!-- Modal Footer -->
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default"
+                                                                    data-dismiss="modal">
+                                                                        Close
+                                                            </button>
+                                                            <button type="button" class="btn btn-danger" ng-click="changepass()">
+                                                            Send
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xs-6">
+                                    <button class="btn btn-success btn-block" ng-click="sub()"> Sign In </button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+
+
+            </div>
+        </div>
+        <!-- END APP CONTAINER -->
+    </div>
+
+     <!--== BOTTOM FLOAT ICON ==-->
+    <div>
+    <canvas id="canvas-radial"></canvas>
+    </div>
+    <!--======== SCRIPT FILES =========-->
+    <script>
+        var granimInstance = new Granim({
+    element: '#canvas-radial',
+    name: 'radial-gradient',
+    direction: 'radial',
+    opacity: [1, 1],
+    isPausedWhenNotInView: true,
+    states : {
+        "default-state": {
+            gradients: [
+                ['#ffb347', '#ffcc33'],
+                ['#83a4d4', '#b6fbff'],
+                ['#9D50BB', '#6E48AA']
+            ]
+        }
+    }
+}); </script>

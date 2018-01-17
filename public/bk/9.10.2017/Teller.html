@@ -1,0 +1,2008 @@
+
+ <style>
+        .in{padding-right: 0px !important;}
+            .error {
+   color: red;
+ }
+    </style>
+
+</head>
+
+
+    <div class="container-fluid sb1">
+        <div class="row" style="height: 60px">
+            <!--== LOGO ==-->
+            <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+                <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <a href="#" class="atab-menu"><i class="fa fa-bars tab-menu" aria-hidden="true"></i></a>
+                <!-- <a href="index-2.html" class="logo"><img src="/assets/images/logo1.png" alt="" />
+                </a> -->
+            </div>
+            <!--== SEARCH ==-->
+
+            <!--== MY ACCCOUNT ==-->
+            <div class="col-md-2 col-sm-3 col-xs-6" style="float: right;">
+                <!-- Dropdown Trigger -->
+               <!--  <a class='waves-effect dropdown-button top-user-pro' href="javascript:void(0);" data-activates='top-menu'>{{ 'SIDE_ACCOUNT' | translate }} <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </a> -->
+
+                <!-- Dropdown Structure -->
+                <ul id='top-menu' class='dropdown-content top-menu-sty'>
+                    <li><a data-toggle ="modal" data-target="#adminSetting" class="waves-effect"><i class="fa fa-cogs" aria-hidden="true"></i>{{'ManageMyAccount'|translate}}</a>
+                    </li>
+
+                    <li class="divider"></li>
+                    <li><a href="javascript:void(0);" class="ho-dr-con-last waves-effect" ng-click="tellerLogout()"><i class="fa fa-sign-in" aria-hidden="true"></i> {{'MENU_Logout' | translate}}</a>
+                    </li>
+                </ul>
+             <!----------- Admin setting starts -------------->
+       <div class="modal fade" id="adminSetting" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+                                              <div class="" style="width: ; margin-top:50px;">
+                                                  <div class="">
+
+                                                      <div class="modal-body">
+                                                          <div class="">
+
+                                                              <div class="" style="">
+
+                   <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+                                                       <div class="row">
+                                                   <h4 class="modal-title" id="smallModalLabel" align="center"></h4>
+                                                                          <div class="col-xs-6 col-sm-6 col-md-6">
+
+                                                                          </div>
+
+                                                                      </div>
+                                                                      <div class="row">
+
+                                                                          <div class="modal-header_123" style="border: none;">
+                                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                            <h4 class="modal-title"><center><b>{{'ManageMyAccount'|translate}}</b></center></h4>
+                                                                          </div>
+                                                                    </div>
+                                                                       <hr>
+                                                                  <div class="row">
+                                                                          <form class="col s12" name="manageform">
+                                                                            <div class="row">
+                                                                              <div class="input-field col s6">
+                                                                                <input  id="first_name" type="text" class="validate" ng-model="tellerwonid" name="tellerwonid" ng-pattern="payementpattern" maxlength="4">
+
+                                                                                <label for="first_name" class="active"><font color="black">{{'TellerID'|translate}}</font>
+                                                                                  <span class="error" ng-show="manageform.tellerwonid.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                 <span class="error" ng-show="manageform.tellerwonid.$error.pattern" style="float:right;padding-right: 50px;font-size: 10px">Please enter 4 digit number only </span>
+                                                                              </div>
+                                                                              <div class="input-field col s6">
+                                                                                <input id="email" type="email" class="validate" ng-model="tellerforgotemail" name="tellerforgotemail">
+                                                                                <label for="email" class="active"><font color="black">Email</font>
+                                                                                  <span class="error" ng-show="manageform.tellerforgotemail.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                <span class="error" ng-show="manageform.tellerforgotemail.$error.email">Not valid Email!</span>
+                                                                              </div>
+                                                                            </div>
+
+                                                                             <div class="row">
+                                                                              <div class="input-field col s6">
+                                                                                <input id="password" type="password" class="validate" ng-model="oldpassword" name="oldpassword">
+                                                                                <label for="password" class="active"><font color="black">{{'OldPassword'|translate}}</font><span class="error" ng-show="manageform.oldpassword.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                              </div>
+                                                                              <div class="input-field col s6">
+                                                                                <input id="password" type="password" class="validate" ng-model="newpassword" name="newpassword">
+                                                                                <label for="password" class="active"><font color="black">{{'NewPassword'|translate}}</font><span class="error" ng-show="manageform.newpassword.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                              </div>
+                                                                              </div>
+                                                                              <div class="row">
+                                                                              <div class="input-field col s6">
+                                                                                <input id="password" type="password" class="validate" ng-model="confirmpassword" name="confirmpassword">
+                                                                                <label for="password" class="active"><font color="black">{{'ConfirmPassword'|translate}}</font><span class="error" ng-show="manageform.confirmpassword.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                              </div>
+                                                                            </div>
+
+                                                                          </form>
+
+                                                                          <div class="row" align="center" style="margin-right: 2px;">
+
+                                                    <button type="button" class="btn btn-successs app-button" ng-click="manageAccount()" style="width: auto;">{{'Submit'|translate}} </button>
+
+
+
+                                                                          </div>
+
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+
+                                                      </div>
+                                                  </div>
+
+                                              </div>
+                                          </div>
+
+                                            <!---------------- Admin Settings ends -->
+
+            </div>
+        </div>
+    </div>
+
+    <!--== BODY CONTNAINER ==-->
+    <div class="container-fluid sb2">
+        <div class="row">
+            <div class="sb2-1" style="position: fixed; overflow: scroll;">
+                <!--== USER INFO ==-->
+                <div class="sb2-12" align="center">
+                    <ul>
+
+                        <li>
+                            <h5>{{'Welcome'|translate}}:{{tellertokendata.name| decodeHtmlEntity | stripslashes}} </h5>
+                        </li>
+
+                        <br>
+
+
+                        <span style="font-size: 16px;">{{tellertokendata.email| decodeHtmlEntity | stripslashes}}</span>
+                        <span style="font-size: 12px;"> {{'TellerID'|translate}}:</span>  <i>{{tellertokendata.tellerID}}</i><br>
+                        <span style="font-size: 12px;">{{'SIDE_BRANCH_ID'|translate}}:<i> {{tellertokendata.branchID| decodeHtmlEntity | stripslashes}}</i> </span><br>
+                         <span style="font-size: 12px;"> {{'Current Balance'|translate}}:</span>  <i>{{currentbalance}}</i>
+
+
+                    </ul>
+                </div>
+                <!--== LEFT MENU ==-->
+                <div class="sb2-13" style="height:100%">
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <!-- <li><a href="javascript:void(0);"><i class="fa fa-bar-chart" aria-hidden="true"></i><b> {{'MENU_DASHBOARD'|translate}}</b></a>
+                        </li> -->
+                        <li class="active"><a ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple2" data-toggle="tab" class=""><i class="fa fa-list-ul" aria-hidden="true"></i><b>Tariff</b></a>
+
+                        </li>
+
+                        <li class=""><a ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple3" data-toggle="tab" class=""><i class="fa fa-money" aria-hidden="true"></i><b> {{'SendingMoney'|translate}}</b></a>
+
+                        </li>
+                        <li><a ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple4" data-toggle="tab" class=""><i class="fa fa-money" aria-hidden="true"></i> <b>{{'PayingMoney'|translate}}</b></a>
+
+                        </li>
+                        <li><a ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple5" data-toggle="tab" class=""><i class="fa fa-file" aria-hidden="true"></i> <b> {{'SIDE_REPORTS'|translate}}</b></a>
+
+                        </li>
+                        <li><a ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple6" data-toggle="tab" class=""><i class="fa fa-picture-o" aria-hidden="true"></i><b> {{'SupplierCode'|translate}}</b></a>
+
+                        </li>
+                        <li><a ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple7" data-toggle="tab" class=""><i class="fa fa-money" aria-hidden="true"></i> <b>{{'PayingSupplier'|translate}}</b></a>
+
+                        </li>
+                        <li><a ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple8" data-toggle="tab" class=""><i class="fa fa-usd" aria-hidden="true"></i> <b>{{'SearchTransaction'|translate}}</b></a>
+
+                            </li>
+                        <li><a ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple9" data-toggle="tab" class=""><i class="fa fa-braille" aria-hidden="true"></i><b> KYC</b></a>
+
+                            </li>
+                              <li><a ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple10" data-toggle="tab" class=""><i class="fa fa-usd" aria-hidden="true"></i><b> {{'SIDE_Reimbursement'|translate}} </b></a>
+
+                            </li>
+                            <li><a ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple15" data-toggle="tab" class=""><i class="fa fa-usd" aria-hidden="true"></i><b> {{'ManageMyAccount'|translate}} </b></a>
+
+                            </li>
+                          <li><a href="http://13.59.161.144:3000/#/faq" target="_blank" class=""><i class="fa fa-question-circle-o" aria-hidden="true" ></i><b> FAQs</b></a>
+
+                            </li>
+                           
+                         </li>
+                            <li class="closed"><a href="javascript:void(0)" class=""><i class="fa fa-language" aria-hidden="true"></i> <b>{{'MENU_LANGUAGE' |translate}}</b></a>
+                           <ul>
+                             <li ng-click="changeLanguage('de')"><a href="" ng-click="frenchlanguage()">{{ 'BUTTON_LANG_DE' | translate }}</a>
+                             </li>
+                             <li ng-click="changeLanguage('en')"><a href="" ng-click="englishlanguage()">{{ 'BUTTON_LANG_EN' | translate }}</a>
+                             </li>
+                           </ul>
+                         </li>
+
+                         <li ><a href="javascript:void(0);" class="" ng-click="tellerLogout()"><i class="fa fa-sign-in" aria-hidden="true"></i><b> {{'MENU_Logout' | translate}}</b></a>
+
+                            </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="sb2-2">
+                <!-- <div class="sb2-2-2">
+
+                    <ul>
+                        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        </li>
+                        <li class="active-bre"><a href="#"> Tariffs</a>
+                        </li>
+                    </ul>
+                </div> -->
+                <div class="sb2-2-add-blog sb2-2-1 ">
+                    <h2></h2><br>
+
+                  <!--   <ul class="nav nav-tabs tab-list"  >
+                        <li class="active"><a data-toggle="tab" ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple2"><i class="fa fa-info" aria-hidden="true"></i> <span>Tariff</span></a>
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple3"><i class="fa fa-money" aria-hidden="true"></i> <span>Sending Money</span></a>
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple4"><i class="fa fa-money" aria-hidden="true"></i> <span>Paying Money</span></a>
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple5"><i class="fa fa-print" aria-hidden="true"></i> <span>Reports</span></a>
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple6"><i class="fa fa-user" aria-hidden="true"></i> <span>Supplier Code</span></a>
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple7"><i class="fa fa-user" aria-hidden="true"></i> <span>Paying Supplier</span></a>
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple8"><i class="fa fa-user" aria-hidden="true"></i> <span>Search Transaction</span></a>
+                        </li>
+                        <li><a data-toggle="tab" ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple9"><i class="fa fa-user" aria-hidden="true"></i> <span>KYC</span></a>
+                        </li>
+<li><a data-toggle="tab" ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple10"><i class="fa fa-usd" aria-hidden="true"></i> <span>Reimbursement</span></a>
+                        </li>
+                        <li><a ng-href="http://13.59.161.144:3000/#/faq"><i class="fa fa-question-circle-o" aria-hidden="true"></i> <span>FAQs</span></a>
+                        </li>
+
+
+
+                    </ul> -->
+
+                     <div class="tab-content">
+                        <div id="tabsNavigationSimple2" class="tab-pane fade in active">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>{{'FillDetails'|translate}}</p>
+                                </div>
+                                <div class="bor">
+                                    <form name="supertellerform">
+                                    <div class="row">
+                                            <div class="input-field col s6" style="height: 1.8rem;">
+                                                <select ng-model="destination" material-select watch>
+                                                  <!-- <option value="" disabled >Enter Destination</option> -->
+                                                  <option  ng-repeat ="country in countrydata track by $index" value="{{country.countryName}}">{{country.countryName| decodeHtmlEntity | stripslashes}}</option>
+                                                 </select>
+
+
+
+
+                                                <label> <font color="black"> {{'EnterDestination'|translate}}</font></label>
+                                            </div>
+                                            <div class="input-field col s6"> <!--prateek -->
+                                                 <input id="list-title2" type="text" class="validate number" ng-model="amount" name="amount" required="required" ng-pattern="payementpattern">
+                                                <label for="last_name" class="active"><font color="black">{{'PrincipalAmount'|translate}}<small>
+                                                </small></font> <span class="error" ng-show="supertellerform.amount.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                              <span class="error" ng-show="supertellerform.amount.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+                                                <!-- <label>Principal Amount<small>(*Please enter the amount)</small> </label> -->
+                                            </div>
+                                        </div>
+                                        <!-- <div class="row">
+
+                                         <button type="button" role="spinbutton" class="btn btn-success pull-right" style=" background-color:mediumaquamarine; text-transform: capitalize;" ng-click="calculatefee();"> Calculate fee </button> </div> -->
+                                           <div class="row">
+                                         <button type="button" role="spinbutton" class="btn btn-success " data-toggle="modal" data-target="#tariffGrid" style=" background-color:mediumaquamarine; text-transform: capitalize; margin-left: 230px; padding: 0px 8px 2px 8px; width: auto;" ng-click="showtariff()"> {{'TariffGrid'|translate}}</button>
+
+                                         <button type="button" role="spinbutton" class="btn btn-success pull-right" style=" background-color:mediumaquamarine; text-transform: capitalize;width: auto;" ng-click="calculatefee();"> {{'Calculatefee'|translate}} </button> </div>
+                                         <div class="modal fade" id="tariffGrid" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+                                                                                <div class="" style="width: ; margin-top:50px;">
+                                                                                    <div class="">
+
+                                                                                        <div class="modal-body">
+                                                                                            <div class="">
+
+                                                                                                <div class="" style="">
+
+                                                     <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+                                                                                         <div class="row">
+                                                                                     <h4 class="modal-title" id="smallModalLabel" align="center"></h4>
+                                                                                                            <div class="col-xs-6 col-sm-6 col-md-6">
+
+                                                                                                            </div>
+
+                                                                                                        </div>
+                                                                                                        <div class="row">
+                                                                                                <div class="modal-header_123" style="border: none;">
+                                                                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                                                                                                            </div>
+                                                                                                            <div class="text-center">
+
+
+                                                                                                                <h1><b> {{'TariffDetails'|translate}}</b></h1>
+                                                                                                            </div>
+
+                                                                                                    <table class="table-responsive table table-hover">
+                                                                                                                   <thead>
+                                                                <tr>
+
+                                                                    <th>Min</th>
+                                                                    <th> Max</th>
+
+                                                                    <th>Tariff</th>
+
+                                                                </tr>
+                                                            </thead>
+
+                                                            <tbody>
+                                                                <tr style="height: 20px;" ng-repeat="tarif in tariffbycountrylist track by $index">
+
+                                                                    <td>{{tarif.minAmount}}</td>
+                                                                    <td>{{tarif.maxAmount}} </td>
+
+                                                                     <td>{{tarif.tariff}}</td>
+                                                                     </tr>
+
+                                                                                                                </tbody>
+                                                                                                            </table>
+
+                                                                                                            <div class="row" align="center" style="margin-right: 2px;">
+
+                                                                                      <button type="button" class="btn btn-successs app-button" value="Tariff&Grid" data-dismiss="modal">{{'Close'|translate}} </button>
+
+
+                                                                                                            </div>
+
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+
+                                        <div class="row">
+                                            <div class="input-field col s6">
+
+                                                <input id="list-title" type="text" class="validate"  value="{{tarifdetails.Fees}}" ng-model="comissionfees">
+
+                                                <label for="list-title" class="active"><font color="black">{{'Commissionfees'|translate}}</font></label>
+
+                                            </div>
+                                            <div class="input-field col s6">
+                                                <input id="list-title" type="text" class="validate" value="{{tarifdetails.totalTax}}" ng-model="totaltax">
+
+                                                <label for="list-title" class="active"><font color="black">{{'TaxAmount'|translate}}</font></label>
+                                            </div> <br>
+                                                  <div class="col-md-12">
+                                             <div class="panel panel-default" style="height: 40px;  z-index: -1;">
+                                                 <div class="panel panel-heading" style="margin-bottom: 40px; height: 40px;background-color:dodgerblue;color: white;">
+                                                     <div class="col-md-6"> <h4>     {{'TotalAmount'|translate}}   </h4> </div>
+                                                     <div class="col-md-6 "> <h4 align="right">{{tarifdetails.TotalAmount}}</h4> </div>
+
+
+                                                 </div>
+
+
+                                                   </div>
+                                            </div>
+                                           <br>
+                                            <div class="input-field col s4">
+                                                <input id="list-name" type="text" class="validate" value="{{tarifdetails.TotalAmount}}">
+                                                <label for="list-name" class="active"><font color="black">{{'Remitterpaysthefees'|translate}}</font></label>
+                                            </div>
+
+
+                                            <div class="input-field col s4">
+                                                <input id="list-name" type="text" class="validate" value="{{tarifdetails.transferMoney}}">
+                                                <label for="list-name" class="active"><font color="black">{{'BeneficiaryRecieve'|translate}}</font></label>
+                                            </div>
+                                            <div class="input-field col s4">
+                                                <input id="list-name" type="text" class="validate" value="{{currency}}">
+                                                <label for="list-name" class="active"><font color="black">{{'Currency'|translate}}</font></label>
+                                            </div>
+
+                                        </div>
+
+                                        <br>
+                                        <div class="row" >
+                            <!-- <a ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple3"> -->
+                                             <!--<button type="button" role="spinbutton" class="btn btn-success pull-right" style=" background-color:mediumaquamarine; text-transform: capitalize;" ng-click="gotoRemitter();"> Continue </button>-->
+                                             <a data-toggle="tab" ng-href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple3" href="http://localhost:3000/#/tellerdashboard#tabsNavigationSimple3"><button type="button" role="spinbutton" class="btn btn-success pull-right" style=" background-color:mediumaquamarine; text-transform: capitalize;width: auto;" ng-click="gotoRemitter();"> {{'Continue'|translate}} </button></a>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="tabsNavigationSimple4" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>{{'DetailsProvidedByYou'|translate}}</p>
+                                </div>
+                                <div class="bor">
+                                    <form name="payinmoneyform">
+                                    <div class="row">
+                                            <div class="input-field col s3">
+                                             <input id="first_name" type="text" class="validate" ng-model="transactionNumber" name="transactionNumber" required="required" ng-pattern="payementpattern"  maxlength="12">
+                                                <label for="first_name" class="active"><font color="black">{{'TransactionRefNo'|translate}}</font><span class="error" ng-show="payinmoneyform.transactionNumber.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                <span class="error" ng-show="payinmoneyform.transactionNumber.$error.pattern">{{'Pleaseenter12digitnumberonly'|translate}} </span>
+
+
+                                            </div>
+                                            <div class="input-field col s3">
+                                                 <input id="list-title" type="text" class="validate" ng-model="transactionAmount" name="transactionAmount" required="required" ng-pattern="payementpattern">
+                                                <label class="active"><font color="black">{{'Amount'|translate}}</font><span class="error" ng-show="payinmoneyform.transactionAmount.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                               <span class="error" ng-show="payinmoneyform.transactionAmount.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+                                                <!-- <label>Amount</label> -->
+                                            </div>
+
+                                            <div class="input-field col s3">
+                                                <input id="list-title" type="text" class="validate" ng-model="beneficiaryfirstname" required="required"  name="beneficiaryfirstname">
+                                                                <label for="list-title" class="active"><font color="black">{{'Name'|translate}}</font>  <span class="error" ng-show="payinmoneyform.beneficiaryfirstname.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="payinmoneyform.beneficiaryfirstname.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+                                            </div>
+                                            <div class="input-field col s3">
+                                                <input id="list-title" type="text" class="validate" ng-model="beneficiarylastname" required="required" name="beneficiarylastname">
+                                                                <label for="list-title" class="active"><font color="black">{{'Surname'|translate}}</font>  <span class="error" ng-show="payinmoneyform.beneficiarylastname.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="payinmoneyform.beneficiarylastname.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+                                            </div>
+
+
+
+
+
+                                        </div>
+
+
+                                        <div class="row" align="right">
+                                          <button type="button" role="spinbutton" style="background-color: mediumaquamarine; color: white;text-transform: capitalize;padding: 8px; border-radius: 5px;width: auto;" ng-click="searchTransaction();">{{'SearchTransactionRef'|translate}}</button>
+
+                                                <!-- <input type="" style="width: 30%;  background-color:white;     height: 40px;
+   padding-left:20px;; border-radius:0; color:black; border-style:solid" placeholder="Search Transaction Ref"> -->
+
+
+                                        </div>
+                                        <br>
+                                         <div class="row">
+                                   <div class="inn-title">
+                                <p>{{'BeneficiaryDetail'|translate}}</p>
+
+                            </div>
+                            </div><br>
+                                       <br>
+<div class="row">
+
+                                            <div class="input-field col s3">
+                                             <input id="first_name" type="text"  class="validate" value="{{transactionfounddata.beneficiaryname| decodeHtmlEntity | stripslashes}}">
+                                                <label class="active"><font color="black">{{'Name'|translate}}</font></label>
+
+
+                                            </div>
+                                            <div class="input-field col s3">
+                                                 <input id="" type="text" class="validate" value="{{transactionfounddata.beneficiarysurName| decodeHtmlEntity | stripslashes}}">
+                                                 <label for="" class="active"><font color="black">{{'Surname'|translate}}</font></label>
+
+                                            </div>
+                                             <div class="input-field col s3">
+                                                <input id="list-title" type="text" class="validate" value="{{transactionfounddata.beneficiaryaddress| decodeHtmlEntity | stripslashes}}">
+                                                <label for="list-title" class="active"><font color="black">{{'SIDE_ADDRESS1'|translate}}</font></label>
+                                            </div>
+
+                                             <div class="input-field col s3">
+                                                <input id="list-title" type="tel" class="validate" value="{{transactionfounddata.beneficiarymobile}}">
+                                                <label for="list-title" class="active"><font color="black">Mobile No</font></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+
+
+                                            <div class="input-field col s3">
+                                                <select ng-model="beneficiaryid">
+                                                 <option value="Voter"> {{'VoterCard'|translate}}</option>
+                                            <option value="Passport"> {{'Passport'|translate}}</option>
+
+                                            <option value="DrivingLicence"> {{'DrivingLicence'|translate}}</option>
+                                            <option value="CNI"> {{'CNI'|translate}}</option>
+                                            <option value="Other"> {{'Other'|translate}}</option>
+                                                 </select>
+                                                <label><font color="black">{{'TypeOfID'|translate}}</font></label>
+                                                                </div>
+
+                                            <div class="input-field col s3">
+                                            <input id="list-title" type="text" class="validate" ng-model="beneficiaryidno" required="required" ng-pattern="branchpattern" name="beneficiaryidno">
+                                                <label for="last_name" class="active"><font color="black">{{beneficiaryid + " No"}} </font><span class="error" ng-show="payinmoneyform.beneficiaryidno.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                              <span class="error" ng-show="payinmoneyform.beneficiaryidno.$error.pattern">{{'Pleaseenteralphabetandnumberonly'|translate}}</span>
+
+                                                </div>
+
+                                             <div class="input-field col s3">
+                                                <input id="list-name" type="text" class="validate" value="{{transactionfounddata.beneficiaryRecieve}}">
+                                                <label for="list-name" class="active"><font color="black">{{'Amount'|translate}}({{transactionfounddata.currency| decodeHtmlEntity | stripslashes}})</font></label>
+                                              </div>
+
+
+ <div class='col-sm-3' style="margin-top:-10px">
+        <label><font color="black">{{'IssueDate'|translate}} </font> </label>
+          <input type="text" id="datepickerbeneficiaryissue" ng-model="beneficiaryissue">
+
+        </div>
+        <div class='col-sm-3' style="margin-left:1px">
+        <label><font color="black">{{'ExpDate'|translate}} </font> </label>
+               <input type="text" id="datepickerbeneficiaryexp" ng-model="beneficiaryexp">
+
+        </div>
+
+
+
+
+
+                                        </div>
+
+
+                                        <br>
+
+                                         <div class="row">
+                                   <div class="inn-title">
+                                <p>{{'RemitterDetail'|translate}}</p>
+
+                            </div>
+                            </div><br>
+                                       <br>
+<div class="row">
+
+                                            <div class="input-field col s3">
+                                             <input id="first_name" type="text"  class="validate" value="{{transactionfounddata.remittername| decodeHtmlEntity | stripslashes}}">
+                                                <label class="active"><font color="black">{{'Name'|translate}}</font></label>
+
+
+                                            </div>
+                                            <div class="input-field col s3">
+                                                 <input id="" type="text" class="validate" value="{{transactionfounddata.remittersurName| decodeHtmlEntity | stripslashes}}">
+                                                 <label for="" class="active"><font color="black">{{'Surname'|translate}}</font></label>
+
+                                            </div>
+                                             <div class="input-field col s3">
+                                                <input id="list-title" type="text" class="validate" value="{{transactionfounddata.remitteraddress| decodeHtmlEntity | stripslashes}}">
+                                                <label for="list-title" class="active"><font color="black">{{'SIDE_ADDRESS1'|translate}}</font></label>
+                                            </div>
+
+                                             <div class="input-field col s3">
+                                                <input id="list-title" type="tel" class="validate" value="{{transactionfounddata.remittermobile}}">
+                                                <label for="list-title" class="active"><font color="black">Mobile No</font></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+
+
+                                            <div class="input-field col s3">
+                                                 <input id="list-name" type="text" class="validate" value="{{transactionfounddata.remitteridType| decodeHtmlEntity | stripslashes}}">
+
+                                                                <label for="list-title" class="active"><font color="black">{{'TypeOfID'|translate}}</font></label>
+                                                                </div>
+
+
+                                            <div class="input-field col s3">
+                                                <input id="list-name" type="text" class="validate" value="{{transactionfounddata.remitteridNo| decodeHtmlEntity | stripslashes}}">
+                                                <label for="list-name" class="active"><font color="black">{{'PassportNo'|translate}}</font></label> </div>
+
+
+                                                <div class="input-field col s3">
+                                                <input id="list-name" type="text" class="validate" value="{{transactionfounddata.issueDate |date : 'dd/MM/yyyy'}}">
+                                                <label for="list-name" style="margin-top: -2px; margin-bottom: 0" class="active"><font color="black">{{'IssueDate'|translate}}</font></label> </div>
+
+                                               <div class="input-field col s3">
+                                                <input id="list-name" type="text" class="validate" value="{{transactionfounddata.expDate |date : 'dd/MM/yyyy'}}">
+                                                <label for="list-name" style="margin-top: -2px; margin-bottom: 0" class="active"><font color="black">{{'ExpDate'|translate}}</font></label> </div>
+
+                                                   <div class="row" >
+
+<button type="button" class="btn btn-success pull-right"  data-toggle="modal" data-target="#smallModal_123" style="background-color: mediumaquamarine;color: white;border-radius: 5px; padding: 3px; margin-right: 20px;text-transform: capitalize;" ng-click="paidtransaction();">{{'PayPrintPaymentVoucher'|translate}}  </button>
+
+
+           <div class="modal fade" id="smallModal_123" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+                                                  <div class="" style="width: ; margin-top:50px;">
+                                                      <div class="">
+
+                                                          <div class="modal-body">
+                                                              <div class="">
+
+                                                                  <div class="" style="">
+
+                       <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+                                                           <div class="row">
+                                                       <h4 class="modal-title" id="smallModalLabel" align="center"></h4>
+                                                                              <div class="col-xs-6 col-sm-6 col-md-6">
+
+                                                                              </div>
+
+                                                                          </div>
+                                                                          <div class="row">
+                                                                  <div class="modal-header_123" style="border: none;">
+                                                                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                                                                              </div>
+                                                                              <div class="text-center">
+
+
+                                                                                  <h1><b> {{'PrintReceipt'|translate}}</b></h1>
+                                                                              </div>
+<div id ="table1">
+                                                                              <table class="table-responsive table table-hover" >
+                                                                                  <thead>
+                                                                                      <tr>
+                                                                                          <th colspan="3"><h4><b>{{'TransactionNo'|translate}} </b></h4></th>
+                                                                                          <td style="text-align: center"><h4><b> {{paidtransactionDeatils.transactionNumber}}</b></h4></td>
+
+                                                                                      </tr>
+                                                                                  </thead>
+                                                                                  <tbody>
+                                                                                      <tr>
+                                                                                          <th colspan="3"><b><i class="fa fa-calendar" aria-hidden="true"></i></b> {{'Date'|translate}}</th>
+
+                                                                                          <td style="text-align: center"> {{paidtransactionDeatils.transactionDate | date : 'dd/MM/yyyy'}} </td>
+
+                                                                                      </tr>
+                                                                                      <tr>
+                                                                                          <th colspan="3">{{'MENU_REMITTER'|translate}}</th>
+
+                                                                                          <td style="text-align: center" class="col-md-3"> {{paidtransactionDeatils.remittername + " "+ paidtransactionDeatils.remittersurName| decodeHtmlEntity | stripslashes }} </td>
+
+                                                                                      </tr>
+                                                                                      <tr>
+                                                                                          <th colspan="3">{{'MENU_BENEFICIARY'|translate}}</th>
+
+                                                                                          <td style="text-align: center"> {{paidtransactionDeatils.beneficiaryname + " "+ paidtransactionDeatils.beneficiarysurName| decodeHtmlEntity | stripslashes }} </td>
+
+                                                                                      </tr>
+                                                                                      <tr>
+                                                                                          <th colspan="3">{{'AmountInLocalCCY'|translate}}</th>
+                                                                                          <td class="col-md-1" style="text-align: center"> {{paidtransactionDeatils.amount}} </td>
+
+                                                                                      </tr>
+                                                                                      <tr>
+                                                                                          <th colspan="3">{{'DestinationCountry'|translate}}</th>
+                                                                                          <td class="col-md-1" style="text-align: center"> {{paidtransactionDeatils.country| decodeHtmlEntity | stripslashes }} </td>
+                                                                                      </tr>
+                                                                                      <tr>
+                                                                                          <th colspan="3">{{'Status'|translate}}</th>
+                                                                                          <td class="col-md-1" style="text-align: center"> {{paidtransactionDeatils.status| decodeHtmlEntity | stripslashes }}</td>
+                                                                                      </tr>
+                                                                                      <tr>
+                                                                                          <th colspan="3">CCY</th>
+                                                                                          <td class="col-md-1" style="text-align: center"> {{paidtransactionDeatils.currency| decodeHtmlEntity | stripslashes }}</td>
+                                                                                      </tr>
+
+                                                                                  </tbody>
+                                                                              </table>
+</div>
+
+                                                                              <div class="row" align="center" style="margin-right: 2px;">
+
+                                                        <button type="button" class="btn btn-successs app-button" value="Pay & Print Payment Voucher"  ng-click="myFunction('table1')" style="width: auto;" >{{'Print'|translate}} </button>
+
+
+                                                                              </div>
+
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+
+                                                          </div>
+                                                      </div>
+
+                                                  </div>
+                                              </div>
+                                  <!---------------- Payment popup ends -->
+
+                           </div> <!--buttons-->
+
+
+
+
+                                        </div>
+                                         <br>
+
+
+                                    </form>
+
+<!----------------------------------------Paying money--------------------------------------------!-->
+    <!----------------------------------------Paying money--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+<div id="tabsNavigationSimple7" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>{{'PayingSupplier'|translate}}</p>
+                                </div>
+                                <div class="bor">
+                                    <form name="suppliersearch">
+                                    <div class="row">
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s8">
+                                                <input id="last_name" type="text"  class="validate" ng-model="supsearch" name="supsearch" required="required" ng-pattern="payementpattern" maxlength="6">
+                                                <label for="first_name" class="active"><font color="black">{{'SupplierCode'|translate}}</font><span class="error" ng-show="suppliersearch.supsearch.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                <span class="error" ng-show="suppliersearch.supsearch.$error.pattern">{{'Pleaseenteralnumberonly'|translate}} </span>
+                                                <!-- <label for="last_name"><h5>Supplier Code</h5></label> -->
+
+                                            </div>
+
+                                            <div align="right" style="padding-top:10px">
+                                              <button type="button" role="button" class="btn btn-success pull-right"
+                                             style="background-color: mediumaquamarine;color: white;text-transform: capitalize; margin-right: 10px;width: auto;" ng-click="searchsuplier();">
+                                             {{'SearchSupplier'|translate}}</button>
+                                             </div>
+
+
+
+
+
+                                       </div>
+                                       <br>
+
+
+                                            <div class="row">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p><h5 style="color: white">{{'SupplierName'|translate}}: {{supgetdata[0].supplierName}} </h5></p>
+                                </div>
+                                </div>
+                                <br>
+
+                                <div class="row">
+
+
+                                            <!-- <div class="input-field col s4" align="left">
+                                                <input id="last_name" type="number" placeholder="82380" class="validate">
+                                                <label for="last_name">Currency Code</label>
+
+
+
+                                            </div> -->
+
+                                            <div class="input-field col s4" align="left">
+                                                <input id="last_name" type="text"  class="validate" ng-model="invoicenumber" name="invoicenumber" required="required" ng-pattern="payementpattern" maxlength="12">
+                                                <label for="first_name" class="active"><font color="black">{{'TransactionRefNo'|translate}}</font><span class="error" ng-show="suppliersearch.invoicenumber.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                <span class="error" ng-show="suppliersearch.invoicenumber.$error.pattern">{{'Pleaseenter12digitnumberonly'|translate}} </span>
+
+
+
+
+                                            </div>
+                                             <div class='col-sm-4' style="margin-top: -10px">
+                                            <label ><font color="black">{{'InvoiceDate'|translate}} </font> </label>
+                                                   <input type="text" id="datepickerinvoice" ng-model="invoicedate">
+
+                                            </div>
+
+                                          <!--  <div class="tab-inn col s4">
+
+                                            <label for="date-picker"><font color="black">{{'InvoiceDate'|translate}}</font> (dd/mm/yyyy)</label>
+                                            <input type="date" id="date-picker" class="datepicker" style="margin-bottom:0; margin-top: -148px;" ng-model="invoicedate">
+
+                                           </div> -->
+
+                                            <div class="input-field col s4" align="left">
+                                                <input id="last_name" type="text"  class="validate" ng-model="invoiceamount" name="invoiceamount" required="required" ng-pattern="payementpattern">
+                                                <label class="active"><font color="black">{{'Amount'|translate}}</font><span class="error" ng-show="suppliersearch.invoiceamount.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                               <span class="error" ng-show="suppliersearch.invoiceamount.$error.pattern">{{'Pleaseenteralnumberonly'|translate}}</span>
+                                                <!-- <label for="last_name">Amount</label> -->
+
+
+
+                                            </div>
+
+
+
+                                           </div>
+                                  <div class="row">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p><h5 style="color: white">{{'SIDE_REMITTER'|translate}}</h5></p>
+                                </div>
+                                </div>
+                                <br>
+
+                                <div class="row">
+                                        <div class="input-field col s4">
+                                                <input id="last_name" type="text" class="validate" value="{{getinvoicedata.remittername| decodeHtmlEntity | stripslashes}}">
+                                                <label for="last_name" class="active"><font color="black">{{'Name'|translate}}</font></label>
+
+
+
+                                            </div>
+
+                                            <div class="input-field col s4" align="left">
+                                                <input id="last_name" type="text" class="validate" value="{{getinvoicedata.remittersurName| decodeHtmlEntity | stripslashes}}">
+                                                <label for="last_name" class="active"><font color="black">{{'Surname'|translate}}</font></label>
+
+
+
+                                            </div>
+
+                                            <div class="input-field col s4" align="left">
+                                                <input id="last_name" type="tel"  class="validate" value="{{getinvoicedata.remittermobile}}">
+                                                <label for="last_name" class="active"><font color="black">Mobile No</font></label>
+
+
+
+                                            </div>
+
+                                            <div class="input-field col s6"  >
+                                                <input id="last_name" type="text" class="validate"  value="{{getinvoicedata.remitteraddress| decodeHtmlEntity | stripslashes}}">
+                                                <label for="last_name" class="active"><font color="black">{{'SIDE_ADDRESS1'|translate}}</font></label>
+
+
+
+                                            </div>
+                                           <div class="input-field col s6 ">
+
+
+
+                                            <input id="last-name" type="text" class="validate" value="{{getinvoicedata.remitteridNo| decodeHtmlEntity | stripslashes}}"><label for="date-picker" class="active"><font color="black">{{'IDNumber'|translate}}</font></label>
+
+
+                                </div>
+
+                                            <div class="input-field col s3" >
+                                                <input id="last_name" type="number" class="validate" value="{{getinvoicedata.remitteramount}}">
+                                                <label for="last_name" class="active"><font color="black">{{'TotalAmount'|translate}}({{getinvoicedata.currency| decodeHtmlEntity | stripslashes}})</font></label>
+
+
+
+                                            </div>
+
+                                            <div class="input-field col s3">
+                                                <input id="last_name" type="number"  class="validate" value="{{getinvoicedata.fees}}">
+                                                <label for="last_name" class="active"><font color="black">{{'Fee'|translate}}</font></label>
+
+
+
+                                            </div>
+
+
+                                            <div class="input-field col s3">
+                                                <input id="last_name" type="number"  class="validate" value="{{getinvoicedata.tax}}">
+                                                <label for="last_name" class="active"><font color="black">{{'Tax'|translate}}</font></label>
+
+
+
+                                            </div>
+
+                                                <div class="input-field col-md-1">=</div>
+                                            <div class="input-field col s2">
+                                                <input id="last_name" type="number" class="validate" value="{{getinvoicedata.totalAmount}}">
+
+
+
+
+                                            </div>
+                                     <!-- <button type="button" class="btn btn-default" role="button" style="background-color: white;color: grey; text-transform: capitalize;border: solid black 1px; border-color: black; margin-left: 360px; padding-bottom: 30px;" > Search Invoice </button>
+                                           <button type="button" role="spinbutton" style="background-color: mediumaquamarine; color: white;text-transform: capitalize;padding: 8px; border-radius: 5px;">Pay&Print Receipt</button> -->
+
+                                           <button type="button"  role="button" style="background-color: mediumaquamarine; color: white;text-transform: capitalize;padding: 8px; border-radius: 5px; width: auto;" ng-click="searchinvoice();" > {{'SearchInvoice'|translate}} </button>
+                                            <button type="button" role="spinbutton" data-toggle="modal" data-target="#smallModal_789" style="background-color: mediumaquamarine; color: white;text-transform: capitalize;padding: 8px; border-radius: 5px; width: auto;" ng-click="payingsupplier()">{{'PayPrintReceipt'|translate}}</button>
+
+
+                      <div class="modal fade" id="smallModal_789" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+                                                             <div class="" style="width: ; margin-top:50px;">
+                                                                 <div class="">
+
+                                                                     <div class="modal-body">
+                                                                         <div class="">
+
+                                                                             <div class="" style="">
+
+                                  <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+                                                                      <div class="row">
+                                                                  <h4 class="modal-title" id="smallModalLabel" align="center"></h4>
+                                                                                         <div class="col-xs-6 col-sm-6 col-md-6">
+
+                                                                                         </div>
+
+                                                                                     </div>
+                                                                                     <div class="row">
+                                                                             <div class="modal-header_123" style="border: none;">
+                                                                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                                                                                         </div>
+                                                                                         <div class="text-center">
+
+
+                                                                                             <h1><b> {{'PrintReceipt'|translate}}</b></h1>
+                                                                                         </div>
+<div id="table3">
+                                                                                         <table class="table-responsive table table-hover" >
+                                                                                             <thead>
+                                                                                                 <tr>
+                                                                                                     <th colspan="3"><h4><b>{{'InvoiceNumber'|translate}} </b></h4></th>
+                                                                                                     <td style="text-align: center"><h4><b> {{getinvoicedata.transactionNumber}}</b></h4></td>
+
+                                                                                                 </tr>
+                                                                                             </thead>
+                                                                                             <tbody>
+                                                                                                 <tr>
+                                                                                                     <th colspan="3">{{'InvoiceDate'|translate}}</th>
+
+                                                                                                     <td style="text-align: center"> {{getinvoicedata.transactionDate |date:'dd/MM/yyyy'}}</td>
+
+                                                                                                 </tr>
+                                                                                                 <tr>
+                                                                                                     <th colspan="3">{{'Amount'|translate}}</th>
+
+                                                                                                     <td style="text-align: center" class="col-md-3"> {{getinvoicedata.amount}} </td>
+
+                                                                                                 </tr>
+                                                                                                   <tr>
+                                                                                                     <th colspan="3">{{'SupplierCode'|translate}}</th>
+
+                                                                                                     <td style="text-align: center"> {{supgetdata[0].supplierCode}} </td>
+
+                                                                                                 </tr>
+                                                                                                 <tr>
+                                                                                                     <th colspan="3">{{'SupplierName'|translate}}</th>
+                                                                                                     <td class="col-md-1" style="text-align: center">  {{supgetdata[0].supplierName| decodeHtmlEntity | stripslashes}} </td>
+
+                                                                                                 </tr>
+                                                                                                 <tr>
+                                                                                                     <th colspan="3">{{'MENU_REMITTER'|translate}}</th>
+                                                                                                     <td class="col-md-1" style="text-align: center"> {{getinvoicedata.remittername +" "+ getinvoicedata.remittersurName| decodeHtmlEntity | stripslashes}} </td>
+                                                                                                 </tr>
+
+
+                                                                                             </tbody>
+                                                                                         </table>
+                                                                                       </div>
+
+                                                                                         <div class="row" align="center" style="margin-right: 2px;">
+
+                                                                   <button type="button" class="btn btn-successs app-button" value="Pay & Print Payment Voucher"  ng-click="printInvoice('table3')" style="width: auto;">{{'Print'|translate}} </button>
+
+
+                                                                                         </div>
+
+                                                                                     </div>
+                                                                                 </div>
+                                                                             </div>
+                                                                         </div>
+
+                                                                     </div>
+                                                                 </div>
+
+                                                             </div>
+                                                         </div>
+                                             <!---------------- Payment popup ends -->
+
+                                           </div>
+
+                                        </form>
+
+
+
+
+
+<div class="row">
+ </div>
+
+
+<!----------------------------------------Print Report--------------------------------------------!-->
+    <!----------------------------------------Print Report--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+<div id="tabsNavigationSimple8" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+
+                                    <p>{{'SearchTransaction'|translate}}</p>
+                                </div>
+                                <div class="bor">
+                                    <form name="searchtransactionform">
+
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input id="last_name" type="text"  class="validate" ng-model="searchTransactionNumber" name="searchTransactionNumber" required="required" ng-pattern="payementpattern" maxlength="12">
+                                                <label for="first_name" class="active"><font color="black">{{'TransactionRefNo'|translate}}</font><span class="error" ng-show="searchtransactionform.searchTransactionNumber.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span>
+                                                 <span class="error" ng-show="searchtransactionform.searchTransactionNumber.$error.pattern" style="float:right;padding-right: 50px;font-size: 10px">{{'Pleaseenter12digitnumberonly'|translate}}</span>
+                                                </label>
+
+                                                <!-- <label for="last_name">Transaction Ref Number</label> -->
+
+
+
+
+
+                                                <button type="button" role="button" class="btn btn-success" data-toggle="modal" data-target="#smallModal" style="background-color: mediumaquamarine;color: white;text-decoration: none; text-transform: capitalize;width: auto;" ng-click="searchTransactionNumber1();">{{'Search'|translate}} </span>
+
+                                            </div>
+
+
+
+
+                                       </div>
+
+                                                 <div id="smallModal" class="modal modal-fixed-footer" style="width: 50%; ">
+    <div class="modal-header" style="background-color: white;padding: 0px !important; height:55px;">
+
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="margin-right:10px; padding:5px;">&times;
+                                                                                            </button>
+     <img src="/assets/images/transactions.png" alt="allytees-500-trans.png" width="40" height="40" style="margin-left:45%;" >
+        <div style="margin-left:40%;" > <b>{{'TransactionHistory'|translate}}</b></div>
+    </div>
+    <div class="modal-content">
+
+
+              <table data-editable data-editable-spy class="responsive-table striped table" style="z-index:-10;    width: 600px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid grey;
+    box-sizing: border-box;" ng-repeat ="transinfo in transactionnumberdetails track by $index">
+        <thead>
+
+            <tr>
+                <th colspan="3">{{'TransactionNumber'|translate}}</th>
+                <td style="text-align: center">{{transinfo.transactionNumber}}</td>
+
+            </tr>
+        </thead>
+              <tbody>
+                  <tr>
+                      <th colspan="3">{{'Date'|translate}}</th>
+
+                      <td style="text-align: center"> {{transinfo.transactionDate |date:'dd/MM/yyyy'}} </td>
+
+                  </tr>
+                  <tr>
+                      <th colspan="3">{{'MENU_REMITTER'|translate}}</th>
+
+                    <td style="text-align: center" class="col-md-3"> {{transinfo.remittername + " "+transinfo.remittersurName | decodeHtmlEntity | stripslashes}} </td>
+
+                </tr>
+                <tr>
+                    <th colspan="3">{{'MENU_BENEFICIARY'|translate}}</th>
+
+                    <td style="text-align: center"> {{transinfo.beneficiaryname + " "+transinfo.beneficiarysurName| decodeHtmlEntity | stripslashes}} </td>
+
+                </tr>
+                <tr>
+                    <th colspan="3">{{'AmountInLocalCCY'|translate}}</th>
+                    <td class="col-md-1" style="text-align: center"> {{transinfo.amount}} </td>
+
+                </tr>
+                <tr>
+                    <th colspan="3">{{'DestinationCountry'|translate}}</th>
+                    <td class="col-md-1" style="text-align: center"> {{transinfo.country| decodeHtmlEntity | stripslashes}} </td>
+                </tr>
+                <tr>
+                    <th colspan="3">{{'Status'|translate}}</th>
+                    <td class="col-md-1" style="text-align: center"> {{transinfo.status| decodeHtmlEntity | stripslashes}}</td>
+                </tr>
+                <tr>
+                    <th colspan="3">CCY</th>
+                    <td class="col-md-1" style="text-align: center"> {{transinfo.currency| decodeHtmlEntity | stripslashes}}</td>
+                </tr>
+
+
+            </tbody>
+            </table>
+
+
+
+    </div> <!--model -->
+
+  </div> <!--modal-->
+
+
+
+
+
+                                        </form>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+<div id="tabsNavigationSimple9" class="tab-pane fade in">
+<div class="box-inn-sp">
+<div class="inn-title">
+    <p>KYC</p>
+
+</div>
+
+
+
+
+
+
+<div class="bor">
+        <form name="kycform">
+
+
+        <div class="row">
+        <div class="input-field col s3">
+        <select ng-model="usertype" ng-change="changeUser(usertype)" id="searchuser">
+          <!-- <option value="?" disabled selected="selected">Select usertype</option> -->
+
+          <option value="Beneficiary"> {{'MENU_BENEFICIARY'|translate}} </option>
+          <option value="Remitter">{{'MENU_REMITTER'|translate}} </option>
+        </select>
+
+        <label for="last_name"><font color="black">{{'SelectType'|translate}}</font></label>
+        </div>
+        <div class="input-field col s3">
+        <input id="last_name" type="text"  class="validate" ng-model="firstname" required="required"  name="firstname">
+                      <label for="list-title" class="active"><font color="black">{{'Name'|translate}}</font>  <span class="error" ng-show="kycform.firstname.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                      <span class="error" ng-show="kycform.firstname.$error.pattern">{{'Pleaseenter'|translate}}</span>
+        <!-- <label for="last_name">Name</label> -->
+        </div>
+        <div class="input-field col s3">
+        <input id="last_name" type="text"  class="validate" ng-model="lastname" required="required"  name="lastname">
+                      <label for="list-title" class="active"><font color="black">{{'Surname'|translate}}</font>  <span class="error" ng-show="kycform.firstname.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                      <span class="error" ng-show="kycform.firstname.$error.pattern">{{'Pleaseenter'|translate}}</span>
+        <!-- <label for="last_name">Name</label> -->
+        </div>
+
+
+        <div class="input-field col s3">
+        <select  ng-model="region" id="region1">
+
+          <option value="UEMOA"> UEMOA </option>
+          <option value="CEMAC">CEMAC </option></select>
+
+        <label for="last_name"><font color="black">{{'SelectRegion'|translate}}</font></label>
+        </div>
+      </div>
+        <div class="row">
+
+        <div class="input-field col s3">
+
+        <select ng-model="countrysearch" id="countrysearch1">
+
+        <option  ng-repeat ="country in countrydata" value="{{country.countryName| decodeHtmlEntity | stripslashes }}">{{country.countryName| decodeHtmlEntity | stripslashes }}</option>
+        </select>
+        <label for="last_name"><font color="black">{{'SIDE_COUNTRY'|translate}}</font></label>
+        </div>
+        <div class="input-field col s3">
+        <input id="last_name" type="email"  class="validate" ng-model="searchemail" name="searchemail" required="required">
+        <label for="last_name" class="active"><font color="black">Email</font> <span class="error" ng-show="kycform.searchemail.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label></label>
+        <span class="error" ng-show="kycform.searchemail.$error.email">{{'Notvalidemail'|translate}}</span>
+        </div>
+        </div>
+        
+
+
+
+        <div class="row" align="right">
+
+        <button type="button" role="button" class="btn btn-success" style="background-color: mediumaquamarine;color: white; text-transform: capitalize;width: auto;margin-top: -100px" ng-click="checkUserKyc();">{{'Submit'|translate}}</button>
+        <button type="button" role="button" class="btn btn-success" style="background-color: mediumaquamarine;color: white; text-transform: capitalize;width: auto;margin-top: -100px" ng-click="cancelUserKyc();">{{'Cancel'|translate}}</button>
+
+
+        </div>
+        </form>
+
+
+</div>
+
+</div>
+</div>
+
+
+
+<div id="tabsNavigationSimple10" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                <p>{{'SIDE_Reimbursement'|translate}}</p>
+
+
+                                                        </div>
+
+
+
+
+
+
+
+                                                        <div class="bor">
+<form name="transactionnoform">
+                                                                        <div class="row" align="left">
+
+                <input type="" style="width: 60%;  background-color:white;  height: 40px;
+   padding-left:20px;; border-radius:0; color:lightblue; border-style:solid;margin-left:20px;" placeholder="Transaction Number" ng-model="transactionNumberFind" name="transactionNumberFind" required="required" ng-pattern="payementpattern" maxlength="12"><span class="error" ng-show="transactionnoform.transactionNumberFind.$error.required" style="font-size: 10px">*</span>
+   <br>
+   <span class="error" ng-show="transactionnoform.transactionNumberFind.$error.pattern" style="font-size: 10px">{{'Pleaseenter12digitnumberonly'|translate}} </span>
+                             <button type="button" role="spinbutton" class="btn btn-success app-button" style="margin-left: 580px;
+    padding-right: 110px;
+    padding-left: 10px;margin-top:-57px;" ng-click="searchTransactionNO();">
+                                {{'CheckStatus'|translate}} </button>
+                         </div>
+                         </form>
+                         <br>
+                                                            <hr>
+                                    <form>
+
+                                        <div class="row">
+                                            <div class="input-field col s3">
+                                                 <input id="last_name" type="text"  class="validate" value="{{findData[0].transactionNumber}}">
+                                                <label class="active"> <font color="black">{{'TransactionNumber'|translate}}</font></label>
+
+
+                                            </div>
+                                            <div class="input-field col s3">
+                                                 <input id="last_name" type="text"  class="validate" value="{{findData[0].transactionDate | date: 'dd/MM/yyyy'}}">
+                                                 <label style="margin-top:-2px;" class="active"><font color="black">{{'Date'|translate}}</font> </label>
+
+
+                                            </div>
+                                            <div class="input-field col s3">
+                                                <input id="last_name" type="text"  class="validate" value="{{findData[0].remittername +' '+ findData[0].remittersurName| decodeHtmlEntity | stripslashes}}">
+                                                <label for="last_name" class="active"><font color="black">{{'MENU_REMITTER'|translate}}</font></label>
+                                            </div>
+                                            <div class="input-field col s3">
+                                                    <input id="last_name" type="text"  class="validate" value="{{findData[0].beneficiaryname + ' '+ findData[0].beneficiarysurName| decodeHtmlEntity | stripslashes}}">
+                                                <label for="" class="active"> <font color="black">{{'MENU_BENEFICIARY'|translate}}</font> </label>
+                                            </div>
+                                              <div class="input-field col s3">
+                                                    <input id="last_name" type="text"  class="validate" value="{{findData[0].totalAmount}}">
+                                                <label for="" class="active"> <font color="black">{{'AmountInLocalCCY'|translate}} </font></label>
+                                            </div>
+                                              <div class="input-field col s3">
+                                                    <input id="last_name" type="text"  class="validate" value="{{findData[0].country| decodeHtmlEntity | stripslashes}}">
+                                                <label for="" class="active"> <font color="black">{{'DestinationCountry'|translate}}</font> </label>
+                                            </div>
+                                              <div class="input-field col s3">
+                                                    <input id="last_name" type="text"  value="{{findData[0].status| decodeHtmlEntity | stripslashes}}">
+                                                <label for="" class="active"><font color="black">{{'PaymentStatus'|translate}}</font> </label>
+                                            </div>
+                                            <div class="input-field col s3" id="statusid">
+                                                <select ng-model="changeStatusvalue"  ng-change = "statuschnage(changeStatusvalue)">
+                                                  <option value="" disabled selected> {{'ChangeStatus'|translate}} </option>
+                                                    <option value="Reimbursed Done"> Reimbursed Done  </option>
+
+                                                    <option value="Reimbursed Request">Reimbursed Request </option>
+                                                  </select>
+
+                                                <!-- <label for="last_name">Change Status</label> -->
+                                            </div>
+
+
+
+                                        </div>
+                                        </form>
+
+
+                                        <div class="row" align="right" id="submitbtn">
+
+                                               <button type="button" role="button" class="btn btn-success" style="background-color: mediumaquamarine;color: white; text-transform: capitalize;margin-right:10px;width: auto; " ng-click="sumbitreimbursement();">{{'Submit'|translate}}</button>
+
+
+                                        </div>
+
+
+
+
+
+
+
+                                </div>
+
+
+
+
+
+
+                          </div>
+                        </div>
+
+
+
+<div id="tabsNavigationSimple5" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>{{'PrintingReport'|translate}}</p>
+                                </div>
+                                <div class="bor">
+                                    <form>
+
+                                        <div class="row">
+
+                                  <div class='col-sm-6'><font color="black"><b>
+                                  {{'StartDate'|translate}}  </b>  </font>
+                                  <input type="text" id="datepickerstartdate" ng-model="sdate">
+                                </div>
+
+                                <div class="input-field col s6"><font color="black"><b>
+                                {{'EndDate'|translate}}</b>  </font>
+                                <input type="text" id="datepickerenddate" ng-model="edate">
+                                </div>
+
+
+                                        </div>
+                                        <div class="row" align="right">
+
+
+
+
+                                                           <button type="button" role="button" class="btn btn-success" data-toggle="modal"
+                                               data-target="#smallModal_456" style="background-color: mediumaquamarine;color: white; text-transform: capitalize;width: auto;" ng-click="transactionsearchdate();">{{'PreviewPrint'|translate}}</button>
+
+
+                                                    <div class="modal fade" id="smallModal_456" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
+<div class="" style="width: ; margin-top:50px;">
+<div class="">
+
+<div class="modal-body">
+<div class="">
+
+<div class="" style="">
+
+<div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+<div class="row">
+<h4 class="modal-title" id="smallModalLabel" align="center"></h4>
+   <div class="col-xs-6 col-sm-6 col-md-6">
+
+   </div>
+
+</div>
+<div class="row">
+<div class="modal-header_123" style="border: none;">
+       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+   </div>
+   <div class="text-center">
+
+
+       <h1><b> {{'PrintReceipt'|translate}}</b></h1>
+       <button type="button" class="btn btn-successs app-button" value="Pay & Print Payment Voucher" ng-click="printReport('table2')" >{{'Print'|translate}} </button>
+   </div>
+    <div id="table2">   <!-- print -->
+   <table class="table-responsive table table-hover" ng-repeat ="trans in transactionDaterangeDetails  track by $index" >
+       <thead>
+           <tr>
+               <th colspan="3"><h4><b>{{'TransactionNumber'|translate}} </b></h4></th>
+               <td style="text-align: center"><h4><b> {{trans.transactionNumber}}</b></h4></td>
+
+           </tr>
+       </thead>
+       <tbody>
+           <tr>
+               <th colspan="3"><b><i class="fa fa-calendar" aria-hidden="true"></i></b> {{'Date'|translate}}</th>
+
+               <td style="text-align: center"> {{trans.transactionDate |date:'dd/MM/yyyy'}} </td>
+
+           </tr>
+           <tr>
+               <th colspan="3">{{'MENU_REMITTER'|translate}}</th>
+
+               <td style="text-align: center" class="col-md-3"> {{trans.remittername +" "+ trans.remittersurName| decodeHtmlEntity | stripslashes}} </td>
+
+           </tr>
+           <tr>
+               <th colspan="3">{{'MENU_BENEFICIARY'|translate}}</th>
+
+               <td style="text-align: center"> {{trans.beneficiaryname +" "+ trans.beneficiarysurName| decodeHtmlEntity | stripslashes}} </td>
+
+           </tr>
+           <tr>
+               <th colspan="3">{{'AmountInLocalCCY'|translate}}</th>
+               <td class="col-md-1" style="text-align: center"> {{trans.amount}} </td>
+
+           </tr>
+           <tr>
+               <th colspan="3">{{'DestinationCountry'|translate}}</th>
+               <td class="col-md-1" style="text-align: center"> {{trans.country| decodeHtmlEntity | stripslashes}} </td>
+           </tr>
+           <tr>
+               <th colspan="3">{{'Status'|translate}}</th>
+               <td class="col-md-1" style="text-align: center"> {{trans.status| decodeHtmlEntity | stripslashes}}</td>
+           </tr>
+           <tr>
+               <th colspan="3">CCY</th>
+               <td class="col-md-1" style="text-align: center"> {{trans.currency| decodeHtmlEntity | stripslashes}}</td>
+           </tr>
+
+       </tbody>
+   </table>
+ </div>
+  
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+<!---------------- Payment popup ends -->
+
+</div>
+</form>
+                                        <hr>
+
+
+<!-- ****************************************ranjitgorai *********************************************-->
+  <div class="input-group serch-wrap " style="box-sizing: border-box;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;background-color: white;">
+              <div class="input-group-addon search-icon"><i class="fa fa-search"></i></div>
+              <input type="text" class="form-control search-text" placeholder="Search.." ng-model="searchstransactionlisttoday">
+</div><hr>
+    <table  class="display table striped" cellspacing="0" width="100%">
+            <thead>
+
+               <tr>
+                 <td>
+                    <a href="" ng-click="sortType = 'transactionDate'; sortReverse = !sortReverse">
+                     <b>{{'Date'|translate}} </b>
+                     <span ng-show="sortType == 'transactionDate' && !sortReverse" class="fa fa-caret-down"></span>
+                     <span ng-show="sortType == 'transactionDate' && sortReverse" class="fa fa-caret-up"></span>
+                   </a>
+                 </td>
+                 
+                 <td>
+                    <a href="" ng-click="sortType = 'transactionNumber'; sortReverse = !sortReverse">
+                     <b>{{'TransactionNo'|translate}} </b>
+                     <span ng-show="sortType == 'transactionNumber' && !sortReverse" class="fa fa-caret-down"></span>
+                     <span ng-show="sortType == 'transactionNumber' && sortReverse" class="fa fa-caret-up"></span>
+                   </a>
+                 </td>
+                 <td>
+                    <a href="" ng-click="sortType = 'amount'; sortReverse = !sortReverse">
+                     <b>{{'Amount'|translate}} </b>
+                     <span ng-show="sortType == 'amount' && !sortReverse" class="fa fa-caret-down"></span>
+                     <span ng-show="sortType == 'amount' && sortReverse" class="fa fa-caret-up"></span>
+                   </a>
+                 </td>
+                 <td>
+                    <a href="" ng-click="sortType = 'totalAmount'; sortReverse = !sortReverse">
+                     <b>{{'Remitterpaid'|translate}} </b>
+                     <span ng-show="sortType == 'totalAmount' && !sortReverse" class="fa fa-caret-down"></span>
+                     <span ng-show="sortType == 'totalAmount' && sortReverse" class="fa fa-caret-up"></span>
+                   </a>
+                 </td>
+                 <td>
+                    <a href="" ng-click="sortType = 'country'; sortReverse = !sortReverse">
+                     <b>{{'SIDE_COUNTRY'|translate}}</b>
+                     <span ng-show="sortType == 'country' && !sortReverse" class="fa fa-caret-down"></span>
+                     <span ng-show="sortType == 'country' && sortReverse" class="fa fa-caret-up"></span>
+                   </a>
+                 </td>
+                 <td>
+                    <a href="" ng-click="sortType = 'remittername'; sortReverse = !sortReverse">
+                     <b>{{'MENU_REMITTER'|translate}} </b>
+                     <span ng-show="sortType == 'remittername' && !sortReverse" class="fa fa-caret-down"></span>
+                     <span ng-show="sortType == 'remittername' && sortReverse" class="fa fa-caret-up"></span>
+                   </a>
+                 </td>
+                 <td>
+                    <a href="" ng-click="sortType = 'beneficiaryname'; sortReverse = !sortReverse">
+                     <b>{{'MENU_BENEFICIARY'|translate}} </b>
+                     <span ng-show="sortType == 'beneficiaryname' && !sortReverse" class="fa fa-caret-down"></span>
+                     <span ng-show="sortType == 'beneficiaryname' && sortReverse" class="fa fa-caret-up"></span>
+                   </a>
+                 </td>
+                 <td>
+                    <a href="" ng-click="sortType = 'status'; sortReverse = !sortReverse">
+                     <b>{{'Status'|translate}} </b>
+                     <span ng-show="sortType == 'status' && !sortReverse" class="fa fa-caret-down"></span>
+                     <span ng-show="sortType == 'status' && sortReverse" class="fa fa-caret-up"></span>
+                   </a>
+                 </td>
+
+              </tr>
+          </thead>
+          <tbody>
+              <tr ng-repeat ="trans in todaytransactionDetails  | orderBy:sortType:sortReverse | filter: searchstransactionlisttoday |startFrom:currentPagetodayReport*pageSizetodayReport | limitTo:pageSizetodayReport">
+
+                  <td>{{trans.transactionDate |date:'yyyy-MM-dd'}}
+                  </td>
+                  
+                  <td>{{trans.transactionNumber}}</td>
+                  <td>{{trans.amount}}</td>
+                  <td>{{trans.totalAmount}}</td>
+                  <td>{{trans.country| decodeHtmlEntity | stripslashes}}</td>
+                  
+                  <td>{{trans.remittername + " " +trans.remittersurName| decodeHtmlEntity | stripslashes}}</td>
+                  <td>{{trans.beneficiaryname + " " +trans.beneficiarysurName| decodeHtmlEntity | stripslashes}}</td>
+                  <td>{{trans.status| decodeHtmlEntity | stripslashes}}</td>
+
+
+              </tr>
+
+          </tbody>
+
+      </table>
+      <hr>
+      <button ng-disabled="currenttodayPageReport == 0" ng-click="currenttodayPageReport=currenttodayPageReport-1">
+    Previous
+</button>
+{{currenttodayPageReport+1}}/{{numberOfPagestodayReport()}}
+<button ng-disabled="currenttodayPageReport >= todaytransactionDetails.length/pageSizetodayReport - 1" ng-click="currentPagetodayReport=currentPagetodayReport+1">
+    Next
+</button>
+<!-- ****************************************ranjitgorain *********************************************-->
+
+
+
+<div class="row">
+ </div>
+                                     </form>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+<div id="tabsNavigationSimple6" class="tab-pane fade in">
+                            <div class="box-inn-sp">
+                                <div class="inn-title">
+                                    <h4></h4>
+                                    <p>{{'SupplierCode'|translate}}</p>
+                                </div>
+                                <div class="bor">
+                                    <form name="suplierform">
+                                    <div class="row">
+
+                                        </div>
+                                        <div class="row">
+                                          <div class="input-field col s6">
+                                              <input id="last_name" type="text"  class="validate" ng-model="suppliername" required="required" name="suppliername">
+                                                                <label for="list-title" class="active"><font color="black">{{'SupplierName'|translate}} </font> <span class="error" ng-show="suplierform.suppliername.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="suplierform.suppliername.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+                                             <!--  <label for="last_name">Supplier Name</label> -->
+                                          </div>
+                                          <div class="input-field col s6">
+                                              <input id="last_name" type="text"  class="validate" ng-model="suppliercode"  name="suppliercode" required="required" ng-pattern="payementpattern" maxlength="6">
+                                                <label for="first_name" class="active"><font color="black">Code</font><span class="error" ng-show="suplierform.suppliercode.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                <span class="error" ng-show="suplierform.suppliercode.$error.pattern">{{'Pleaseenteralnumberonly'|translate}} </span>
+                                              <!-- <label for="last_name">Code</label> -->
+                                          </div>
+
+
+                                        </div>
+
+
+                                        </form>
+
+
+                                        <div class="row" align="right">
+
+                                          <button type="button" role="button" class="btn btn-success pull-right"
+                          style="background-color: mediumaquamarine;color: white;text-transform: capitalize; margin-right: 10px;width: auto;" ng-click="findsupplier();">
+                         {{'SearchSupplier'|translate}} </button>
+
+
+                                        </div>
+
+
+
+
+                                        <!--  <div class="sb2-2-3"> -->
+                   <!--  <div class="row"> -->
+                        <!-- <div class="col-md-12"> -->
+                            <!-- <div class="box-inn-sp"> -->
+                              <!--  <div class="inn-title">
+                                  <p align="center">{{'SupplierList'|translate}}</p>
+
+
+                              </div> -->
+                               <!--  <div class="bor1"> -->
+                                <div class="tab-inn" style="border-style: solid;
+    border-color: rgba(45, 58, 64, 0.04);">
+    <div class="input-group serch-wrap" style="box-sizing: border-box;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;background-color: white;">
+      <div class="input-group-addon search-icon"><i class="fa fa-search"></i></div>
+      <input type="text" class="form-control search-text" placeholder="Search.." ng-model="searchsuplierlist">
+    </div><hr>
+                              <table  class="display table striped" cellspacing="0" width="100%">
+                                 <thead>
+                                     <tr>
+                                       <td>
+                                           <a href="" ng-click="sortType = 'supplierName'; sortReverse = !sortReverse">
+                                            <b>{{'SupplierName'|translate}} </b>
+                                            <span ng-show="sortType == 'supplierName' && !sortReverse" class="fa fa-caret-down"></span>
+                                            <span ng-show="sortType == 'supplierName' && sortReverse" class="fa fa-caret-up"></span>
+                                          </a>
+                                        </td>
+                                        <td>
+                                            <a href="" ng-click="sortType = 'supplierCode'; sortReverse = !sortReverse">
+                                             <b>Code </b>
+                                             <span ng-show="sortType == 'supplierCode' && !sortReverse" class="fa fa-caret-down"></span>
+                                             <span ng-show="sortType == 'supplierCode' && sortReverse" class="fa fa-caret-up"></span>
+                                           </a>
+                                         </td>
+                                         <td>
+                                             <a href="" ng-click="sortType = 'contact'; sortReverse = !sortReverse">
+                                              <b>{{'SIDE_CONTACT'|translate}} </b>
+                                              <span ng-show="sortType == 'contact' && !sortReverse" class="fa fa-caret-down"></span>
+                                              <span ng-show="sortType == 'contact' && sortReverse" class="fa fa-caret-up"></span>
+                                            </a>
+                                          </td>
+                                          <td>
+                                              <a href="" ng-click="sortType = 'country'; sortReverse = !sortReverse">
+                                               <b>{{'country'|translate}} </b>
+                                               <span ng-show="sortType == 'country' && !sortReverse" class="fa fa-caret-down"></span>
+                                               <span ng-show="sortType == 'country' && sortReverse" class="fa fa-caret-up"></span>
+                                             </a>
+                                           </td>
+                                          <!--  <td>
+                                               <a href="" ng-click="sortType = 'sector'; sortReverse = !sortReverse">
+                                                <b>{{'Region'|translate}} </b>
+                                                <span ng-show="sortType == 'sector' && !sortReverse" class="fa fa-caret-down"></span>
+                                                <span ng-show="sortType == 'sector' && sortReverse" class="fa fa-caret-up"></span>
+                                              </a>
+                                            </td> -->
+                                            <td>
+                                                <a href="" ng-click="sortType = 'email'; sortReverse = !sortReverse">
+                                                 <b>Email </b>
+                                                 <span ng-show="sortType == 'email' && !sortReverse" class="fa fa-caret-down"></span>
+                                                 <span ng-show="sortType == 'email' && sortReverse" class="fa fa-caret-up"></span>
+                                               </a>
+                                             </td>
+
+
+
+                                     </tr>
+                                 </thead>
+
+                                        <tbody>
+                                          <tr ng-repeat ="suplier in supplierDetails| orderBy:sortType:sortReverse | filter: searchsuplierlist |startFrom:currentPageSupplier*pageSizeSupplier | limitTo:pageSizeSupplier">
+
+                                                <td>{{suplier.supplierName| decodeHtmlEntity | stripslashes }}</td>
+                                                <td>{{suplier.supplierCode}}</td>
+                                               <td> {{suplier.contact}} </td>
+                                               <td>{{suplier.country| decodeHtmlEntity | stripslashes }}</td>
+                                               <!-- <td>{{suplier.sector| decodeHtmlEntity | stripslashes }}</td> -->
+                                               <td>{{suplier.email| decodeHtmlEntity | stripslashes }}</td>
+
+
+
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                    <hr>
+                                    <button ng-disabled="currentPageSupplier == 0" ng-click="currentPageSupplier=currentPageSupplier-1">
+                                      Previous
+                                  </button>
+                                  {{currentPageSupplier+1}}/{{numberOfPagesSupplier()}}
+                                  <button ng-disabled="currentPageSupplier >= supplierDetails.length/pageSizeSupplier - 1" ng-click="currentPageSupplier=currentPageSupplier+1">
+                                      Next
+                                  </button>
+
+                                </div>
+                              <!-- </div> -->
+                                 <br>
+
+
+
+                            <!-- <div class="row">
+                            <button type="button" role="button" class="btn btn-success pull-right"
+                                style="background-color: mediumaquamarine;color: white;text-transform: capitalize; margin-right: 10px;"
+                            > Continue</button>
+                            </div> -->
+
+                            <!-- </div> -->
+                        <!-- </div> -->
+                   <!--  </div> -->
+                <!-- </div> -->
+
+                                     </form>
+
+
+
+
+
+
+<!----------------------------------------Print Report--------------------------------------------!-->
+    <!----------------------------------------Print Report--------------------------------------------!-->
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div id="tabsNavigationSimple3" class="tab-pane fade">
+                            <div class="inn-title">
+                               <p>{{'RemitterDetail'|translate}}</p>
+
+                            </div>
+                            <div class="bor">
+                                <form name="remitterdetailsform">
+                                <div class="row">
+                                    <div class="row">
+                                        <div class="input-field col s4">
+                                                  <input id="list-title" type="text" class="validate" ng-model="remittername" name="remittername" required="required"  >
+                                                                <label for="list-title" class="active"><font color="black"> {{'Name'|translate}}  </font><span class="error" ng-show="remitterdetailsform.remittername.$error.required"  style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="remitterdetailsform.remittername.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+                                                </div>
+                                                <div class="input-field col s4">
+                                                  <input id="list-title" type="text" class="validate" ng-model="remittersurName" name="remittersurName" required="required">
+                                                                <label for="list-title" class="active"> <font color="black">{{'Surname'|translate}}</font> <span class="error" ng-show="remitterdetailsform.remittersurName.$error.required"  style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="remitterdetailsform.remittersurName.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+                                                </div>
+
+                                            <div class="input-field col s4">
+                                                 <input id="list-title" type="text" class="validate" ng-model="remitteraddress" name="remitteraddress" required="required">
+                                                                <label for="list-title" class="active"> <font color="black">{{'SIDE_ADDRESS1'|translate}}</font>  <span class="error" ng-show="remitterdetailsform.remitteraddress.$error.required" style="float:right;padding-right: 20px;font-size: 10px" >*</span></label>
+                                                                <span class="error" ng-show="remitterdetailsform.remitteraddress.$error.pattern">{{'Pleaseentervalidaddress'|translate}}</span>
+                                            </div>
+                                             </div>
+                                             </div>
+
+
+                                    <div class="row">
+
+                                             <div class="row">
+                                            <div class="input-field col s4">
+                                                 <input id="list-title" type="tel" class="validate" ng-model="remittermobile" name="remittermobile" ng-pattern="phoneNumberpattern" required="required" maxlength="15">
+                                                <label for="list-title" class="active"><font color="black">{{'MobileNowithCountryCode'|translate}} </font> <span class="error" ng-show="remitterdetailsform.remittermobile.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                  <span class="error" ng-show="remitterdetailsform.remittermobile.$error.pattern">{{'PleasematchpatternCountryCode'|translate}}</span>
+                                                <!-- <label>Mobile No</label> -->
+                                            </div>
+
+                                            <div class="input-field col s4">
+
+                                                <input id="list-title" type="email" class="validate" ng-model="remitteremail" name="remitteremail" required="required">
+                                                <label for="list-title" class="active"><font color="black">Email</font>  <span class="error" ng-show="remitterdetailsform.remitteremail.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                  <span class="error" ng-show="remitterdetailsform.remitteremail.$error.email">
+                                                                  {{'Notvalidemail'|translate}}</span>
+                                               <!-- <label>Email</label> -->
+                                            </div>
+                                             <div class="input-field col s4">
+                                               <!-- <input id="list-title" type="text" class="validate" value ="{{tarifdetails.TotalAmount}}">
+                                                <label class="active"><font color="black">{{'Amount1'|translate}}</font></label> -->
+                                                <input id="list-title" type="text" class="validate" ng-model="remittancemode" name="remittancemode" required="required"  placeholder="Cash To Cash">
+                                                 <label class="active"><font color="black">{{'RemittanceMode'|translate}}</font><span class="error" ng-show="remitterdetailsform.remittancemode.$error.required"  style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                             <span class="error" ng-show="remitterdetailsform.remittancemode.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+                                            </div>
+                                            </div>
+
+<div class="row">
+<div class="input-field col s4">
+
+                                         <select ng-model="remitteridtype">
+                                         <!-- <option value="" disabled selected="">Type of ID</option> -->
+                                             <option value="Voter"> {{'VoterCard'|translate}}</option>
+                                            <option value="Passport"> {{'Passport'|translate}}</option>
+
+                                            <option value="DrivingLicence"> {{'DrivingLicence'|translate}}</option>
+                                            <option value="CNI"> {{'CNI'|translate}}</option>
+                                            <option value="Other"> {{'Other'|translate}}</option>
+                                         </select>
+
+
+                                                <label> <font color="black">{{'TypeOfID'|translate}}</font></label>
+                                            </div>
+                                            <div class="input-field col s4">
+                                         <input id="list-title" type="text" class="validate" ng-model="remitterpassport" required="required"  name="remitterpassport" >
+                                                <label for="last_name" class="active"><font color="black">{{remitteridtype +" No"}}</font>  <span class="error" ng-show="remitterdetailsform.remitterpassport.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                                              <span class="error" ng-show="remitterdetailsform.remitterpassport.$error.pattern">{{'Pleaseenteralphabetandnumberonly'|translate}}</span>
+                                                <!-- <label>Passport No.</label> -->
+                                        </div>
+                    <div class="input-field col s4">
+
+                                         <select ng-model="remitterissuecountry" material-select watch>
+                                                  <!-- <option value="" disabled >Enter Destination</option> -->
+                                                  <option  ng-repeat ="country in countrydata track by $index" value="{{country.countryName}}">{{country.countryName| decodeHtmlEntity | stripslashes}}</option>
+                                          </select>
+                                          <label><font color="black">{{'CountryofIssue'|translate}}</font></label>
+
+
+                 </div>
+  </div>
+
+
+<div class="row">
+
+        <div class='col-sm-4'>
+        <label ><font color="black">{{'IssueDate'|translate}} </font> </label>
+               <input type="text" id="datepickerremiterissue" ng-model="remitterissuedate">
+
+        </div>
+        <div class='col-sm-4'>
+        <label ><font color="black">{{'ExpDate'|translate}} </font> </label>
+               <input type="text" id="datepickerremiterexp" ng-model="remitterexpdate">
+
+        </div>
+
+
+                                              <!-- <div class="input-field col s4" style="margin-top:23px;">
+
+
+                                            </div> -->
+                                        </div>
+
+
+
+                                    </div>
+
+                               <br><br>
+
+                                    <div class="row">
+                                   <div class="inn-title">
+
+                                <p>{{'BeneficiaryDetail'|translate}}</p>
+                            </div>
+                            </div><br>
+                                    <div class="row">
+                                        <div class="input-field col s4">
+                                                 <input id="list-title" type="text" class="validate" ng-model="beneficiaryname" name="beneficiaryname" required="required">
+                                                                <label for="list-title" class="active"><font color="black"> {{'Name'|translate}}</font>  <span class="error" ng-show="remitterdetailsform.beneficiaryname.$error.required"  style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="remitterdetailsform.beneficiaryname.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+                                                <!-- <label>Name</label> -->
+                                            </div>
+                                         <div class="input-field col s4">
+                                                 <input id="list-title" type="text" class="validate" ng-model="beneficiarysurname" name="beneficiarysurname" required="required">
+                                                                <label for="list-title" class="active"> <font color="black">{{'Surname'|translate}} </font> <span class="error" ng-show="remitterdetailsform.beneficiarysurname.$error.required"  style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                <span class="error" ng-show="remitterdetailsform.beneficiarysurname.$error.pattern">{{'Pleaseenteralphabetonly'|translate}}</span>
+                                                <!-- <label>Surname</label> -->
+                                            </div>
+
+
+
+                                       <div class="input-field col s4">
+                                                 <input id="list-title" type="text" class="validate" ng-model="beneficiaryaddress" name="beneficiaryaddress" required="required">
+                                                                <label for="list-title" class="active"><font color="black"> {{'SIDE_ADDRESS1'|translate}} </font> <span class="error" ng-show="remitterdetailsform.beneficiaryaddress.$error.required" style="float:right;padding-right: 20px;font-size: 10px" >*</span></label>
+                                                                <span class="error" ng-show="remitterdetailsform.beneficiaryaddress.$error.pattern">{{'Pleaseentervalidaddress'|translate}}</span>
+                                            </div>
+                                            <div class="input-field col s4">
+                                                 <input id="list-title" type="tel" class="validate" ng-model="beneficiarymobile" name="beneficiarymobile" ng-pattern="phoneNumberpattern" required="required" maxlength="15">
+                                                <label for="list-title" class="active"><font color="black">{{'MobileNowithCountryCode'|translate}}</font>  <span class="error" ng-show="remitterdetailsform.remittermobile.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+
+                                                 <span class="error" ng-show="remitterdetailsform.beneficiarymobile.$error.pattern">{{'PleasematchpatternCountryCode'|translate}}</span>
+
+                                            </div>
+                                            <div class="input-field col s4">
+                                                 <input id="list-title" type="email" class="validate" ng-model="beneficiaryemail"  name="beneficiaryemail" required="required">
+                                                <label for="list-title" class="active"><font color="black">Email </font> <span class="error" ng-show="remitterdetailsform.beneficiaryemail.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                  <span class="error" ng-show="remitterdetailsform.beneficiaryemail.$error.email">
+                                                                 {{'Notvalidemail'|translate}}</span>
+
+                                            </div>
+                                            </div>
+
+                                            <div class="row test" align="right" style="padding: 20px;">
+
+
+                                             <button type="button" class="btn btn-default" role="button" style="background-color: mediumaquamarine; color: white;text-transform: capitalize;padding: 0px 8px; border-radius: 5px;display: inline-block;" ng-click="kycCheck();" > KYC </button>
+
+                                             <button type="button" class="btn btn-default" role="button" style="background-color: mediumaquamarine; color: white;text-transform: capitalize;padding: 0px 8px; border-radius: 5px;display: inline-block;" ng-click="cancelTransaction();" > {{'Cancel'|translate}} </button>
+                                            
+                                             <button type="button" class="btn btn-default" role="button" style="background-color: mediumaquamarine; color: white;text-transform: capitalize;padding: 8px; border-radius: 5px; width: auto;display: inline-block !important;" ng-click="createTransaction();" id="createTransactionbtn" ng-init="createTransactionhide()">{{'Confirm'|translate}}</button>
+                                             
+                                          
+
+                                        </div>
+
+
+</form>
+                                    </div>
+                                    </div>
+
+                                    <!---ranjit -->
+                                      <div id="tabsNavigationSimple15" class="tab-pane fade in">
+                                                    <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="box-inn-sp">
+                                                      <div class="inn-title">
+                                                          <h4></h4>
+                                                          <p>{{'ManageMyAccount'|translate}}</p>
+                                                      </div>
+                                                      <div class="bor1">
+                                                        <div class="tab-inn">
+                                                        <form name="manageform">
+                                                          <div class="row">
+                                                            <div class="input-field col s3">
+                                                                                <input  id="first_name" type="text" class="validate" ng-model="tellerwonid" name="tellerwonid" ng-pattern="payementpattern" maxlength="4">
+
+                                                                                <label for="first_name" class="active"><font color="black">{{'TellerID'|translate}}</font>
+                                                                                  <span class="error" ng-show="manageform.tellerwonid.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                 <span class="error" ng-show="manageform.tellerwonid.$error.pattern" style="float:right;padding-right: 50px;font-size: 10px">Please enter 4 digit number only </span>
+                                                                              </div>
+                                                                              <div class="input-field col s3">
+                                                                                <input id="email" type="email" class="validate" ng-model="tellerforgotemail" name="tellerforgotemail">
+                                                                                <label for="email" class="active"><font color="black">Email</font>
+                                                                                  <span class="error" ng-show="manageform.tellerforgotemail.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                <span class="error" ng-show="manageform.tellerforgotemail.$error.email">Not valid Email!</span>
+                                                                              </div>
+                                                                               <div class="input-field col s3">
+                                                                                <input id="password" type="password" class="validate" ng-model="oldpassword" name="oldpassword">
+                                                                                <label for="password" class="active"><font color="black">{{'OldPassword'|translate}}</font><span class="error" ng-show="manageform.oldpassword.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                              </div>
+                                                                              <div class="input-field col s3">
+                                                                                <input id="password" type="password" class="validate" ng-model="newpassword" name="newpassword">
+                                                                                <label for="password" class="active"><font color="black">{{'NewPassword'|translate}}</font><span class="error" ng-show="manageform.newpassword.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                              </div>
+                                                          </div>
+                                                          <div class="row">
+                                                                              <div class="input-field col s3">
+                                                                                <input id="password" type="password" class="validate" ng-model="confirmpassword" name="confirmpassword">
+                                                                                <label for="password" class="active"><font color="black">{{'ConfirmPassword'|translate}}</font><span class="error" ng-show="manageform.confirmpassword.$error.required" style="float:right;padding-right: 20px;font-size: 10px">*</span></label>
+                                                                              </div>
+                                                                              <button type="button" class="btn btn-successs app-button" ng-click="manageAccount()" style="width: auto; margin: 15px">{{'Submit'|translate}} </button>
+
+                                                                </div>
+                                                          
+                                                        </form>
+                                                        
+
+                                                         
+                                                         
+                                                                
+
+                                                          </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                 
+
+
+
+
+
+
+
+
+                      
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                    <!--ranjit -->
+
+                                    </div>
+
+
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>

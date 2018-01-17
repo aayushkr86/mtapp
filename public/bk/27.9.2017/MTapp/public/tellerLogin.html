@@ -1,0 +1,156 @@
+
+    <!--== MAIN CONTRAINER ==-->
+    <div class="container-fluid sb1">
+        <div class="row" style="height: 60px;">
+
+            <div class="col-md-2 col-sm-3 col-xs-6 sb1-1">
+                <a href="#" class="btn-close-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+
+               <!--  <a href="#" class="logo"><img src="/assets/images/logo1.png" alt="" />
+                </a> -->
+            </div>
+              </div>
+    </div>
+
+
+
+
+        <div class="app">
+        <!-- START APP CONTAINER -->
+        <div class="app-container">
+            <div class="app-login-box">
+                <div class="app-login-box-user">
+                <!-- <img src="/assets/images/logo1.png" alt="John Doe" style="border-radius:0;"> -->
+                </div>
+                <div class="app-login-box-title">
+                    <div class="title">Teller Login</div>
+                    <div class="subtitle">Sign in to your account</div>
+                </div>
+                <div class="app-login-box-container">
+                  <form name="myForm">
+                      <div class="form-group">
+                          <input type="text" class="form-control" name="login" placeholder="Teller ID" ng-model="tellerID" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="email" class="form-control" name="input" placeholder="Email" ng-model="email" required>
+                        <span class="error" ng-show="myForm.input.$error.email">
+                          Not valid email!</span>
+
+                      </div>
+                      <div class="form-group">
+                          <input type="password" class="form-control" name="password" placeholder="Password" ng-model="password" required>
+                      </div>
+                      <div class="form-group">
+                          <div class="row">
+                              <div class="col-md-6 col-xs-6">
+                                  <div class="app-checkbox">
+                                      <label>
+                                         <input type="checkbox" name="app-checkbox-1" value="0" ng-click="home()">
+                                         <i class="fa fa-home" aria-hidden="true"></i>Home</label>
+                                         <br>
+
+                                <label>     <a data-toggle="modal" data-target="#myModalHorizontal">
+      Forgot  Password
+                                              </a> </label>
+                                              </form>
+
+
+  <div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog"
+       aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                  <button type="button" class="close"
+                     data-dismiss="modal">
+                         <span aria-hidden="true">&times;</span>
+                         <span class="sr-only">Close</span>
+                  </button>
+                  <h3 class="modal-title" id="myModalLabel">
+              <label>        Send my Password
+                      </label>    </h3>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body">
+
+                  <form class="form-horizontal" role="form" name="tellerforgotpassform">
+                    <div class="form-group">
+                      <label  class="col-sm-2 control-label"
+                                for="inputEmail3">Email</label>
+                      <div class="col-sm-10">
+                          <input type="email" class="form-control"
+                          id="inputEmail3" ng-model="tellermail" required name="tellermail" />
+                          <span class="error" ng-show="tellerforgotpassform.tellermail.$error.email">
+                          Not valid email!</span>
+                      </div>
+                    </div>
+                      <h4 align="center"> OR </h4>
+                         <div class="form-group">
+                      <label  class="col-sm-2 control-label"
+                                for="inputEmail3">Phone Number</label>
+                      <div class="col-sm-10">
+                          <input type="tel" class="form-control"
+                          id="inputEmail3" ng-model="tellerphone" name="tellerphone" required="required" ng-pattern="phoneNumbr" maxlength="15" />
+
+
+                                                  <span class="error" ng-show="tellerforgotpassform.tellerphone.$error.minlength">Phone no not less that 10 char.</span>
+                                                  <span class="error" ng-show="tellerforgotpassform.tellerphone.$error.maxlength">Phone no not more than 11 char.</span>
+                                                  <br><span class="error" ng-show="tellerforgotpassform.tellerphone.$error.pattern">Please match pattern [Countrycode+mobilenumber]</span>
+                      </div>
+                    </div>
+           </form>
+               </div>
+
+              <!-- Modal Footer -->
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default"
+                          data-dismiss="modal">
+                              Close
+                  </button>
+                  <button type="button" class="btn btn-danger" role="button" ng-click="forgotpass();">
+                  Send
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+                                  </div>
+                              </div>
+                              <div class="col-md-6 col-xs-6">
+                                  <button class="btn btn-success btn-block" ng-click="sub()"> Sign In </button>
+                              </div>
+                          </div>
+                      </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <!-- END APP CONTAINER -->
+    </div>
+
+     <!--== BOTTOM FLOAT ICON ==-->
+    <div>
+    <canvas id="canvas-radial"></canvas>
+    </div>
+    <!--======== SCRIPT FILES =========-->
+    <script>
+        var granimInstance = new Granim({
+    element: '#canvas-radial',
+    name: 'radial-gradient',
+    direction: 'radial',
+    opacity: [1, 1],
+    isPausedWhenNotInView: true,
+    states : {
+        "default-state": {
+            gradients: [
+                ['#ffb347', '#ffcc33'],
+                ['#83a4d4', '#b6fbff'],
+                ['#9D50BB', '#6E48AA']
+            ]
+        }
+    }
+}); </script>

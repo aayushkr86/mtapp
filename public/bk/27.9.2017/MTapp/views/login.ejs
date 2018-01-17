@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <%- include('./common/stylesheet') %>
+</head>
+<body style="background-image:url(../../image/2.jpg); no-repeat; background-size: 1320px,500px;">
+<br>
+<div class="container">
+	<div class="col-sm-4"></div>
+	<div style="background-color: gray;opacity: 0.8;" class="jumbotron col-sm-4">
+
+	<legend><font size="4" color="#006400"><center><strong><i class="fa fa-user" aria-hidden="true"></i>Login Form</strong></center></font></legend>
+  <form>
+    <div class="form-group">
+    <div class="input-group">
+    <div class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+    <input name="email" id="email" type="email" class="form-control" placeholder="Email" required="required">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+    <div class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></div>
+    <input name="password" id="password" type="password" class="form-control" placeholder="Password" required="required">
+   </div>
+  </div>
+
+  <button type="submit" class="btn btn-info"" id="login-btn" style="background-color:#006400;"><font color="#7FFF00"><strong>Login</strong></font></button>
+  <button type="button" class="btn btn-link" style="text-decoration:none" id="forgot"><strong><font color="#00FF00">Forgot Password</font></strong></button>
+
+
+  <hr>
+  <font color="#FF0000"><b>Not Registered?</b></font>
+  <button type="button" class="btn btn-link" style="text-decoration:none"  data-toggle="modal" data-target="#myModal"><strong><font color="#40E0D0">Signup here</font></strong></button>
+
+
+</form>
+</div>
+
+
+
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <%- include('./common/javascript') %>
+
+<script type="text/javascript">
+$(document).ready(function() {
+$('#login-btn').click(function(e){
+    e.preventDefault();
+
+    var data = {
+
+          email : $('#email').val(),
+         password : $('#password').val(),
+        };
+     console.log(data);
+
+  $.ajax({
+
+  method : "post",
+
+  url : "/",
+
+  data : data,
+
+
+  success : function(result){
+       if(result.error){
+        new PNotify({
+          tittle : 'Regular notice',
+          type :'error',
+          text :result.result,
+
+        });
+        //$('#demo').html(result.result);
+       }else{
+
+        window.location.href="/welcome";
+
+       }
+
+
+    }
+
+
+   });
+
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
